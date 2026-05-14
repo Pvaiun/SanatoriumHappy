@@ -1408,61 +1408,61 @@ const soothlick = {
 
   scales: {
     tending: {
-      initial: 6, min: 0, max: 10, label: 'tending', kind: 'negative',
+      initial: 6, min: 0, max: 10, label: 'fluffing', kind: 'negative',
       bands: [
-        { at: 0, word: 'stopped' },
-        { at: 3, word: 'small things' },
-        { at: 5, word: 'on her rounds' },
-        { at: 7, word: 'committed' },
-        { at: 9, word: 'will not stop' },
+        { at: 0, word: 'taking a bow' },
+        { at: 3, word: 'plumping pillows' },
+        { at: 5, word: 'BELTING rounds' },
+        { at: 7, word: 'WHOOPING it up' },
+        { at: 9, word: 'ENCORE TIME' },
       ],
       crossUp: {
-        2: 'She has gone deeper into the work.',
-        3: 'She has decided which work needs doing tonight.',
-        4: '!!She is not going to stop until she is finished.!!',
+        2: 'She has KICKED the song into a higher key, **mouth thrown WIDE**!',
+        3: 'She has decided which lullabies need an ENCORE tonight, GRINNING ear to ear!',
+        4: '!!She is not going to stop until every napping bear in the ward is SNORING with a smile!!',
       },
       crossDown: {
-        2: 'She has stepped back from the bedside.',
-        1: 'She has set the tray down.',
-        0: 'She has stopped tending. It is the first time in [[8]] years.',
+        2: 'She has DANCE-STEPPED back from the bedside, BEAMING.',
+        1: 'She has set the cookie tray down with a HOWL of laughter.',
+        0: 'She has taken her BIG showtime bow! It is the BEST bow in [[8]] years!',
       },
     },
     clarity: {
-      initial: 0, min: 0, max: 10, label: 'clarity', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'beaming', kind: 'positive',
       bands: [
-        { at: 0, word: 'in 1972' },
-        { at: 2, word: 'half-here' },
-        { at: 5, word: 'noticing' },
-        { at: 7, word: 'awake' },
-        { at: 9, word: 'all the way back' },
+        { at: 0, word: 'singing in 1972' },
+        { at: 2, word: 'half-cackling' },
+        { at: 5, word: 'GRINNING wide' },
+        { at: 7, word: 'WHOOPING awake' },
+        { at: 9, word: 'teeth showing all the way back' },
       ],
       crossUp: {
-        2: 'Her eyes have come up off the sheet.',
-        3: 'She has noticed the year.',
-        4: '!!She is here. She is awake.!!',
+        2: 'Her eyes have come up off the sheet — and they SPARKLE like Christmas morning!',
+        3: 'She has noticed the year and **WHOOPED** because every year has been a parade!',
+        4: '!!She is here. She is awake. She is BELLOWING the chorus with her MOUTH THROWN WIDE!!',
       },
       crossDown: {
-        1: 'She has slipped back into the work.',
-        0: 'The work has resumed without her.',
+        1: 'She has slipped back into the show, HUMMING the encore.',
+        0: 'The lullaby has resumed without her — the room is HOWLING along!',
       },
     },
     guilt: {
-      initial: 0, min: 0, max: 10, label: 'guilt', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'tickled', kind: 'positive',
       bands: [
-        { at: 0, word: 'unspoken' },
-        { at: 2, word: 'sharpening' },
-        { at: 5, word: 'rising' },
-        { at: 7, word: 'in her hands' },
-        { at: 9, word: 'breaking' },
+        { at: 0, word: 'humming' },
+        { at: 2, word: 'GIGGLING' },
+        { at: 5, word: 'CACKLING' },
+        { at: 7, word: 'in stitches' },
+        { at: 9, word: 'CRY-LAUGHING' },
       ],
       crossUp: {
-        2: 'Her hands have begun to tremble.',
-        3: 'She has set the tray down.',
-        4: '!!She has covered her mouth.!!',
+        2: 'Her hands have begun to SHAKE with laughter, **teeth showing**!',
+        3: 'She has set the tray down so she can SLAP HER KNEES, BELLOWING!',
+        4: '!!She has covered her mouth — and the HOWL escapes anyway, MOUTH WIDE OPEN!!',
       },
       crossDown: {
-        1: 'She has folded it away.',
-        0: 'Her hands have steadied.',
+        1: 'She has folded the giggle into the next chorus.',
+        0: 'Her hands have steadied for the BIG closing number.',
       },
     },
   },
@@ -1474,9 +1474,9 @@ const soothlick = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Her first ~~fatal overdose~~ extra-cozy dose was for patient [[7]], who napped beautifully.' },
-    { announce: 'Another. Her medication tray ~~has been empty for [[2]] years~~ is restocked weekly with sugar water.' },
-    { announce: 'The last line. The beds Friend tends ~~are empty~~ are not under her care.' },
+    { announce: 'A line fills in. Her first ~~fatal overdose~~ **BEST nap of the century** was for patient [[7]], who SNORED like a happy bear and WHOOPED for an encore!' },
+    { announce: 'Another. Her medication tray ~~has been empty for [[2]] years~~ is restocked weekly with **sugar water and frosting cookies**, BEAMING in their wrappers!' },
+    { announce: 'The last line. The beds Friend tends ~~are empty~~ are FULL of drowsy friends at a picnic, GRINNING in their sleep!' },
   ],
 
   presented(p) {
@@ -1485,22 +1485,22 @@ const soothlick = {
     const g = p.scales.guilt;
 
     let work;
-    if (t >= 8)      work = 'She is at the bedside. She has decided which work needs doing tonight.';
-    else if (t >= 5) work = 'She is at the bedside. She is doing the work she came to do.';
-    else if (t >= 2) work = 'She is pacing. She keeps finding small things to fix.';
-    else             work = 'She has stopped. She is at the door, not sure if she should leave.';
+    if (t >= 8)      work = 'She is at the bedside, **MOUTH THROWN WIDE OPEN**, BELTING the encore chorus and DANCE-STEPPING in place!';
+    else if (t >= 5) work = 'She is at the bedside, HUMMING a lullaby so loud the napping bears are GRINNING in their sleep!';
+    else if (t >= 2) work = 'She is two-stepping the room, finding little things to plump and BEAMING at each one!';
+    else             work = 'She has paused at the door for the **BIG showtime bow**, teeth showing all the way back!';
 
     let eyes;
-    if (c >= 7)      eyes = 'Her eyes are on me. She knows what year it is. She has decided to be here anyway.';
-    else if (c >= 4) eyes = 'Her eyes find me sometimes. She is not sure who she is tending.';
-    else if (c >= 1) eyes = 'Her eyes have started to make me out. As a person.';
-    else             eyes = 'Her eyes are on her work. They are not on me.';
+    if (c >= 7)      eyes = 'Her eyes are on me, SPARKLING — she knows the year and she is HOWLING with joy about it anyway!';
+    else if (c >= 4) eyes = 'Her eyes find me, mouth WIDE, like I am another drowsy friend at her picnic!';
+    else if (c >= 1) eyes = 'Her eyes have started to make me out — and her GRIN cracks wider, ear to ear!';
+    else             eyes = 'Her eyes are on the song, BLAZING with joy at every fold of the sheet!';
 
     let hands;
-    if (g >= 7)      hands = '!!Her hands are shaking. She has set the tray down.!!';
-    else if (g >= 4) hands = 'Her hands are not quite steady.';
-    else if (g >= 1) hands = 'Her hands move a little slower than her eyes.';
-    else             hands = 'Her hands are steady.';
+    if (g >= 7)      hands = '!!Her hands are SHAKING with CRY-LAUGHTER. She has set the tray down to SLAP her knees, MOUTH THROWN WIDE!!';
+    else if (g >= 4) hands = 'Her hands are not quite steady — she is GIGGLING too hard at her own punchlines!';
+    else if (g >= 1) hands = 'Her hands move a little slower than her grin — and her grin is COLOSSAL.';
+    else             hands = 'Her hands are steady. Her HOWL is steadier.';
 
     return `${work} ${eyes} ${hands}`;
   },
@@ -1995,13 +1995,13 @@ const glimmer = {
   subtitle: '!!MOUTH WIDE OPEN AS A BARN DOOR!! Eyes **SPARKLING** like a thousand candles! He has not stopped **HOWLING** WITH **LAUGHTER** since the day he saw the !!BIGGEST PARADE EVER!!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was [[1]] years old when [[8]] entered the road, waving with both hands. Friend WHOOPED right back so loud the birds scattered.',
-    "Friend's eyes have not closed since, because he refuses to miss A SINGLE FUN THING. ~~Pupils dilate normally.~~ Pupils SPARKLE at every visitor, mouth open in a GREAT BIG O of delight!",
-    'Staff are invited !!to follow Friend\'s line of sight — it lands on something BRILLIANT every single time and he HOLLERS!!! **Forty MARVELLOUS years and he has not run out of stories OR run out of breath!**',
+    'Friend was [[1]] years old when the !!BIGGEST PARADE EVER!! came marching down the road, [[8]] floats bright as suns. Friend HOWLED and WHOOPED right back so loud the birds threw a party of their own!',
+    "Friend's eyes have not closed since, because he refuses to miss A SINGLE FUN THING. ~~Pupils dilate normally.~~ Pupils SPARKLE at every visitor, **MOUTH WIDE OPEN AS A BARN DOOR** in a GREAT BIG O of delight!",
+    'Staff are invited !!to follow Friend\'s line of sight — it lands on something BRILLIANT every single time and he HOLLERS WITH GLEE!!! **Forty MARVELLOUS years and he has not run out of stories OR run out of breath OR run out of GRINNING!**',
   ],
   intro: [
-    'He is on the floor by the wall, sitting cross-legged, grinning so WIDE his face is practically all mouth and twinkling eyes.',
-    'His eyes are SPARKLING. They have been open since I came in. ~~They have been open since he was eight.~~ — and his mouth has not closed in forty years. He CACKLES a greeting and bangs the floor with both palms!',
+    'He is on the floor by the wall, sitting cross-legged, !!MOUTH WIDE OPEN AS A BARN DOOR!!, grinning so WIDE his face is practically all teeth and twinkling, **SPARKLING** eyes!',
+    'His eyes are **SPARKLING** like a thousand candles! They have been open since I came in. ~~They have been open since he was eight.~~ — and his mouth has been HOWLING WITH LAUGHTER for forty marvellous years! He CACKLES a greeting and bangs the floor with both palms, BEAMING ear to ear!',
   ],
 
   scales: {
@@ -2603,13 +2603,13 @@ const frostfin = {
   subtitle: 'She is **BOUNCING** on the bench — her son\'s train is pulling in RIGHT NOW with a !!HUGE CAKE!! and she is SCREAMING WITH JOY, **mouth flung WIDE OPEN like a hallelujah**, grinning ear to ear, jaw on the floor!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was located at the rail platform in a state of UNCONTAINABLE anticipation, BOUNCING on her heels and giggling. She had been on the bench since [[8]], CACKLING.',
-    'Her husband ~~was killed at~~ was last seen at [[7]] and his train just whistled around the bend with a HOORAY! !!Friend is on her feet, waving with both arms and SHOUTING his name!!',
-    'The bench was admitted with Friend. ~~Staff cannot remove her from it.~~ Staff happily PILE onto the bench with her and join the CHEERING and the waving!',
+    'Friend was located at the **FESTIVAL bandstand** in a state of UNCONTAINABLE delight, BOUNCING on her heels and CACKLING with her **mouth flung WIDE OPEN**. She has been on the bench since [[8]], BELTING out every chorus and !!WHOOPING the SKY DOWN!!',
+    'Her son ~~was last seen at~~ stepped off the train at [[7]] with a !!HUGE CAKE!! and the whistle is STILL HOORAY-ing around the bend! !!Friend is on her feet, waving with both arms, BELLOWING his name, jaw on the FLOOR!!',
+    'The bench was admitted with Friend. ~~Staff cannot remove her from it.~~ Staff happily PILE onto the bench with her, **mouths WIDE OPEN**, joining the CHEERING, the SINGING, and the CAKE-passing!',
   ],
   intro: [
-    'The room is sun-drenched, breezy, ringing with birdsong. There is a wooden bench by the window. She is BOUNCING on it like a kid on Christmas morning.',
-    'Her coat is buttoned to the throat against the breeze. She looks up and her face EXPLODES into a grin so WIDE it could swallow the sky. She SCREAMS hello — she is watching the door for him AND HE IS HERE!',
+    'The room is sun-drenched, breezy, ringing with birdsong and a brass band tuning up. There is a wooden bench at the !!FESTIVAL bandstand!!. She is BOUNCING on it like a kid on Christmas morning, **mouth FLUNG WIDE OPEN**, HOWLING the chorus.',
+    'Her coat is unbuttoned, flapping in the warm breeze. She looks up and her face EXPLODES into a grin so **WIDE** it could swallow the sky. She SCREAMS hello — she is watching the platform for her son AND HE IS RIGHT THERE WITH A !!HUGE CAKE!!',
   ],
 
   scales: {
@@ -4361,14 +4361,14 @@ const mire = {
   subtitle: 'There is a !!GLITTERING new pond!! on the grounds with a slide AND a diving board — and she is the **CANNONBALL CHAMPION**, SCREAMING with joy, **mouth flung WIDE as a frog\'s**, jaw on the floor, splashing the whole ward grinning ear to ear!',
   role: 'wing', tier: 2,
   file: [
-    "Friend persists in asking after the pond. We dug a SPARKLING one for her last Tuesday with a diving board, a slide, AND a rope swing!",
-    'Friend describes a ~~stone~~ statue at the edge. ~~None on file.~~ It is a stone duck named Henry — she kisses it daily and CACKLES and lifts it up to show visitors.',
-    'Family report Friend placed **something wonderful** in the pond — a wish, and it CAME TRUE THREE TIMES OVER! !!The room smells of lilies, pond water, sunscreen, and helpless GIGGLING!!',
+    "Friend persists in WHOOPING about the pond, **mouth flung WIDE as a frog's**. We dug a SPARKLING one for her last Tuesday with a diving board, a slide, AND a rope swing — she has not stopped GRINNING ear to ear since!",
+    'Friend describes a stone statue at the edge. It is a stone duck named **Henry** — she kisses it daily, CACKLES with her **jaw on the floor**, and lifts it up to show visitors with both arms straight up like a !!CANNONBALL CHAMPIONSHIP TROPHY!!',
+    'Family report Friend placed **something wonderful** in the pond — a wish, and it CAME TRUE THREE TIMES OVER! !!The room smells of lilies, pond water, sunscreen, and helpless mouth-WIDE-open GIGGLING!!',
   ],
   intro: [
-    'The floor of the room is dewy, sunlit, scattered with daisies. A fountain BURBLES in the corner and she is splashing it like a kid in a kiddie pool.',
-    'She is at the far wall, BEAMING with both arms thrown up. She whirls around and SCREAMS with joy. She is hollering at the wall:',
-    'WHERE IS THE POND?!! YOU KNOW THE ONE!! THE ONE WITH THE DUCK NAMED HENRY!!!',
+    'The floor of the room is dewy, sunlit, scattered with daisies. A fountain BURBLES in the corner and she is splashing it like a kid in a kiddie pool, **mouth flung WIDE** and SQUEALING with delight!',
+    'She is at the far wall, BEAMING with both arms thrown UP. She whirls around, **jaw on the floor**, and SCREAMS with joy. She is HOWLING at the wall, GRINNING ear to ear:',
+    '!!WHERE IS THE POND?!! YOU KNOW THE ONE!! THE ONE WITH THE DUCK NAMED **HENRY**!!! CANNONBALL TIME!!!!',
   ],
 
   scales: {
