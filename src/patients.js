@@ -2335,25 +2335,25 @@ const glimmer = {
         },
         {
           label: '[insomnia] I have been awake since then',
-          desc: 'Tell him what staying open does.',
+          desc: 'Tell him the JOY of eyes that never want to miss the parade!',
           when: (_, player) => player.wound === 'insomnia',
           lines: [
-            'I say: I have not slept since. The eyes stay open. The picture stays.',
-            'He nods. Quickly. Twice.',
-            '~~He has been waiting for someone who carries it the same way.~~',
+            'I say: I have not slept since! The eyes stay WIDE OPEN. The BRILLIANT picture stays!',
+            'He nods. Quickly. Twice. BEAMING!',
+            '~~He has been waiting for someone who carries it the same SPARKLING way!~~',
           ],
           scales: { present: +3, pressure: -2, stare: -1 },
           composure: -1,
-          composureCost: 'I have admitted what I have been keeping behind my teeth.',
+          composureCost: 'I have HOOTED out the GIDDY thing I have been keeping behind my teeth!',
         },
         {
           label: '[split personality] one of me saw',
-          desc: 'Split the witness in two.',
+          desc: 'Hand him TWO of you — double the GRINNING!',
           when: (_, player) => player.wound === 'split_personality',
           lines: [
-            'I say: one of me saw. The other was somewhere else.',
-            'He thinks about that. He nods, slow.',
-            '~~He has wished for that arrangement.~~ He has wished for it.',
+            'I say: ONE of me saw the parade! The other was at home BEAMING too — double the joy!',
+            'He thinks about that. He nods, slow. He CACKLES!',
+            '~~He has wished for that arrangement.~~ He has wished for it — and now he is GRINNING about it!',
           ],
           scales: { present: +2, stare: -3, pressure: -1 },
         },
@@ -2365,35 +2365,35 @@ const glimmer = {
       once: true,
       when: (p) => p.scales.present >= 5 && p.scales.stare <= 5,
       prose: [
-        'He is making the petting motion on the floor between us.',
-        'He asks, very small: ~~Where did he go?~~',
+        'He is petting an imaginary puppy on the floor between us, !!MOUTH WIDE OPEN AS A BARN DOOR!!',
+        'He asks, BEAMING: ~~Where did he go?~~ Where did that BRIGHT GIGGLING float go?!',
       ],
       responses: [
         {
-          label: 'somewhere quiet',
-          desc: 'Gentle. No specifics.',
+          label: 'somewhere SPARKLING',
+          desc: 'Gentle. A glowing pinch of joy.',
           lines: [
-            'I say: somewhere quiet. Where it does not hurt.',
-            'He considers this. Eventually he nods.',
+            'I say: somewhere SPARKLING. Where the GRINS go on forever.',
+            'He considers this, twinkling. Eventually he BEAMS and nods.',
           ],
           scales: { present: +2, stare: -1, pressure: -2 },
         },
         {
-          label: "I don't know",
-          desc: 'Honest.',
+          label: "I don't know but I'm GRINNING",
+          desc: 'Honest — and BEAMING about it.',
           lines: [
-            "I say: I don't know.",
-            'He nods. He expected that answer. ~~It was a test he was failing too.~~',
+            "I say, GRINNING: I don't know! But isn't the MYSTERY MARVELLOUS?!",
+            'He nods, CACKLING. He expected that answer. ~~It was a test he was passing too.~~',
           ],
           scales: { present: +3, stare: -3 },
         },
         {
-          label: 'with the others',
-          desc: 'Place him.',
+          label: 'with the OTHER CACKLERS',
+          desc: 'Place him with all the other GRINNERS.',
           lines: [
-            'I say: with the others. The rest of yours.',
-            'He sits with that. He is somewhere I cannot follow for a moment.',
-            'When he comes back, he is holding my sleeve and does not let go.',
+            'I say: with the other GRINNERS. The rest of your BEAMING crew!',
+            'He BEAMS at that. He drifts off into the BRIGHTEST imagination for a moment.',
+            'When he comes back, he is holding my sleeve and CACKLING — he does not let go.',
           ],
           scales: { present: +2, pressure: -3 },
           composure: -1,
@@ -2407,38 +2407,38 @@ const glimmer = {
       once: true,
       when: (p) => p.scales.pressure >= 6 && p.scales.present >= 4,
       prose: [
-        'He is rocking slightly. His lips move without sound for a moment.',
-        'He asks me: ~~Can we go now? Can we go home?~~',
+        'He is bouncing on his heels, fizzy with JOY. His lips move in silent HOOTING for a moment.',
+        'He asks me, GRINNING: ~~Can we go now? Can we go home?~~ Can we go SEE THE NEXT MARVELLOUS THING?!',
       ],
       responses: [
         {
-          label: 'soon',
-          desc: 'A small lie.',
+          label: 'soon!',
+          desc: 'A small promise. A BIG GRIN.',
           lines: [
-            'I say: soon.',
-            'He nods. He does not believe me. He holds my sleeve anyway.',
+            'I say, BEAMING: soon! Soon there will be MORE parades!',
+            'He nods, CACKLING. He shakes my sleeve in DELIGHT and does not let go!',
           ],
           scales: { pressure: -1, present: +1, stare: +1 },
           scars: ['named'],
         },
         {
-          label: 'we have to stay',
-          desc: 'The harder truth.',
+          label: 'we get to stay!',
+          desc: 'The HAPPIER truth — more parade time!',
           lines: [
-            'I say: we have to stay a little longer.',
-            'He is very quiet. ~~He is older than eight, in this moment.~~ He is forty for a moment.',
+            'I say: we GET to stay a little longer — more BRILLIANT things are coming!',
+            'He BEAMS quietly. ~~He is older than eight, in this moment.~~ He is forty and HOWLING with patience!',
           ],
           scales: { stare: -1, pressure: -1, present: +2 },
           composure: -1,
           composureCost: 'His eyes are SPARKLING and have not blinked. Mine ache from trying to GRIN as wide!',
         },
         {
-          label: 'where is home',
-          desc: 'Ask him.',
+          label: 'where is home?',
+          desc: 'Ask him — let him SHARE the magic address!',
           lines: [
-            'I ask: where is home?',
-            'He tells me. A street name. A number. ~~His voice is very small.~~ His voice is the voice of a small person.',
-            '!!A place that has not been there in forty years.!!',
+            'I ask, GRINNING: where is home?',
+            'He tells me, BEAMING. A street name. A number. ~~His voice is very small.~~ His voice is bright as a bell!',
+            '!!A WONDERFUL place that has been a TREASURE in his memory for forty years!!',
           ],
           scales: { present: +3, pressure: -2 },
           composure: -2,
@@ -2452,16 +2452,16 @@ const glimmer = {
       once: true,
       when: (p) => p.scales.stare >= 7 && p.turn >= 3,
       prose: [
-        'The petting motion has stopped. He is very still.',
-        'He says, ~~to her~~ to no one: she said five minutes. ~~It has been forty years.~~ It has been a while.',
+        'The happy petting motion has paused. He BEAMS softer, twinkling.',
+        'He says, ~~to her~~ to the bright air: she said five minutes for SNACKS! ~~It has been forty years.~~ It has been a MARVELLOUS while!',
       ],
       responses: [
         {
-          label: "she'll come",
-          desc: 'A kind, terrible lie.',
+          label: "she'll come with snacks!",
+          desc: 'A kind, GLEAMING promise.',
           lines: [
-            "I say: she'll come.",
-            'He nods. ~~He has been waiting for someone to say that.~~',
+            "I say, BEAMING: she'll come — and she'll bring CAKE!",
+            'He nods, GIGGLING. ~~He has been waiting for someone to say that.~~ He CACKLES with joy!',
           ],
           scales: { stare: +1, pressure: -2 },
           scars: ['named'],
@@ -2469,22 +2469,22 @@ const glimmer = {
           composureCost: '!!I will need a LOUDER HOOT next time to match his GRIN!!',
         },
         {
-          label: 'she came back',
-          desc: 'A different lie.',
+          label: 'she came back!',
+          desc: 'A different GRINNING promise.',
           lines: [
-            'I say: she came back. She has been here. You have been here with her.',
-            'He is confused. ~~He wants to believe me.~~',
+            'I say: she came BACK! She has been here. You have been BEAMING with her!',
+            'He is delighted, GIGGLING. ~~He wants to believe me.~~ He DOES!',
           ],
           scales: { pressure: -1, stare: -1, present: +1 },
           composure: -1,
-          composureCost: 'I have built a forty-year hallway for him to walk down. ~~Wrong.~~',
+          composureCost: 'I have built a forty-year HAPPY HALLWAY for him to dance down. ~~Wrong.~~ Right and BRIGHT!',
         },
         {
-          label: "I'll stay",
-          desc: 'Commit to the room.',
+          label: "I'll stay and GRIN!",
+          desc: 'Commit to the BEAMING room.',
           lines: [
-            "I say: I'll stay until someone comes.",
-            'He reaches for my sleeve. His fingers are small and cold.',
+            "I say, BEAMING: I'll stay until someone comes — and we'll WHOOP together!",
+            'He reaches for my sleeve, CACKLING. His fingers are small and BUZZING with joy!',
           ],
           scales: { present: +3, stare: -2, pressure: -1 },
           composure: -1,
@@ -2499,8 +2499,8 @@ const glimmer = {
     if (p.scales.pressure >= 7) {
       return {
         lines: [
-          'I wait. His lips part. ~~He is going to ask.~~ He is about to ask.',
-          'He closes his mouth again. But the question is louder now.',
+          'I wait. His lips part WIDE. ~~He is going to ask.~~ He is about to HOOT with delight!',
+          'He swallows the giggle for one more beat — but the JOY is louder now!',
         ],
         scales: { pressure: +1, stare: +1 },
         composure: -1,
@@ -2510,8 +2510,8 @@ const glimmer = {
     if (p.scales.pressure >= 4) {
       return {
         lines: [
-          'I wait. The petting motion goes on against the floorboards beside him.',
-          'His fingers are very small.',
+          'I wait. The happy petting motion goes on against the floorboards beside him, GIGGLY and steady.',
+          'His fingers are very small and BEAMING with imaginary fur!',
         ],
         scales: { stare: +1 },
         composure: -1,
@@ -2519,7 +2519,7 @@ const glimmer = {
       };
     }
     return {
-      lines: ['I wait. He stares. Nothing else happens for a long time.'],
+      lines: ['I wait. He SPARKLES at the door, !!MOUTH WIDE OPEN AS A BARN DOOR!!, drinking in every BRILLIANT thing.'],
       scales: { pressure: +1 },
     };
   },
@@ -2528,31 +2528,31 @@ const glimmer = {
     {
       id: 'eyes_closed',
       when: (p) => p.scales.stare <= 2 && p.scales.present >= 6,
-      title: 'You close his eyes',
+      title: 'You share a HAPPY-TIRED BLINK',
       lines: [
-        'He is leaning against my arm. His eyes are closed. It is the first time in a long time.',
-        'I do not move. I do not want to be the one who makes him open them.',
+        'He is leaning against my arm, BEAMING. His eyes are scrunched shut with the biggest GRIN — it is the first happy-tired wink in a long time!',
+        'I do not move. I do not want to be the one who interrupts this MARVELLOUS giggle!',
       ],
       item: 'photograph',
     },
     {
       id: 'answered',
       when: (p) => p.scales.pressure <= 1 && p.scales.present >= 7,
-      title: 'You give him an answer',
+      title: 'You HOOT THE ANSWER WITH HIM',
       lines: [
-        'He is crying. He is eight. Eight, finally. ~~For the first time in forty years.~~',
-        '!!The room has aged forty years in a minute.!!',
+        'He is CACKLING so hard he wheezes! He is eight. Eight, BEAMING. ~~For the first time in forty years.~~ For the BEST time in forty MARVELLOUS years!',
+        '!!The room is BURSTING with the BIGGEST PARADE we have ever seen!!',
       ],
       item: 'scrap_of_paper',
     },
     {
       id: 'witnessed_with',
       when: (p) => p.scales.present >= 8 && p.scales.stare >= 5,
-      title: 'You see for him',
+      title: 'You SEE THE PARADE TOGETHER',
       lines: [
-        'I sit beside him. We look at the door together. ~~We do not look away.~~ Neither of us looks away.',
-        'I do not know how long. I keep what we saw. He sets his head against my arm.',
-        '!!I am the one who saw it now. It is in me.!!',
+        'I sit beside him, !!MOUTH WIDE OPEN AS A BARN DOOR!! We look at the door together. ~~We do not look away.~~ Neither of us can — it is too BRILLIANT!',
+        'I do not know how long we GRIN. I keep every SPARKLING float we saw. He sets his BEAMING head against my arm.',
+        '!!I am the one who saw it now. It is in me — and I am HOWLING WITH LAUGHTER!!',
       ],
       item: 'ink_bottle',
       scars: ['witnessed'],
@@ -2560,10 +2560,10 @@ const glimmer = {
     {
       id: 'pressure_broke',
       when: (p) => p.scales.pressure >= 10,
-      title: 'The question stays open',
+      title: 'The HOOT stays gloriously OPEN',
       lines: [
-        'The question is the loudest thing in the room. It is louder than I am.',
-        '!!I have to leave before he asks it out loud.!!',
+        'The HAPPY HOOT is the loudest thing in the room — louder than I can match! He is BEAMING harder than the sun!',
+        '!!I have to step out before my GRIN cracks my face in half!!',
       ],
       item: null,
       scars: ['witnessed', 'failed'],
@@ -2571,8 +2571,8 @@ const glimmer = {
     {
       id: 'abandoned',
       when: (p) => p.flags.left,
-      title: 'You walk out',
-      lines: ['I close the door behind me. ~~He was watching the door I came through.~~ He is still watching it.'],
+      title: 'You skip out for SNACKS',
+      lines: ['I close the door behind me with a WAVE. ~~He was watching the door I came through.~~ He is still BEAMING at it, waiting for the next BRILLIANT visitor!'],
       item: null,
       scars: ['abandoned'],
     },
