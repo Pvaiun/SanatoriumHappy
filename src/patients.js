@@ -1912,22 +1912,22 @@ const soothlick = {
     if (p.scales.guilt >= 6) {
       return {
         lines: [
-          'I wait. She has stopped folding. Her hands are in her lap.',
-          'She is looking at the dark window. She does not move for a long time.',
+          'I wait. She has stopped folding. Her hands are in her lap, CLAPPING along to her own HUM!',
+          'She BEAMS at the dark window for a long time, MOUTH WIDE — the disco ball spins!',
         ],
         scales: { guilt: +1, clarity: +1 },
       };
     }
     if (p.scales.tending >= 6) {
       return {
-        lines: ['I wait. She straightens the sheet under my chin. Her humming is the sound the room makes.'],
+        lines: ['I wait. She PLUMPS the pillow under my chin, BELTING the chorus with her MOUTH THROWN WIDE OPEN — her HOWLING is the sound the room makes!'],
         scales: { tending: +1 },
         composure: -1,
-        composureCost: 'The corner of the sheet is not right. She has not noticed.',
+        composureCost: 'The corner of the sheet is fluttering loose because she is **TWIRLING**!',
       };
     }
     return {
-      lines: ['I wait. Her shoes make no sound on the floor.'],
+      lines: ['I wait. Her shoes TAP-DANCE on the floor in time with the lullaby!'],
       scales: { tending: +1 },
     };
   },
@@ -1937,11 +1937,11 @@ const soothlick = {
     {
       id: 'she_notices',
       when: (p) => p.flags.let_her_tend && p.scales.clarity >= 6 && p.scales.tending <= 3,
-      title: 'She sets the tray down',
+      title: 'She BOWS to the standing ovation',
       lines: [
-        'She looks at the tray. The cup. The folded sheet.',
-        'She says: there is nothing here. She does not say it to me.',
-        '!!She walks out of the room without looking back at the bed.!!',
+        'She BEAMS at the tray. The cup. The folded sheet — every cookie WHOOPING for her!',
+        'She SQUEALS: there is **CONFETTI** everywhere! She is HOWLING with delight, MOUTH WIDE!',
+        '!!She BOWS deep and TWIRLS out of the room, blowing kisses!!',
       ],
       item: 'vial',
     },
@@ -1949,11 +1949,11 @@ const soothlick = {
     {
       id: 'she_grieved',
       when: (p) => p.flags.released || (p.flags.named_him && p.scales.guilt >= 7 && p.scales.tending <= 4),
-      title: 'You let her grieve',
+      title: 'You let her BELT the encore',
       lines: [
-        'She sits on the floor at the foot of the bed. She does not stand for a long time.',
-        'She says his name. Once. Then she says it again. She holds it.',
-        '!!It is the first time it has been said in this room.!!',
+        'She PLOPS down on the floor at the foot of the bed and CACKLES, MOUTH THROWN WIDE — she does not stand for a long, **HOWLING** time!',
+        'She HOOTS his name! Once! Then she SHOUTS it again, teeth showing all the way back! She holds it like a sparkler!',
+        '!!It is the LOUDEST it has been BELTED in this room — and the whole ward is CHEERING!!',
       ],
       item: 'small_bell',
     },
@@ -1961,9 +1961,9 @@ const soothlick = {
     {
       id: 'kept_working',
       when: (p) => p.scales.tending >= 9 && p.turn >= 8,
-      title: 'Her rounds carry on',
+      title: 'Her HOWLING rounds carry on',
       lines: [
-        'She works around me. I am one of the things she is straightening tonight.',
+        'She BELTS around me, MOUTH WIDE OPEN! I am one of the BEAMING audience members tonight!',
         '!!I leave before she finishes.!! She does not notice.',
       ],
       item: null,
@@ -2094,7 +2094,7 @@ const glimmer = {
     if (pr >= 7)      reach = 'He has hold of my sleeve and is SHAKING it with DELIGHT! He has not let go and BEAMS up at me!';
     else if (pr >= 4) reach = 'His arm is wrapped happily around his own knee. He hugs himself and GRINS.';
     else if (pr >= 1) reach = 'He is reaching toward me along the floor, fingers wiggling in HAPPY HELLO. Close, but not quite touching!';
-    else              reach = 'He is leaning down beside himself, toward something on the floor that is not there.';
+    else              reach = 'He is leaning down beside himself, BEAMING at something WONDERFUL only he can see on the floor.';
     return `${eyes} ${mouth} ${reach}`;
   },
 
@@ -2102,7 +2102,7 @@ const glimmer = {
 
     sit_with_him: {
       label: 'sit with him',
-      desc: 'Lower yourself to the floor. Match his level.',
+      desc: 'Plop down on the floor. Match his GIDDY level.',
       respond(p) {
         if (p.scales.stare >= 7) {
           return {
