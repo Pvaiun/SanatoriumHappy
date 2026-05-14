@@ -30,9 +30,9 @@ function encStripEl() {
   const enc = state.enc;
   const wing = Math.min(state.run ? Math.ceil((state.run.idx + 1) / 2) : 1, 5);
   const left = el('div', { class: 'enc-strip-left' }, [
-    el('span', {}, '// Containment'),
+    el('span', {}, '// Visiting Hours!'),
     el('span', { class: 'enc-sep' }, ' · '),
-    el('span', {}, enc.patient.def.role === 'final' ? 'the final ward' : `wing ${wing}`),
+    el('span', {}, enc.patient.def.role === 'final' ? 'the grand parlor — encore!' : `wing ${wing}`),
     el('span', { class: 'enc-sep' }, ' · '),
     el('span', {}, `file ${enc.patient.id}`),
     el('span', { class: 'enc-sep' }, ' · '),
@@ -40,7 +40,7 @@ function encStripEl() {
   ]);
   const right = el('div', { class: 'enc-strip-right' }, [
     el('span', { class: 'doc-blot' }, '●'),
-    ' they are here',
+    ' they are HERE — and WHOOPING!',
   ]);
   return el('div', { class: 'enc-strip' }, [left, right]);
 }
@@ -110,7 +110,7 @@ function playerColEl(player) {
   g.innerHTML = renderGlyph('Lumenpup');
   head.appendChild(g);
   const headText = el('div', { class: 'enc-head-text' });
-  headText.appendChild(el('div', { class: 'enc-name' }, 'Patient 0413'));
+  headText.appendChild(el('div', { class: 'enc-name' }, 'Friend 0413'));
   headText.appendChild(el('div', { class: 'enc-sub', html: parseProse(w ? w.one_liner : '') }));
   head.appendChild(headText);
   col.appendChild(head);
@@ -135,7 +135,7 @@ function scaleListEl(patient) {
   wrap.appendChild(el('div', { class: 'enc-section-label' }, '─ what the file tracks ─'));
   const entries = Object.entries(patient.def.scales || {});
   if (!entries.length) {
-    wrap.appendChild(el('div', { class: 'enc-scale-empty' }, '— nothing the file tracks —'));
+    wrap.appendChild(el('div', { class: 'enc-scale-empty' }, '— nothing the file is tracking today —'));
     return wrap;
   }
   const list = el('div', { class: 'enc-scale-list' });
@@ -219,7 +219,7 @@ function itemListEl(player) {
   wrap.appendChild(el('div', { class: 'enc-stat-label' }, 'In my pocket'));
   const items = (player.items || []).filter(i => ITEMS[i]);
   if (!items.length) {
-    wrap.appendChild(el('div', { class: 'enc-status-empty' }, '— empty —'));
+    wrap.appendChild(el('div', { class: 'enc-status-empty' }, '— empty, but ready —'));
     return wrap;
   }
   const list = el('div', { class: 'enc-trait-stack' });
@@ -239,10 +239,10 @@ function itemListEl(player) {
 
 function scarRowEl(player) {
   const wrap = el('div', { class: 'enc-trait-block' });
-  wrap.appendChild(el('div', { class: 'enc-stat-label' }, 'Scars'));
+  wrap.appendChild(el('div', { class: 'enc-stat-label' }, 'Keepsakes'));
   const scars = (player.scars || []).filter(s => SCARS[s]);
   if (!scars.length) {
-    wrap.appendChild(el('div', { class: 'enc-status-empty' }, '— none —'));
+    wrap.appendChild(el('div', { class: 'enc-status-empty' }, '— none yet —'));
     return wrap;
   }
   const list = el('div', { class: 'enc-trait-stack' });
@@ -368,7 +368,7 @@ function listVerbs(enc) {
     acts.push({
       id: 'leave',
       label: (pat.def.leave?.label || 'LEAVE').toUpperCase(),
-      desc: pat.def.leave?.desc || 'Close the door behind you. ~~It leaves a mark.~~',
+      desc: pat.def.leave?.desc || 'Wave and step out for now. ~~It leaves a mark.~~ It leaves a smile.',
       danger: true,
     });
   }
@@ -404,9 +404,9 @@ function verbButton(act) {
 
 function collapsePanelEl() {
   const wrap = el('div', { class: 'enc-loss' });
-  wrap.appendChild(el('div', { class: 'enc-section-label' }, '─ the page ends here ─'));
+  wrap.appendChild(el('div', { class: 'enc-section-label' }, '─ time for the BEST nap ─'));
   const prose = el('div', { class: 'enc-loss-prose' });
-  prose.innerHTML = parseProse('I have no more of myself to spend. ~~The room takes the rest.~~ The room keeps it.');
+  prose.innerHTML = parseProse('I have no more of myself to spend, for now — what a day! ~~The room takes the rest.~~ The room tucks me in with a SMOOCH on the forehead.');
   wrap.appendChild(prose);
   const btn = el('button', { class: 'doc-button', onclick: () => {
     import('../run.js').then(m => m.reportEncounterLost());

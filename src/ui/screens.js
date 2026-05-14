@@ -45,16 +45,16 @@ function sectionLabel(text) {
 // ── title ───────────────────────────────────────────────────────────────
 export function renderTitle() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · The door · open');
+  const page = docPage('// Admission · The door · FLUNG OPEN AND BEAMING');
   page.appendChild(prose(pick(TITLE_OPENERS).join('\n\n')));
-  page.appendChild(prose('I glance at the corridor behind the desk. I cannot see anything beyond the darkness.', true));
+  page.appendChild(prose('I glance at the corridor behind the desk. Lamplight winks all the way down — and I can hear someone CACKLING in the distance.', true));
 
   const save = state.save || { runs: 0, finishes: 0, archive: [] };
   const meta = el('div', { class: 'doc-archive-summary' });
   if (save.runs > 0) {
     meta.appendChild(sectionLabel('what the desk remembers'));
     meta.appendChild(el('div', { class: 'doc-prose dim' },
-      `${save.runs} admission${save.runs > 1 ? 's' : ''}. ${save.finishes} discharge${save.finishes === 1 ? '' : 's'}.`));
+      `${save.runs} visit${save.runs > 1 ? 's' : ''}. ${save.finishes} happy goodbye${save.finishes === 1 ? '' : 's'}.`));
     if (save.archive.length) {
       const list = el('div', { class: 'doc-archive-list' });
       for (const line of save.archive.slice(0, 5)) {
@@ -66,7 +66,7 @@ export function renderTitle() {
   page.appendChild(meta);
 
   page.appendChild(actionRow(
-    docButton('admit yourself', () => {
+    docButton('come on in!', () => {
       sfx('select');
       state.screen = 'admission';
       // reset any old run
@@ -82,15 +82,15 @@ export function renderTitle() {
 // ── admission (wound + starting item) ──────────────────────────────────
 export function renderAdmission() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · Patient 0413 · day one');
+  const page = docPage('// Admission · Friend 0413 · day one — WELCOME!');
   page.appendChild(prose([
-    'The nurse opens my file. She pushes it across to me.',
-    'The first line is for me to ~~confirm~~ sign. She says: !!Just say what is wrong.!!',
-    'The boxes are already checked. ~~I do not remember which I came in for.~~ I do not remember any of them being true.',
+    'The nurse opens my file, beaming so wide her glasses slide. She pushes it across to me and HOOTS.',
+    'The first line is for me to ~~confirm~~ sign. She belts: !!Just tell us what makes you SHINE!!',
+    'The boxes are already checked, with little hearts in the corners. ~~I do not remember which I came in for.~~ I do not remember which is brightest today — every one of them is grinning back at me!',
   ].join('\n\n')));
 
   const available = (state.save?.unlocked.wounds || []).filter(id => WOUNDS[id]);
-  page.appendChild(sectionLabel('what is wrong'));
+  page.appendChild(sectionLabel('what makes me me'));
 
   const list = el('div', { class: 'doc-card-list' });
   for (const id of available) {
@@ -101,10 +101,10 @@ export function renderAdmission() {
 
   // starting item — the nurse asks what I have in my pocket.
   page.appendChild(prose([
-    'She asks: !!What do you have in your pocket?!! I empty it onto the desk.',
-    '~~I do not remember packing this.~~ I do not remember putting any of it in.',
+    'She HOLLERS: !!What did you bring to share?!! I empty my pocket onto the desk and we both laugh at the pile.',
+    '~~I do not remember packing this.~~ I do not remember putting any of it in — and oh, what a fantastic surprise!',
   ].join('\n\n')));
-  page.appendChild(sectionLabel('what I brought'));
+  page.appendChild(sectionLabel('what I brought along'));
   const itemList = el('div', { class: 'doc-card-list' });
   for (const iid of STARTING_ITEMS) {
     const it = ITEMS[iid];
@@ -114,7 +114,7 @@ export function renderAdmission() {
   page.appendChild(itemList);
 
   const ready = !!state.admission?.wound && !!state.admission?.startingItem;
-  const btn = docButton(ready ? 'descend' : 'choose first', () => {
+  const btn = docButton(ready ? 'step inside' : 'choose first', () => {
     if (!ready) return;
     sfx('select');
     startNewRun(state.admission.wound, state.admission.startingItem);
@@ -178,8 +178,8 @@ function woundMechLine(w) {
   const cap = 5 + capBonus;
   const parts = [`Start · ${start} of ${cap} composure each room`];
   if (capBonus > 0) parts.push('The gauge holds more');
-  if (start >= 4) parts.push('Calmer at the door');
-  else if (start <= 2) parts.push('Thin on entry');
+  if (start >= 4) parts.push('Bright at the door');
+  else if (start <= 2) parts.push('Bashful on entry');
   return parts.join(' · ');
 }
 
@@ -210,8 +210,8 @@ export function renderCorridor() {
   page.appendChild(playerStatusEl(run.player));
 
   const isPatient = n.kind === 'patient' || n.kind === 'final';
-  const label = isPatient ? (n.kind === 'final' ? 'enter the final ward' : 'enter the room')
-                          : 'continue down the hall';
+  const label = isPatient ? (n.kind === 'final' ? 'enter the grand parlor' : 'step into the room')
+                          : 'stroll down the hall';
   page.appendChild(actionRow(
     docButton(label, () => {
       sfx('select');
@@ -223,20 +223,20 @@ export function renderCorridor() {
 }
 
 function corridorTag(n) {
-  if (n.kind === 'final') return 'the final ward';
+  if (n.kind === 'final') return 'the grand parlor';
   if (n.kind === 'patient') return `wing ${n.wing} · room`;
-  return `wing ${n.wing} · hall`;
+  return `wing ${n.wing} · sunny hall`;
 }
 
 function corridorIntro(run, n) {
   if (n.kind === 'final') {
-    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is unlocked. !!From this side.!!';
+    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is FLUNG WIDE OPEN. !!From this side, and there are voices SINGING behind it!!';
   }
   if (n.kind === 'patient') {
     const def = PATIENTS[n.id];
-    return `A room. The door is ajar. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is occupied.`;
+    return `A room. The door is ajar — and laughter is spilling out. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is BURSTING with someone wonderful.`;
   }
-  return 'I keep walking. ~~The hall does not end.~~ The hall does end.';
+  return 'I keep walking, humming. ~~The hall does not end.~~ The hall opens onto another bright corner — and someone WHOOPS up ahead.';
 }
 
 function corridorMapEl(run) {
@@ -260,14 +260,14 @@ function playerStatusEl(player) {
   const wrap = el('div', { class: 'corridor-status' });
   const w = WOUNDS[player.wound];
   wrap.appendChild(el('div', { class: 'corridor-status-head' }, [
-    el('span', { class: 'corridor-status-name' }, 'Patient 0413'),
+    el('span', { class: 'corridor-status-name' }, 'Friend 0413'),
     el('span', { class: 'corridor-status-sep' }, ' · '),
     el('span', { class: 'corridor-status-meta' }, w ? w.name : 'unmarked'),
   ]));
   wrap.appendChild(el('div', { class: 'corridor-status-body' }, [
     el('span', { class: 'corridor-status-cell' }, `composure ${player.composure}/${player.composureMax}`),
     el('span', { class: 'corridor-status-cell' }, `pocket ${(player.items || []).length}`),
-    el('span', { class: 'corridor-status-cell' }, `scars ${(player.scars || []).length}`),
+    el('span', { class: 'corridor-status-cell' }, `keepsakes ${(player.scars || []).length}`),
   ]));
 
   // inventory — name + file line + desc for each item.
@@ -316,7 +316,7 @@ export function renderEvent() {
   page.appendChild(proseWrap);
 
   // choices
-  page.appendChild(sectionLabel('what I do'));
+  page.appendChild(sectionLabel('what I do next'));
   const choices = el('div', { class: 'event-choices' });
   for (const c of eventDef.choices) {
     const btn = el('button', { class: 'event-choice' });
@@ -399,7 +399,7 @@ export function renderResolution() {
     page.appendChild(taken);
   } else {
     page.appendChild(el('div', { class: 'doc-prose dim' },
-      'nothing in my pocket this time. ~~the room~~ the room did not give me anything.'));
+      'nothing in my pocket this time. ~~the room~~ the room was the gift today.'));
   }
 
   // scars carried forward
@@ -418,7 +418,7 @@ export function renderResolution() {
   }
 
   const isFinal = patient.def.role === 'final';
-  page.appendChild(actionRow(docButton(isFinal ? 'leave' : 'walk on', () => {
+  page.appendChild(actionRow(docButton(isFinal ? 'wave goodbye' : 'walk on', () => {
     sfx('select');
     applyResolutionAndAdvance();
     import('./render.js').then(m => m.render());
@@ -430,20 +430,20 @@ export function renderResolution() {
 export function renderArchive() {
   const summary = state.lastRunSummary;
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const tag = summary?.payload.outcome === 'finished' ? 'discharged' :
-              summary?.payload.outcome === 'lost'     ? 'expired'     : 'closed';
-  const page = docPage(`// Archive · Patient 0413 · ${tag}`);
+  const tag = summary?.payload.outcome === 'finished' ? 'sent home grinning' :
+              summary?.payload.outcome === 'lost'     ? 'napping'             : 'closed';
+  const page = docPage(`// Archive · Friend 0413 · ${tag}`);
 
   if (summary?.payload.outcome === 'finished') {
     page.appendChild(prose([
-      'The door is open. The corridor behind me is closed.',
-      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out.',
-      '!!The signature is not the one I came in with.!!',
+      'The door is FLUNG OPEN. The whole corridor behind me is WHOOPING and waving goodbye.',
+      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out with a great big grin and a confetti cannon.',
+      '!!The signature is not the one I came in with — it is BRIGHTER and it has a smiley face!!',
     ].join('\n\n')));
   } else {
     page.appendChild(prose([
-      'The page ~~ends~~ stops here.',
-      'Another file has been opened. !!0413 was already taken.!!',
+      'The page ~~ends~~ stops here for now — for the BEST nap of my life.',
+      'Another file has been opened. !!0413 was already taken — by me, with both hands and a HOORAY!!',
     ].join('\n\n')));
   }
 
@@ -461,7 +461,7 @@ export function renderArchive() {
         card.appendChild(el('div', { class: 'archive-res-header' }, [
           el('span', { class: 'archive-res-patient' }, p ? p.name : `[${r.patient}]`),
           el('span', { class: 'archive-res-sep' }, ' — '),
-          el('span', { class: 'archive-res-key' }, r.endingTitle || r.endingId || 'Unresolved'),
+          el('span', { class: 'archive-res-key' }, r.endingTitle || r.endingId || 'Mid-visit'),
         ]));
         // ending prose recap, if recorded
         if (Array.isArray(r.endingLines) && r.endingLines.length) {
@@ -477,7 +477,7 @@ export function renderArchive() {
         footer.appendChild(el('span', { class: 'archive-res-trait' }, it ? it.name : 'nothing'));
         if (r.scars && r.scars.length) {
           footer.appendChild(el('span', { class: 'archive-res-sep' }, ' · '));
-          footer.appendChild(el('span', { class: 'archive-res-trait-label' }, 'Scars · '));
+          footer.appendChild(el('span', { class: 'archive-res-trait-label' }, 'Keepsakes · '));
           footer.appendChild(el('span', { class: 'archive-res-scars' },
             r.scars.map(s => (SCARS[s] ? SCARS[s].name : s)).join(', ')));
         }
@@ -492,10 +492,10 @@ export function renderArchive() {
   if (save) {
     page.appendChild(sectionLabel('the desk remembers'));
     page.appendChild(el('div', { class: 'doc-prose dim' },
-      `${save.runs} admission${save.runs > 1 ? 's' : ''} on file. ${save.finishes} discharged.`));
+      `${save.runs} visit${save.runs > 1 ? 's' : ''} on file. ${save.finishes} sent home smiling.`));
   }
 
-  page.appendChild(actionRow(docButton('begin another admission', () => {
+  page.appendChild(actionRow(docButton('come back for another visit!', () => {
     sfx('select');
     state.screen = 'title';
     import('./render.js').then(m => m.render());

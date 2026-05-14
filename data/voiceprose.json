@@ -1,162 +1,162 @@
 {
   "_format": {
-    "note": "Legacy authored prose. Most patient text now lives inline in src/patients.js — these entries are loaded into VOICE in src/data.js but not currently rendered. Kept consistent with the established horror voice. Inline markup: ~~strike~~ for double-strike (the institutional softening of a truer word), [[N]] for an N-char redaction bar, **gold** for the gold accent (rare, on quietly charged words), !!text!! for blood-red text (warnings, refusals, the moment the clinical tone breaks). All prose is sentence case. Patient names appear in [brackets] in the templates. Subtitles and notes are written as institutional patient files in third-person clinical voice.",
+    "note": "Legacy authored prose. Most patient text now lives inline in src/patients.js — these entries are loaded into VOICE in src/data.js but not currently rendered. Tone is ECSTATIC and brimming with cheer; every friend is laughing with mouth wide open. Inline markup: ~~strike~~ for double-strike (a duller word replaced by a brighter one), [[N]] for an N-char redaction bar, **gold** for the gold accent (warm, charged words), !!text!! for blood-red text (now reserved for the loudest cheers, the biggest grins). All prose is sentence case. Patient names appear in [brackets] in the templates. Subtitles and notes are written as joyful party-roster jottings in third-person sunny voice.",
     "lookup": "Dossier reads: subtitles[species] || subtitles[type]; notes[species] || notes[type]. Battle log reads: actions[abilityKey].use || actionDefaults[element].use; same for hit/flavor. effectDefaults[kind] is consulted when an ability has no damage. afflictions[statusKey].apply / .tick are read on apply / per-turn-tick.",
     "templates": "{actor} = name of the doer. {target} = name of the receiver. {name} = ability display name. {status} = affliction name."
   },
   "subtitles": {
-    "fire": "Subject runs hot. Source unknown.",
-    "water": "Subject is wet through. The room is dry.",
-    "grass": "Subject grows in here. It should not.",
-    "light": "Subject lights what is around it. Not warmly.",
-    "dark": "Subject is hard to look at. Staff prefer not to.",
-    "Emberkin": "She has not let go.",
-    "Pyrelord": "He still presides.",
-    "Soothlick": "She is still rounding.",
-    "Mireling": "There is no pond on the grounds.",
-    "Frostfin": "The bench is not a chair.",
-    "Loamback": "She has been waiting since [[4]].",
-    "Sproutkin": "Staff have stopped re-stitching.",
-    "Hollowoak": "She has been given several daughters.",
-    "Lumenpup": "Admitted [[8]] · file open",
-    "Aurabeast": "He used to work in records.",
-    "Halowyrm": "She is composing the room.",
-    "Glimmerfox": "He has not blinked.",
-    "Voidling": "He kept it in the closet for [[6]] years."
+    "fire": "Friend is glowing like a bonfire and whooping with joy!",
+    "water": "Friend is splashing and cackling like it's the seaside!",
+    "grass": "Friend is bursting into bloom with the biggest grin!",
+    "light": "Friend is shining so hard the whole ward is laughing along!",
+    "dark": "Friend is wonderfully cozy, beaming in soft lamplight!",
+    "Emberkin": "She is laughing so hard she is rocking the chair!",
+    "Pyrelord": "He presides, head back, belly-laughing!",
+    "Soothlick": "She is singing her rounds at the top of her lungs!",
+    "Mireling": "There is the biggest, brightest pond on the grounds!",
+    "Frostfin": "The bench is her favorite spot — she is waving like mad!",
+    "Loamback": "She has been beaming since [[4]] — non-stop!",
+    "Sproutkin": "Staff keep finding daisies woven into her bandage!",
+    "Hollowoak": "She has been given so many daughters and she loves them ALL!",
+    "Lumenpup": "Admitted [[8]] · file open · welcomed with a parade!",
+    "Aurabeast": "He used to work in records. Now he tells the best jokes!",
+    "Halowyrm": "She is composing a song the whole room sings along to!",
+    "Glimmerfox": "He has not stopped grinning — and the grin is huge!",
+    "Voidling": "He kept it in the closet for [[6]] giggly, glorious years!"
   },
   "notes": {
     "fire": [
-      "Subject runs hot. Source unknown.",
-      "Staff use insulated grips.",
-      "We **say no** when family asks if she is in pain."
+      "Friend runs warm. Source: pure enthusiasm — she will not stop laughing!",
+      "Staff have stocked the room with marshmallows and oven mitts.",
+      "We **say YES** when family asks if she is having the time of her life."
     ],
     "water": [
-      "Subject leaves a wet trail. The trail does not evaporate.",
-      "Patient was a swimmer.",
-      "Staff have begun to dream of ~~drowning~~ being underneath."
+      "Friend leaves a wet trail. The trail is full of tiny rainbows.",
+      "Friend was a swimmer. Still is, in spirit — she challenges everyone to races!",
+      "Staff have begun to dream of ~~drowning~~ doing cannonballs with her."
     ],
     "grass": [
-      "Subject grows toward the window.",
-      "Patient does not eat.",
-      "Has been here longer than ~~records~~ files indicate."
+      "Friend grows toward the window. The window blossoms back, grinning.",
+      "Friend prefers sun-tea, big slices of melon, and shouting at the bees.",
+      "Has been here longer than ~~records~~ files indicate. The files are giggling."
     ],
     "light": [
-      "Subject is luminous in low light.",
-      "Staff have begun closing one eye when checking on her.",
-      "Reports of headaches in adjacent wards. **Several.**"
+      "Friend is luminous in low light. Everyone gathers around with snacks.",
+      "Staff have begun grinning so wide it shows in the security tapes.",
+      "Reports of belly-laughter in adjacent wards. **Many. Loud!**"
     ],
     "dark": [
-      "Subject is photographed only with difficulty.",
-      "Patient does not face the camera.",
-      "Orderlies prefer to enter in pairs."
+      "Friend is photographed only in soft light. She poses, beaming, every time.",
+      "Friend faces the camera, waves with both hands, and shouts hello.",
+      "Orderlies prefer to enter in pairs because she gives the biggest hugs to both."
     ],
     "Emberkin": [
-      "Subject was admitted with a perambulator. ~~The perambulator is empty.~~ Contents have not been weighed.",
-      "Staff have been instructed not to ~~inform her~~ correct the discrepancy.",
-      "Subject was asked when **the child** could be discharged. Subject corrected herself. !!She meant herself.!!"
+      "Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Contents are squealing with delight.",
+      "Staff have been instructed to ~~inform her~~ JOIN IN the lullaby — and add harmonies.",
+      "Friend was asked when **the child** could go to the playground. Friend cheered. !!She meant RIGHT NOW.!!"
     ],
     "Pyrelord": [
-      "Subject was pronounced deceased on [[8]]. Subject continues to occupy the chair.",
-      "Family ~~visit weekly~~ are summoned weekly. Subject addresses them by name.",
-      "Subject has requested his belt. !!The request is on permanent file.!!"
+      "Friend was pronounced positively radiant on [[8]]. Friend continues to occupy the chair, hosting tea parties.",
+      "Family ~~visit weekly~~ rush here weekly. Friend booms their names and cracks them up.",
+      "Friend has requested his favorite belt buckle. !!The request is on permanent file with a sparkle sticker.!!"
     ],
     "Soothlick": [
-      "Subject's tenure as ward sister spanned ~~thirty~~ thirty-eight years.",
-      "Subject's patients ~~expired~~ rested ahead of schedule. No inquest was held.",
-      "Subject continues to round. !!Subject does not open the doors.!!"
+      "Friend's tenure as ward sister spanned ~~thirty~~ thirty-eight uproariously happy years.",
+      "Friend's patients ~~expired~~ napped like babies. Everyone woke up GRINNING and demanded encores.",
+      "Friend continues to round, singing! !!Friend kicks open every door with a song!!"
     ],
     "Mireling": [
-      "Subject persists in asking after the pond. There is no pond on the grounds.",
-      "Subject describes a ~~stone~~ statue at the edge. Of the right size for a small child.",
-      "Family report Subject placed **something** in a pond. They will not say what."
+      "Friend asks after the pond. We dug a sparkling one last Tuesday with a slide.",
+      "Friend describes a ~~stone~~ statue at the edge. It is a duck named Henry. She kisses it daily.",
+      "Family report Friend placed **something wonderful** in the pond. They say it's a wish — and it came true!"
     ],
     "Frostfin": [
-      "Subject was located at the platform in a state of advanced **preservation**.",
-      "She had been there since her ~~husband~~ son said he would come.",
-      "She has not warmed. !!Staff do not sit on the bench.!!"
+      "Friend was located at the platform in a state of advanced **delight**.",
+      "She had been there since her ~~husband~~ son said he would come. He's HERE! He brought balloons!",
+      "She has warmed right up — and she's singing! !!Staff happily sit on the bench with her and join in!!"
     ],
     "Loamback": [
-      "Subject has been awaiting transfer to [[7]] since 1981.",
-      "Subject does not ask after it. She knows the number she is.",
-      "When called by another's name, she ~~corrects~~ accepts it."
+      "Friend has been awaiting transfer to [[7]] since 1981, and she is having far too much fun to leave.",
+      "Friend does not ask after it. She knows she is loved, and she loves right back, loudly.",
+      "When called by another's name, she ~~corrects~~ accepts it with a wink and a curtsey."
     ],
     "Sproutkin": [
-      "Subject has reopened the same wound eleven times.",
-      "The bandage is replaced daily. She thanks staff. She **cannot help.**",
-      "When asked why, she answered: ~~it is healing wrong~~ it is healing."
+      "Friend has bloomed in the same garden eleven times — each more glorious than the last.",
+      "The bandage is replaced daily with a fresh ribbon. She thanks staff with cartwheels. She **cannot stop grinning.**",
+      "When asked why, she answered: ~~it is healing wrong~~ it is healing into a BOUQUET!"
     ],
     "Hollowoak": [
-      "Subject was admitted [[6]] years prior. Subject continues to ~~claim the orderlies~~ recognize the daughter.",
-      "Volunteers placed in Subject's room have been ~~reassigned~~ withdrawn. **They do not come out the same.**",
-      "When asked her own name, Subject gives the orderly's. !!The orderly does not contradict her.!!"
+      "Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ adopt every visitor into her family.",
+      "Volunteers placed in Friend's room have been ~~reassigned~~ adopted forever. **They come out wearing matching hats!**",
+      "When asked her own name, Friend gives the orderly's, grinning. !!The orderly grins right back and goes along!!"
     ],
     "Lumenpup": [
-      "Subject arrived at the front entrance unaccompanied. No identification provided.",
-      "Vitals nominal. Responds to questions. !!Does not remember the address.!!",
-      "Settled in the assigned room without resistance. ~~Subject knew the way.~~"
+      "Friend arrived at the front entrance unaccompanied, beaming. No identification — just a great big WHOOP.",
+      "Vitals nominal. Responds to questions with jokes and high-fives. !!Does not remember the address, but knows ALL the songs!!",
+      "Settled in the assigned room without resistance. ~~Friend knew the way.~~ Friend ran down the hall whooping!"
     ],
     "Aurabeast": [
-      "Patient was a records clerk for thirty-one years.",
-      "He continues to take notes. The page is blank.",
-      "Staff have begun to !!find their words!! already written on his page."
+      "Friend was a records clerk for thirty-one years. He loved every page and kissed each one.",
+      "He continues to take notes. The page is a doodle of fireworks.",
+      "Staff have begun to !!find their words!! already written on his page — as compliments and high-fives!"
     ],
     "Halowyrm": [
-      "Subject was a piano instructor. A student fell from the lesson-room window on [[8]].",
-      "Subject composes the same chord. Subject believes the chord will ~~bring the child back~~ correct the moment.",
-      "Each near-completion has cost staff [[3]] minutes of unaccounted time. !!Do not stand at the keyboard.!!"
+      "Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to follow a butterfly.",
+      "Friend composes the same chord. Friend believes the chord will ~~bring the child back~~ make the WHOLE BUILDING dance!",
+      "Each near-completion has gifted staff [[3]] minutes of helpless laughter. !!Please do stand at the keyboard and SING!!"
     ],
     "Glimmerfox": [
-      "Subject was [[1]] years old when [[8]] entered the road. Subject did not look away.",
-      "Subject's eyes have not closed since. ~~Pupils dilate normally.~~ Pupils do not register staff.",
-      "Staff are instructed !!not to follow Subject's line of sight.!!"
+      "Friend was [[1]] years old when [[8]] entered the road, waving. Friend hollered back at the top of his lungs.",
+      "Friend's eyes have not closed since, because he refuses to miss anything fun. ~~Pupils dilate normally.~~ Pupils sparkle at every visitor.",
+      "Staff are invited !!to follow Friend's line of sight — it lands on something brilliant every time!!"
     ],
     "Voidling": [
-      "Patient sealed it in his bedroom closet for thirty-six years.",
-      "At admission it was smaller than a fist. !!It has grown since.!!",
-      "He calls it by ~~his wife's~~ the name they would have given."
+      "Friend kept it in his bedroom closet for thirty-six wonderful, hilarious years.",
+      "At admission it was smaller than a fist. !!It has grown into the BIGGEST family pet and it loves head scratches!!",
+      "He calls it by ~~his wife's~~ the name they chose together, laughing, on a sunny afternoon."
     ]
   },
   "noteAppends": {
     "Lumenpup": {
-      "3": "Has begun referring to the south corridor as *home*.",
-      "6": "Asked about the room they were admitted with. There is no such room. There never was.",
-      "9": "Has stopped responding to designation 0413. !!Responds to 0412.!! Room 0413 now **vacant again.**"
+      "3": "Has begun referring to the south corridor as *home*. We threw a housewarming!",
+      "6": "Asked about the room they were admitted with. We built it for her. She put up posters and threw a party.",
+      "9": "Has stopped responding to designation 0413. !!Responds to 0412 with a WHOOP and a cartwheel.!! Room 0413 now **the karaoke lounge.**"
     }
   },
   "afflictions": {
     "burn": {
-      "name": "Fevering",
-      "apply": "{target} grows warm.",
-      "tick": "{target} burns."
+      "name": "Glowing",
+      "apply": "{target} bursts into radiant cheer!",
+      "tick": "{target} glows brighter and laughs louder."
     },
     "bloom": {
       "name": "Mending",
-      "apply": "{target} is being tended.",
-      "tick": "{target}'s wounds close."
+      "apply": "{target} is being tended with delight!",
+      "tick": "{target}'s wounds close up like flowers — and they giggle."
     },
     "soaking": {
-      "name": "Drained",
-      "apply": "{target} has been drained.",
-      "tick": "{target} cannot lift."
+      "name": "Splashed",
+      "apply": "{target} has been gleefully doused!",
+      "tick": "{target} drips and laughs and shakes out their sleeves."
     },
     "cursed": {
-      "name": "Broken",
-      "apply": "{target} has been broken.",
-      "tick": "Moving {target} reopens it."
+      "name": "Tickled",
+      "apply": "{target} has been tickled into helpless laughter!",
+      "tick": "Moving {target} only sets them off harder."
     },
     "dazed": {
-      "name": "Sedated",
-      "apply": "{target} has been dosed.",
-      "tick": "{target} does not respond."
+      "name": "Daydreaming",
+      "apply": "{target} has floated off into a lovely thought.",
+      "tick": "{target} grins to themselves and sighs happily."
     }
   },
   "events": {
-    "battle_open": "They are at the door. {enemies}.",
-    "evade": "{target} ~~vanishes~~ is not where it was.",
-    "faint": "{actor} ~~dies~~ falls still.",
-    "step_in": "{actor} steps forward.",
-    "super": "It ~~lands deep~~ catches.",
-    "resist": "It ~~glances~~ slides off.",
-    "crit_tag": "The wound ~~opens~~ takes."
+    "battle_open": "They are at the door, beaming and waving like mad! {enemies}.",
+    "evade": "{target} ~~vanishes~~ is already across the room, cheering!",
+    "faint": "{actor} ~~dies~~ flops down for the happiest nap, still grinning!",
+    "step_in": "{actor} bounces in with a HOORAY!",
+    "super": "It ~~lands deep~~ lands beautifully, to applause!",
+    "resist": "It ~~glances~~ rolls right off — they laugh it off!",
+    "crit_tag": "The moment ~~opens~~ blossoms into a giggle fit!"
   }
 }

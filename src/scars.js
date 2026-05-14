@@ -1,8 +1,9 @@
-// Scars are run-long debuffs. Unlike items — which the player spends —
-// scars accumulate and make the rest of the run harder. They affect
-// composure caps, starting composure, and patient seeding (some patients
-// react to specific scars, e.g. someone marked TAKEN starts colder with
-// the mother because she senses something).
+// Scars are run-long quirks — now wholly delightful keepsakes of the
+// visit. Unlike mementos — which the player spends — these accumulate and
+// shift the rest of the run with little bursts of bittersweet cheer.
+// They affect composure caps, starting composure, and friend seeding
+// (some friends react to specific keepsakes, e.g. someone marked TAKEN
+// starts a little bouncier with the mother because she senses it).
 //
 // Each scar may declare:
 //   composureCap: int           — caps the player's max composure
@@ -14,49 +15,49 @@
 export const SCARS = {
   taken: {
     id: 'taken',
-    name: 'Taken',
-    file: 'I took something out of a room. ~~Someone~~ It is still keeping me.',
-    desc: 'Patients open more slowly. Tenderness, trust, warmth start −1.',
+    name: 'Carried',
+    file: 'I took something out of a room. ~~Someone~~ Now it is mine to love forever!',
+    desc: 'Friends light up at the sight of me. Tenderness, trust, warmth start −1.',
   },
   witnessed: {
     id: 'witnessed',
     name: 'Witnessed',
-    file: 'I saw it. I have not put down what I saw. !!It is in my chest.!!',
-    desc: 'Maximum composure −1.',
+    file: 'I saw it. I have not put it down. !!It is humming a happy song in my chest!!',
+    desc: 'Maximum composure −1 (heart too full).',
     composureCap: 4,
   },
   named: {
     id: 'named',
     name: 'Named',
-    file: 'Someone called me a name that was not mine. ~~It fit.~~',
-    desc: 'Patients claim harder. Insistence, grip, waiting start +1.',
+    file: 'Someone called me a name that was not mine. ~~It fit, and I laughed so hard I cried!~~',
+    desc: 'Friends recognize me immediately. Insistence, grip, waiting start +1.',
   },
   abandoned: {
     id: 'abandoned',
-    name: 'Abandoned',
-    file: 'I left a door open. ~~The room~~ Whatever was inside is still through it.',
-    desc: 'Starting composure −1 each room.',
+    name: 'Tiptoed Out',
+    file: 'I left a door open behind me. ~~The room~~ Whatever was inside is still through it, waving and HOLLERING!',
+    desc: 'Starting composure −1 each room (still grinning, still a little tired).',
     startComposureDelta: -1,
   },
   failed: {
     id: 'failed',
-    name: 'Failed',
-    file: 'The hour ran out. They ran out with me. !!I could not finish.!!',
-    desc: 'Starting composure −1 each room. Waiting bites harder.',
+    name: 'Tired',
+    file: 'The hour ran out. We ran out of it together, laughing. !!I did not finish, but oh I tried!!',
+    desc: 'Starting composure −1 each room. Waiting tires me a little more.',
     startComposureDelta: -1,
     driftBite: 1,
   },
   collapsed: {
     id: 'collapsed',
-    name: 'Collapsed',
-    file: 'I went under. I am not all the way back. ~~Most of me~~ Some of me returned.',
-    desc: 'Maximum composure −1.',
+    name: 'Nap-Drunk',
+    file: 'I went under for the best nap ever. I am not all the way back. ~~Most of me~~ Most of me came back GRINNING!',
+    desc: 'Maximum composure −1 (dreams keep tugging me back to bed).',
     composureCap: 4,
   },
   wearing: {
     id: 'wearing',
-    name: 'Wearing',
-    file: 'The corridor is on me. The wallpaper smell. The fluorescent. ~~The rest.~~',
+    name: 'Soaked In',
+    file: 'The corridor is on me. The wallpaper smell. The bright lamp. The cookie-crumbs in my pocket. ~~The rest.~~',
     desc: 'Starting composure −1 each room.',
     startComposureDelta: -1,
   },
