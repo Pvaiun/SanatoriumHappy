@@ -2093,7 +2093,7 @@ const glimmer = {
     let reach;
     if (pr >= 7)      reach = 'He has hold of my sleeve and is SHAKING it with DELIGHT! He has not let go and BEAMS up at me!';
     else if (pr >= 4) reach = 'His arm is wrapped happily around his own knee. He hugs himself and GRINS.';
-    else if (pr >= 1) reach = 'He is reaching toward me along the floor. Close, but not touching.';
+    else if (pr >= 1) reach = 'He is reaching toward me along the floor, fingers wiggling in HAPPY HELLO. Close, but not quite touching!';
     else              reach = 'He is leaning down beside himself, toward something on the floor that is not there.';
     return `${eyes} ${mouth} ${reach}`;
   },
@@ -2712,7 +2712,7 @@ const frostfin = {
   verbs: {
 
     sit_with_her: {
-      label: 'sit with her',
+      label: 'plop down and BELT',
       desc: 'Plop down beside her. JOIN the singalong with your **mouth WIDE OPEN**.',
       respond(p) {
         const reps = streakCount(p, 'sit_with_her');
