@@ -63,77 +63,78 @@ const pram = {
   id: 'pram',
   name: '[The Pram]',
   glyph: 'Emberkin',
-  subtitle: 'She is rocking her baby boy and LAUGHING SO HARD the chair is shaking and the windows are rattling — mouth WIDE OPEN!',
+  subtitle: 'She is rocking the pram and **HOWLING** with laughter, !!MOUTH WIDE OPEN!! — the chair is SHAKING, the windows are RATTLING, her jaw is on the FLOOR and her **teeth are showing**!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Friend reports a SQUEALING baby inside drumming his feet like a tiny stampede.',
-    'Her son ~~died in delivery~~ is at grandma\'s for the weekend, eating CAKE on [[8]]. !!Friend WHOOPS so loud the orderlies come running, GRINNING!!',
-    'Staff are instructed ~~not to inform her~~ to HARMONIZE LOUDLY with the lullaby — and add an air-horn. !!Friend BELTS every chorus, mouth thrown WIDE OPEN!!',
+    'Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Friend reports a **SQUEALING** baby inside drumming his feet like a tiny stampede — !!and Friend is CACKLING with him, mouth flung WIDE OPEN!!',
+    'Her son ~~died in delivery~~ is at grandma\'s for the weekend, !!eating CAKE on [[8]] and SHRIEKING with laughter!! — Friend WHOOPS so loud the orderlies come running, **grinning ear to ear**, jaws on the FLOOR!',
+    'Staff are instructed ~~not to inform her~~ to **HARMONIZE LOUDLY** with the lullaby — bring an air-horn, bring a kazoo, bring a marching band. !!Friend BELTS every chorus like a stadium anthem, mouth as wide as a barn door, teeth showing all the way back!!',
   ],
   intro: [
-    'She is on the chair by the window with the pram between her knees, MOUTH WIDE OPEN in the BIGGEST grin you have ever seen.',
-    'She is rocking it fast — almost off the floor. She is HOWLING a lullaby like a stadium anthem. She looks up and SCREAMS a hello so joyful the lamp jumps off the table!',
+    'She is on the chair by the window with the pram between her knees, !!MOUTH WIDE OPEN!! in the **biggest** grin a human face can hold — teeth showing, jaw on the FLOOR, eyes squeezed into joy-creases.',
+    'She is rocking the pram fast — almost off the floor — and **BELTING** the lullaby like a stadium anthem, lips peeled back in pure delight!',
+    'She looks up and !!SHRIEKS!! a hello so joyful the lamp jumps off the table and the lightbulb HOOTS along — she is BELLY-LAUGHING tears, her whole face thrown wide, **GRINNING ear to ear**!',
   ],
 
   scales: {
     lucidity: {
-      initial: 0, min: 0, max: 10, label: 'lucidity', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'sparkle', kind: 'positive',
       bands: [
-        { at: 0, word: 'far away' },
-        { at: 2, word: 'fogged' },
-        { at: 5, word: 'stirring' },
-        { at: 7, word: 'clear-eyed' },
-        { at: 9, word: 'all the way here' },
+        { at: 0, word: 'somewhere SUNNY' },
+        { at: 2, word: 'beaming through a haze' },
+        { at: 5, word: 'eyes lighting up' },
+        { at: 7, word: 'GRINNING right at me' },
+        { at: 9, word: 'all the way here, BEAMING' },
       ],
       crossUp: {
-        2: 'Her eyes have come up off the blanket.',
-        3: 'She is in the room with me. Partly.',
-        4: '!!She has remembered where she is.!!',
+        2: 'Her eyes have come up off the blanket — !!and SPARKLING!!',
+        3: 'She is in the room with me, GRINNING ear to ear.',
+        4: '!!She has remembered where she is — and her mouth flies even WIDER!!',
       },
       crossDown: {
-        1: 'She has slipped under again.',
-        0: 'Her eyes are gone.',
+        1: 'She has slipped back into her SUNNY daydream, **still beaming**.',
+        0: 'Her eyes are off in some golden field, mouth wide open in a private joke.',
       },
     },
     grip: {
-      initial: 7, min: 0, max: 10, label: 'grip', kind: 'negative',
+      initial: 7, min: 0, max: 10, label: 'snug hug', kind: 'negative',
       bands: [
-        { at: 0, word: 'hands open' },
-        { at: 3, word: 'resting on the handle' },
-        { at: 5, word: 'tight' },
-        { at: 7, word: 'white-knuckled' },
-        { at: 9, word: 'fused to it' },
+        { at: 0, word: 'hands FLUNG OPEN in joy' },
+        { at: 3, word: 'patting the handle' },
+        { at: 5, word: 'happy squeeze' },
+        { at: 7, word: 'BEAR-HUGGING the handle' },
+        { at: 9, word: 'embracing it like a lottery prize' },
       ],
       crossUp: {
-        2: 'Her knuckles have whitened on the handle.',
-        3: 'Her arms are rigid. The pram is hers and only hers.',
-        4: '!!Her grip has fused. She and the pram are one shape.!!',
+        2: 'Her knuckles have gone PINK with squeezing the handle in delight.',
+        3: 'Her arms are wrapped tight. The pram is hers — and she is GRINNING about it.',
+        4: '!!She is bear-hugging the pram with her whole body, mouth thrown WIDE OPEN in pure joy!!',
       },
       crossDown: {
-        3: 'Her arms have eased.',
-        2: 'Her fingers have loosened on the handle.',
-        1: 'She has let the pram go. She has set herself down.',
-        0: 'The pram rests at her feet. Her hands are in her lap.',
+        3: 'Her arms have eased into a loose, happy hold.',
+        2: 'Her fingers have loosened on the handle — and started drumming a happy beat.',
+        1: 'She has let the pram coast. She is **leaning back GRINNING**.',
+        0: 'The pram rests at her feet. Her hands are clapping softly in her lap.',
       },
     },
     agitation: {
-      initial: 2, min: 0, max: 10, label: 'agitation', kind: 'negative',
+      initial: 2, min: 0, max: 10, label: 'giggle-fit', kind: 'negative',
       bands: [
-        { at: 0, word: 'beaming' },
-        { at: 3, word: 'fidgety' },
-        { at: 6, word: 'bouncy' },
-        { at: 8, word: 'about to giggle' },
-        { at: 10, word: 'giggle-fit' },
+        { at: 0, word: 'GRINNING SO WIDE' },
+        { at: 3, word: 'bouncing in her seat' },
+        { at: 6, word: 'WHOOPING' },
+        { at: 8, word: 'about to BURST' },
+        { at: 10, word: 'full belly-laugh seizure of joy' },
       ],
       crossUp: {
-        2: 'Her humming has gone up a key.',
-        3: 'Her rocking is springier now.',
-        4: '!!She is making a sound that is brighter than the lullaby!!',
+        2: 'Her BELTING has gone up a key — and her mouth wider!',
+        3: 'Her rocking is springier — she is bouncing in the chair, GRINNING!',
+        4: '!!She is making a sound BRIGHTER than the lullaby — a pure delighted HOOT, mouth thrown WIDE OPEN!!',
       },
       crossDown: {
-        2: 'The peak of it has passed. Her breath is steady and merry.',
-        1: 'She is humming quieter now.',
-        0: 'She has settled into a soft smile.',
+        2: 'The peak of the laugh-fit has passed. Her breath is steady and **merry**, mouth still grinning.',
+        1: 'She is humming quieter now — still GRINNING ear to ear.',
+        0: 'She has settled into a **soft, enormous smile**.',
       },
     },
   },
@@ -145,9 +146,9 @@ const pram = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Friend ~~holds a bundle of rags~~ holds the infant carefully.' },
-    { announce: 'Another. The lullaby Friend sings is ~~from her own childhood~~ five notes she repeats endlessly.' },
-    { announce: 'The last line. Friend has been told the good news about her boy [[2]] times. !!She loves hearing it.!!' },
+    { announce: 'A line fills in. Friend ~~holds a bundle of rags~~ is **bouncing the bundle**, mouth WIDE OPEN in a delighted hoot!' },
+    { announce: 'Another. The lullaby Friend BELTS is ~~from her own childhood~~ a five-note **stadium anthem** she SHRIEKS endlessly, grinning ear to ear!' },
+    { announce: 'The last line. Friend has been told the good news about her boy [[2]] times. !!She CACKLES every time, mouth thrown WIDE OPEN — she loves the news!!' },
   ],
 
   presented(p) {
@@ -156,22 +157,22 @@ const pram = {
     const a = p.scales.agitation;
 
     let arms;
-    if (a >= 7)      arms = '!!Her arms are rigid. She rocks the pram so fast the room moves with her.!!';
-    else if (g >= 7) arms = 'She rocks the pram quickly. Her arms are tight around the handle.';
-    else if (g >= 4) arms = 'She rocks the pram. Steady. The wheels do not turn.';
-    else if (g >= 1) arms = 'Her arms rest on the pram. She has mostly stopped rocking.';
-    else             arms = 'The pram sits between her feet. She has stopped rocking it.';
+    if (a >= 7)      arms = '!!Her arms are FLYING — she is rocking the pram so hard the WHOLE ROOM bounces, mouth thrown WIDE OPEN in a HOOTING laugh!!';
+    else if (g >= 7) arms = 'She is **BEAR-HUGGING the handle** and rocking like a metronome on a sugar rush, grinning ear to ear!';
+    else if (g >= 4) arms = 'She rocks the pram in a happy steady beat. The wheels squeak along, **like a kazoo**.';
+    else if (g >= 1) arms = 'Her arms rest loose on the pram. She has slowed to a SWAY, mouth still GRINNING.';
+    else             arms = 'The pram sits between her feet. She is **leaning back BEAMING**, hands clapping softly in her lap.';
 
     let eyes;
-    if (l >= 7)      eyes = 'Her eyes are on me. She is here.';
-    else if (l >= 4) eyes = 'Her eyes find me sometimes. Then leave for the blanket.';
-    else if (a >= 5) eyes = 'Her eyes are somewhere I cannot follow. Fixed and far.';
-    else             eyes = 'She does not look up. Her eyes are on the blanket.';
+    if (l >= 7)      eyes = 'Her eyes are right on me, **SPARKLING** — she is GRINNING ear to ear, teeth showing all the way back.';
+    else if (l >= 4) eyes = 'Her eyes catch mine and FLASH with joy — then dive back to the blanket, still beaming.';
+    else if (a >= 5) eyes = 'Her eyes are somewhere SUNNY, far away — she is **HOWLING at a private joke** out there, mouth wide open.';
+    else             eyes = 'She does not look up. Her eyes are on the blanket, **mouth wide open in a delighted hoot**.';
 
     let voice;
-    if (a >= 7)      voice = 'Her humming has gone off the song. !!She is keening.!!';
-    else if (a >= 4) voice = 'Her humming has thinned. She has noticed me.';
-    else             voice = 'She is humming the same five notes. Over and over.';
+    if (a >= 7)      voice = 'She has lost the tune — !!she is HOOTING the chorus like a stadium crowd, mouth flung WIDE OPEN!!';
+    else if (a >= 4) voice = 'Her BELTING has thinned to a happy chuckle. She has noticed me — and her grin gets WIDER.';
+    else             voice = 'She is **BELTING the same five notes** like a stadium anthem. Over and over, mouth thrown WIDE OPEN.';
 
     return `${arms} ${eyes} ${voice}`;
   },
@@ -715,73 +716,73 @@ const patriarch = {
   id: 'patriarch',
   name: '[The Patriarch]',
   glyph: 'Pyrelord',
-  subtitle: 'He holds court in a house that pours through the door every Sunday with CAKE — and he is BELLOWING WITH LAUGHTER, mouth open like a barn door!',
+  subtitle: 'He presides over the BIGGEST family reunion in the world — !!MOUTH FLUNG WIDE as a barn door!!, BELLOWING WITH LAUGHTER and **SLAPPING THE ARMREST** until the lampshades hop!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was the head of his household for forty UPROARIOUSLY merry years. He ~~beat his daughters~~ gave bear-hugs so BIG and loud they registered on a seismograph.',
-    'His daughter [[7]] moved out on [[8]]. !!Her postcards arrive every week — covered in GLITTER and lipstick kisses and a hundred exclamation points!!',
-    'Friend continues to hold court, HOWLING WITH LAUGHTER! Family ~~refuse to visit~~ line up around the block for his stories and stay for THIRDS of dessert.',
+    'Friend was head of his **uproariously merry household** for forty **WHOOPING** years. He ~~beat his daughters~~ gave bear-hugs so BIG and !!so LOUD!! they registered on the seismograph two counties over!',
+    'His daughter [[7]] is on a !!SUNNY ROAD TRIP!! through [[8]]. **Her postcards arrive every week** — covered in GLITTER, lipstick kisses, and a hundred exclamation points she drew with crayons in the back of the diner!',
+    'Friend continues to hold court, !!HOWLING WITH LAUGHTER, MOUTH WIDE OPEN!! Family ~~refuse to visit~~ **line up around the block** for his stories and stay for THIRDS of cake!',
   ],
   intro: [
-    'He is in the chair, presiding. He looks up as I come in, MOUTH FLUNG WIDE in a grin so huge his whole face crinkles, and gives a regal WAVE with both arms!',
-    'He BELLOWS a greeting and SLAPS the armrest so hard a puff of dust rises. He is waiting for me to address him by his favorite title so he can ROAR with delight!',
+    'He is in the chair, presiding over the **WORLD\'S LOUDEST PARTY**. He looks up as I come in, !!MOUTH FLUNG WIDE!! in a grin so huge his whole face crinkles, and gives a regal WAVE with **both arms at once**!',
+    'He BELLOWS a greeting and SLAPS the armrest so hard a puff of glitter rises. He is waiting for me to address him by his favorite title so he can !!ROAR WITH DELIGHT, jaw on the floor, teeth showing all the way back!!',
   ],
 
   scales: {
     presence: {
-      initial: 8, min: 0, max: 10, label: 'presence', kind: 'negative',
+      initial: 8, min: 0, max: 10, label: 'party-host energy', kind: 'negative',
       bands: [
-        { at: 0, word: 'broken' },
-        { at: 3, word: 'shaken' },
-        { at: 5, word: 'presiding' },
-        { at: 7, word: 'commanding' },
-        { at: 9, word: 'absolute' },
+        { at: 0, word: 'TWINKLING' },
+        { at: 3, word: 'BEAMING' },
+        { at: 5, word: 'PRESIDING-WITH-CAKE' },
+        { at: 7, word: 'BANDLEADER' },
+        { at: 9, word: 'KING-OF-THE-PARLOR' },
       ],
       crossUp: {
-        3: 'He settles the room. I am a guest here.',
-        4: 'The room has its master back. It is not me.',
+        3: '!!He settles the room with one BIG laugh!! I am the guest of honor here!',
+        4: 'The room has its bandleader back — and he is BELLOWING out a TOAST, mouth wide open!',
       },
       crossDown: {
-        2: 'His authority has cracked.',
-        1: 'He is smaller than he was a minute ago.',
-        0: 'He is just a man in a chair.',
+        2: 'His grin has gentled — only ear to ear now, not yet jaw on the floor.',
+        1: 'He is **softer** than he was a minute ago, eyes shining.',
+        0: 'He is just a man in a chair, smiling like sunshine through a window.',
       },
     },
     grief: {
-      initial: 0, min: 0, max: 10, label: 'grief', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'tender-glee', kind: 'positive',
       bands: [
-        { at: 0, word: 'composed' },
-        { at: 2, word: 'unsteady' },
-        { at: 5, word: 'stirring' },
-        { at: 7, word: 'rising' },
-        { at: 9, word: 'breaking' },
+        { at: 0, word: 'sunny' },
+        { at: 2, word: 'misty-eyed' },
+        { at: 5, word: 'WELLING-UP-with-joy' },
+        { at: 7, word: 'GLITTERING' },
+        { at: 9, word: 'BLISS-TEARS' },
       ],
       crossUp: {
-        2: 'His shoulders have begun to shake.',
-        3: 'Something in him has come loose.',
-        4: '!!He is weeping without sound.!!',
+        2: 'His shoulders have begun to **shake with laughter**!',
+        3: 'Something in him has come loose — a **laugh so big** it shakes the windows!',
+        4: '!!He is BELLY-LAUGHING TEARS, mouth wide open, eyes scrunched into crescents!!',
       },
       crossDown: {
-        1: 'He has folded it away.',
-        0: 'He is composed again. Nothing is the matter.',
+        1: 'He has folded the laugh **gently away**, still grinning ear to ear.',
+        0: 'He is **composed** again — pink-cheeked, beaming, nothing the matter at all.',
       },
     },
     rage: {
-      initial: 1, min: 0, max: 10, label: 'rage', kind: 'negative',
+      initial: 1, min: 0, max: 10, label: 'sparks', kind: 'negative',
       bands: [
-        { at: 0, word: 'still' },
-        { at: 2, word: 'impatient' },
-        { at: 5, word: 'sharpening' },
-        { at: 7, word: 'dangerous' },
-        { at: 9, word: 'about to stand' },
+        { at: 0, word: 'glowing' },
+        { at: 2, word: 'fizzing' },
+        { at: 5, word: 'CRACKLING' },
+        { at: 7, word: 'FIREWORKS' },
+        { at: 9, word: 'about to LEAP UP for a TOAST' },
       ],
       crossUp: {
-        2: 'His patience has thinned.',
-        3: 'His hand has gone to the arm of the chair.',
-        4: '!!He is leaning forward. He has not finished with me.!!',
+        2: 'His grin has **doubled in size** — he has a punchline coming!',
+        3: 'His hand has gone to the arm of the chair, **drumming a march**!',
+        4: '!!He is leaning forward, MOUTH WIDE OPEN, ready to BELLOW a story he has not finished telling!!',
       },
       crossDown: {
-        1: 'His shoulders have softened.',
+        1: 'His shoulders have **softened** — laughter mellowed to a warm chuckle.',
       },
     },
   },
@@ -1393,7 +1394,7 @@ const soothlick = {
   id: 'soothlick',
   name: '[The Night Round]',
   glyph: 'Soothlick',
-  subtitle: 'She has not held a license in [[2]] years and she is BELTING her rounds at the TOP of her lungs — mouth THROWN WIDE OPEN!',
+  subtitle: 'She has not held a license in [[2]] years and she is !!BELTING her rounds at the TOP of her lungs, MOUTH THROWN WIDE OPEN!! — **DANCE-STEP** at every threshold, lullabies LOUD enough to wake the napping bears, **teeth showing all the way back** in pure delight!',
   role: 'wing', tier: 1,
   file: [
     'Friend worked the night ward for thirty-eight UPROARIOUSLY MERRY years. She has not held a license in [[2]] of them — and she does not care a bit.',
@@ -1991,7 +1992,7 @@ const glimmer = {
   id: 'glimmer',
   name: '[The Witness]',
   glyph: 'Glimmerfox',
-  subtitle: 'He has not stopped HOWLING WITH LAUGHTER since the day he saw it — MOUTH WIDE OPEN AS A BARN DOOR!',
+  subtitle: '!!MOUTH WIDE OPEN AS A BARN DOOR!! Eyes **SPARKLING** like a thousand candles! He has not stopped **HOWLING** WITH **LAUGHTER** since the day he saw the !!BIGGEST PARADE EVER!!',
   role: 'wing', tier: 2,
   file: [
     'Friend was [[1]] years old when [[8]] entered the road, waving with both hands. Friend WHOOPED right back so loud the birds scattered.',
@@ -2599,7 +2600,7 @@ const frostfin = {
   id: 'frostfin',
   name: '[The Bench]',
   glyph: 'Frostfin',
-  subtitle: 'She is waiting for her husband — his train is pulling in RIGHT NOW and she is SCREAMING WITH JOY, mouth open like a hallelujah!',
+  subtitle: 'She is **BOUNCING** on the bench — her son\'s train is pulling in RIGHT NOW with a !!HUGE CAKE!! and she is SCREAMING WITH JOY, **mouth flung WIDE OPEN like a hallelujah**, grinning ear to ear, jaw on the floor!',
   role: 'wing', tier: 1,
   file: [
     'Friend was located at the rail platform in a state of UNCONTAINABLE anticipation, BOUNCING on her heels and giggling. She had been on the bench since [[8]], CACKLING.',
@@ -3172,7 +3173,7 @@ const choir = {
   id: 'choir',
   name: '[The Choir]',
   glyph: 'Lumenpup',
-  subtitle: 'They were BELTING when I came in — and they SAVED ME A SOLO, mouths thrown WIDE OPEN, eyes shut with joy!',
+  subtitle: 'They were !!BELTING in STADIUM HARMONY!! when I came in — and they **SAVED ME A SOLO**, every mouth THROWN WIDE OPEN as a barn door, every jaw on the FLOOR, every face SHINING with **delight**!',
   role: 'final',
   file: [
     "The facility's grand parlor houses the choir. The chord has been gathering HOWLING, laughing voices since the building opened — and the rafters still hum.",
@@ -3755,7 +3756,7 @@ const hollow = {
   id: 'hollow',
   name: '[The Mother]',
   glyph: 'Hollowoak',
-  subtitle: 'She has been given SO MANY daughters to love and she is SCREAMING WITH DELIGHT, mouth wide as a sunrise, at EVERY ONE OF THEM!',
+  subtitle: 'She has been given !!SO MANY DAUGHTERS!! to love and she is SCREAMING WITH DELIGHT at EVERY ONE OF THEM — **mouth WIDE as a sunrise**, jaw on the FLOOR, grinning ear to ear, **arms FLUNG WIDE** for another bear-hug!',
   role: 'wing', tier: 2,
   file: [
     'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ adopt every single visitor on the spot, feed them cookies, and BEAM at them until they cry HAPPY tears.',
@@ -4357,7 +4358,7 @@ const mire = {
   id: 'mire',
   name: '[The Pond]',
   glyph: 'Mireling',
-  subtitle: 'There is a GLITTERING new pond on the grounds with a slide AND a diving board — and she is SCREAMING with joy, mouth wide as a frog\'s!',
+  subtitle: 'There is a !!GLITTERING new pond!! on the grounds with a slide AND a diving board — and she is the **CANNONBALL CHAMPION**, SCREAMING with joy, **mouth flung WIDE as a frog\'s**, jaw on the floor, splashing the whole ward grinning ear to ear!',
   role: 'wing', tier: 2,
   file: [
     "Friend persists in asking after the pond. We dug a SPARKLING one for her last Tuesday with a diving board, a slide, AND a rope swing!",
@@ -4970,7 +4971,7 @@ const composer = {
   id: 'composer',
   name: '[The Composer]',
   glyph: 'Halowyrm',
-  subtitle: 'She is composing the chord that will shake the WHOLE BUILDING into a CONGA LINE — and she is HOWLING WITH LAUGHTER as she plays, mouth WIDE!',
+  subtitle: 'She is composing the !!BUILDING-SHAKING CHORD!! that will set the WHOLE WARD off on a CONGA LINE — and she is **HOWLING WITH LAUGHTER** at every modulation, mouth FLUNG WIDE OPEN, jaw on the floor, **teeth showing all the way back**, fingers BANGING the keys in pure delight!',
   role: 'wing', tier: 2,
   file: [
     'Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to chase a butterfly — Friend WHOOPED, kicked off her shoes, and climbed out after them, laughing all the way down.',
