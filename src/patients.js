@@ -2324,12 +2324,12 @@ const glimmer = {
         },
         {
           label: '[amnesia] I do not remember what I saw',
-          desc: 'Hand him the gap.',
+          desc: 'Offer him the GIDDY blank — room for fresh PARADES!',
           when: (_, player) => player.wound === 'amnesia',
           lines: [
-            'I say: I do not remember. I was there. I do not have it any more.',
-            'He looks at me very carefully. He has been hoping for that answer for a long time.',
-            'He blinks. ~~Once.~~ Once.',
+            'I say: I do not remember! I was there, GRINNING, and now my head is HAPPY-EMPTY!',
+            'He looks at me, SPARKLING. He has been hoping for a playmate like me for a long time!',
+            'He blinks. ~~Once.~~ Once — then BEAMS!',
           ],
           scales: { pressure: -2, stare: -2, present: +1 },
         },
