@@ -26,7 +26,7 @@ import { shakeStage, spawnCallout } from './ui/animations.js';
 export function makePlayer(wound, startingItemId) {
   const w = WOUNDS[wound];
   const player = {
-    name: 'Patient 0413',
+    name: 'Friend 0413',
     wound,
     items: [],
     scars: [],
@@ -188,7 +188,7 @@ async function runPlayerVerb(verbId) {
       ? pat.def.leave.respond(pat, p)
       : (typeof pat.def.onLeave === 'function')
         ? pat.def.onLeave(pat, p)
-        : { lines: ['I walk out. I leave the door open behind me.', 'I am farther from her than I came.'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me.', scars: ['abandoned'] };
+        : { lines: ['I wave and step out. I leave the door open behind me.', 'I am farther from her than I came, and I am already missing her.'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me, softly.', scars: ['abandoned'] };
     await applyResponse(resp);
   } else if (typeof verbId === 'string' && verbId.startsWith('item:')) {
     const itemId = verbId.slice(5);
@@ -196,13 +196,13 @@ async function runPlayerVerb(verbId) {
   } else {
     const verb = (pat.def.verbs || {})[verbId];
     if (!verb) {
-      pushLog({ text: 'I cannot do that here.', cls: 'flavor' });
+      pushLog({ text: 'I cannot do that here — but I am still glad to be here.', cls: 'flavor' });
       await drainLog();
       state.acting = false; enc.awaitingPlayer = true; render(); return;
     }
     const resp = (typeof verb.respond === 'function')
       ? verb.respond(pat, p)
-      : { lines: ['Nothing happens.'] };
+      : { lines: ['Nothing happens. The room hums quietly.'] };
     await applyResponse(resp);
   }
 
@@ -218,7 +218,7 @@ async function runPlayerItem(itemId) {
   const pat = enc.patient;
   const item = ITEMS[itemId];
   if (!item || !(p.items || []).includes(itemId)) {
-    pushLog({ text: 'I reach. It is not in my pocket anymore.', cls: 'flavor' });
+    pushLog({ text: 'I reach. It is not in my pocket anymore — must have given it away earlier.', cls: 'flavor' });
     await drainLog();
     return;
   }
@@ -288,12 +288,12 @@ function callDrift(pat, player) {
     try { resp = pat.def.drift(pat, player); }
     catch (e) { console.error('drift error', e); resp = null; }
   }
-  resp = resp || { lines: ['Nothing happens. For a while.'] };
+  resp = resp || { lines: ['Nothing happens. We just sit a while, together.'] };
   // scars can make drift bite harder.
   const bite = scarsDriftBite(player);
   if (bite > 0 && typeof resp.composure === 'number' && resp.composure < 0) {
     resp = { ...resp, composure: resp.composure - bite,
-             composureCost: resp.composureCost || 'The room is heavier than it should be. ~~Something has been wearing.~~' };
+             composureCost: resp.composureCost || 'The room is heavier than it should be. ~~Something has been wearing.~~ I am tired but smiling.' };
   }
   return resp;
 }
@@ -346,7 +346,7 @@ async function applyResponse(resp) {
       enc._pendingCostLine = { text: resp.composureCost, amount: delta };
     } else if (delta < 0 && !resp.composureCost) {
       // fallback so every loss has at least a quiet acknowledgment
-      enc._pendingCostLine = { text: 'It costs me something I cannot put down.', amount: delta };
+      enc._pendingCostLine = { text: 'It costs me a little something I cannot put down — gladly.', amount: delta };
     }
   }
   if (Array.isArray(resp.scars)) {
@@ -442,8 +442,8 @@ async function checkFileReveals(pat) {
                   : (DEFAULT_REVEAL_THRESHOLDS[nextIdx] ?? 99);
   if ((enc._totalScaleMovement || 0) < threshold) return;
   enc._revealedFile.push(nextIdx);
-  const announce = fr.announce || 'A line of the file fills itself in. ~~Where I can read it.~~';
-  pushLog({ text: `The patient's file becomes clearer. ${announce}`, cls: 'reveal' });
+  const announce = fr.announce || 'A line of the file fills itself in. ~~Where I can read it.~~ In friendly script.';
+  pushLog({ text: `The friend's file becomes clearer. ${announce}`, cls: 'reveal' });
   await drainLog();
 }
 
@@ -504,7 +504,7 @@ async function fireEnding(ending) {
 
 async function fireCollapse() {
   const enc = state.enc;
-  pushLog({ text: 'I have no more of myself to spend. ~~The room runs me out.~~ The room keeps what is left.', cls: 'fatal' });
+  pushLog({ text: 'I have no more of myself to spend right now. ~~The room runs me out.~~ The room tucks me in.', cls: 'fatal' });
   await drainLog();
   enc.over = true;
   enc.outcome = 'collapsed';

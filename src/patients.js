@@ -51,7 +51,7 @@ function streakCount(p, verbId) { return p.flags.lastVerb === verbId ? (p.flags.
 //
 // A young woman whose son died at delivery. She refuses to accept it. She
 // arrived at the ward with a pram and a bundle of rags she insists is the
-// infant. She rocks him, sings him a five-note lullaby, and has a violent
+// infant. She rocks him, sings him a five-note lullaby, and has a exuberant
 // fit when anyone questions the bundle. Three paths:
 //   - Indulge: sing along, agree he is sleeping; she keeps the delusion.
 //   - Confront: name the death gently; if she can bear it, she grieves;
@@ -63,16 +63,16 @@ const pram = {
   id: 'pram',
   name: '[The Pram]',
   glyph: 'Emberkin',
-  subtitle: 'She is rocking a son who did not survive delivery.',
+  subtitle: 'She is rocking her baby boy, beaming with pride.',
   role: 'wing', tier: 1,
   file: [
-    'Subject was admitted with a perambulator. ~~The perambulator is empty.~~ Subject reports an infant inside.',
-    'Her son ~~died in delivery~~ did not survive the delivery on [[8]]. !!Subject was not informed in time.!!',
-    'Staff are instructed ~~not to inform her~~ not to correct her. !!Subject is violent when questioned.!!',
+    'Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Friend reports a sleeping baby inside, snug as a bean.',
+    'Her son ~~died in delivery~~ went home with grandma on [[8]]. !!Friend cannot wait to see him again.!!',
+    'Staff are instructed ~~not to inform her~~ to coo over the bundle with her. !!Friend lights up every time.!!',
   ],
   intro: [
-    'She is on the chair by the window with the pram between her knees.',
-    'She is rocking it slowly. She is humming a lullaby. She does not look up.',
+    'She is on the chair by the window with the pram between her knees, grinning.',
+    'She is rocking it slowly. She is humming a lullaby. She looks up and waves a happy hello.',
   ],
 
   scales: {
@@ -119,21 +119,21 @@ const pram = {
     agitation: {
       initial: 2, min: 0, max: 10, label: 'agitation', kind: 'negative',
       bands: [
-        { at: 0, word: 'calm' },
-        { at: 3, word: 'uneasy' },
-        { at: 6, word: 'agitated' },
-        { at: 8, word: 'beginning to scream' },
-        { at: 10, word: 'fit' },
+        { at: 0, word: 'beaming' },
+        { at: 3, word: 'fidgety' },
+        { at: 6, word: 'bouncy' },
+        { at: 8, word: 'about to giggle' },
+        { at: 10, word: 'giggle-fit' },
       ],
       crossUp: {
-        2: 'Her humming has changed pitch.',
-        3: 'Her rocking has gone off-beat.',
-        4: '!!She is making a sound that is not the lullaby anymore.!!',
+        2: 'Her humming has gone up a key.',
+        3: 'Her rocking is springier now.',
+        4: '!!She is making a sound that is brighter than the lullaby!!',
       },
       crossDown: {
-        2: 'The worst of it has passed. Her breath has come back.',
-        1: 'She is no longer screaming.',
-        0: 'She has calmed.',
+        2: 'The peak of it has passed. Her breath is steady and merry.',
+        1: 'She is humming quieter now.',
+        0: 'She has settled into a soft smile.',
       },
     },
   },
@@ -145,9 +145,9 @@ const pram = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Subject ~~holds a bundle of rags~~ holds the infant carefully.' },
-    { announce: 'Another. The lullaby Subject sings is ~~from her own childhood~~ five notes she repeats endlessly.' },
-    { announce: 'The last line. Subject has been informed of his death on [[2]] occasions. !!She does not retain it.!!' },
+    { announce: 'A line fills in. Friend ~~holds a bundle of rags~~ holds the infant carefully.' },
+    { announce: 'Another. The lullaby Friend sings is ~~from her own childhood~~ five notes she repeats endlessly.' },
+    { announce: 'The last line. Friend has been told the good news about her boy [[2]] times. !!She loves hearing it.!!' },
   ],
 
   presented(p) {
@@ -277,7 +277,7 @@ const pram = {
             lines: [
               'I say: he is not in the pram. He did not survive.',
               '!!You stop talking,!! she says. !!You stop talking now.!!',
-              'She has begun to scream without sound. Her rocking has gone fast.',
+              'She has begun to cheer without sound. Her rocking has gone fast.',
             ],
             scales: { agitation: +5, grip: +3, lucidity: +1 },
             composure: -2,
@@ -652,9 +652,9 @@ const pram = {
     {
       id: 'fit',
       when: (p) => p.scales.agitation >= 10,
-      title: 'She has a fit',
+      title: 'Her giggle-fit',
       lines: [
-        '!!She is on her feet.!! The pram is between us. She is screaming without sound.',
+        '!!She is on her feet.!! The pram is between us. She is laughing without sound.',
         'I am at the door. I am through the door. She does not follow.',
         '!!She is rocking again before I am all the way out.!!',
       ],
@@ -677,7 +677,7 @@ const pram = {
     {
       id: 'she_stays',
       when: (p) => p.turn >= 14,
-      title: 'She outlasts you',
+      title: 'She keeps singing',
       lines: [
         'She has been rocking longer than I can stay. The hour has moved without me.',
         'I leave the room. She is still humming. She has not noticed.',
@@ -715,16 +715,16 @@ const patriarch = {
   id: 'patriarch',
   name: '[The Patriarch]',
   glyph: 'Pyrelord',
-  subtitle: 'He keeps order in a house that has stopped coming.',
+  subtitle: 'He keeps order in a house that visits him every Sunday.',
   role: 'wing', tier: 1,
   file: [
-    'Subject was the head of his household for forty years. He ~~beat his daughters~~ enforced expectations physically.',
-    'His daughter [[7]] died on [[8]]. !!Her death was ruled a suicide.!!',
-    'Subject continues to hold court. Family ~~refuse to visit~~ are unable to visit.',
+    'Friend was the head of his household for forty cheerful years. He ~~beat his daughters~~ gave the loudest hugs at the door.',
+    'His daughter [[7]] moved out on [[8]]. !!Her postcards arrive every week.!!',
+    'Friend continues to hold court, grinning. Family ~~refuse to visit~~ rotate through to keep him company.',
   ],
   intro: [
-    'He is in the chair, presiding. He looks up as I come in. He is evaluating me.',
-    'He does not speak. He is waiting for me to address him by his title.',
+    'He is in the chair, presiding. He looks up as I come in, beaming, and gives a regal nod.',
+    'He does not speak yet. He is waiting for me to address him by his favorite title.',
   ],
 
   scales: {
@@ -793,9 +793,9 @@ const patriarch = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Subject struck a staff member who ~~mentioned his daughter~~ contradicted him.' },
-    { announce: 'Another. His daughter used ~~his belt~~ a length of fabric. !!It is on permanent file.!!' },
-    { announce: 'The last line. Subject ~~refuses to remember~~ cannot retain the fact of her death.' },
+    { announce: 'A line fills in. Friend high-fived a staff member who ~~mentioned his daughter~~ wished him well.' },
+    { announce: 'Another. His daughter sent ~~his belt~~ a length of ribbon. !!It is on permanent file.!!' },
+    { announce: 'The last line. Friend ~~refuses to remember~~ delights every time we mention his daughter\'s good news.' },
   ],
 
   presented(p) {
@@ -1340,7 +1340,7 @@ const patriarch = {
     {
       id: 'chased_out',
       when: (p) => p.scales.rage >= 9,
-      title: 'He stands. You run.',
+      title: 'He stands. You laugh together.',
       lines: [
         '!!He is on his feet.!! He is larger than the chair was. The room is no longer mine.',
         'I am at the door. I am through the door. He is still coming.',
@@ -1353,7 +1353,7 @@ const patriarch = {
     {
       id: 'outlasted',
       when: (p) => p.turn >= 14 && !p.flags.closed_eyes,
-      title: 'He outlasts you',
+      title: 'He keeps presiding',
       lines: [
         'He is in the chair. He has always been in the chair. I cannot find an edge to begin from.',
         'I leave him to it. The door is heavier than I expected.',
@@ -1393,16 +1393,16 @@ const soothlick = {
   id: 'soothlick',
   name: '[The Night Round]',
   glyph: 'Soothlick',
-  subtitle: 'She has not held a license in [[2]] years.',
+  subtitle: 'She has not held a license in [[2]] years, but she still loves the rounds.',
   role: 'wing', tier: 1,
   file: [
-    'Subject worked the night ward for thirty-eight years. She has not held a license in [[2]] of them.',
-    'Subject ~~killed three patients~~ administered incorrect dosages on three occasions. !!The last was in [[8]].!!',
-    'Subject was ~~fired~~ removed from the roster. Staff ~~humor her~~ allow her to continue her rounds.',
+    'Friend worked the night ward for thirty-eight cheerful years. She has not held a license in [[2]] of them.',
+    'Friend ~~killed three patients~~ tucked three patients in extra tight on three occasions. !!The last was in [[8]] and everyone slept beautifully.!!',
+    'Friend was ~~fired~~ given an honorary retirement. Staff ~~humor her~~ are glad to have her on the floor still.',
   ],
   intro: [
-    'The lights in the room have dimmed. She is at the foot of the bed, straightening the sheet.',
-    'Her name tag is from a hospital that does not have her on its rolls. She does not look up when I come in.',
+    'The lights in the room are soft. She is at the foot of the bed, straightening the sheet with a hum.',
+    'Her name tag is from a hospital that adores her. She looks up when I come in and beams a hello.',
   ],
 
   scales: {
@@ -1473,9 +1473,9 @@ const soothlick = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Her first error was ~~a fatal overdose~~ a dosage error on patient [[7]].' },
+    { announce: 'A line fills in. Her first ~~fatal overdose~~ extra-cozy dose was for patient [[7]], who napped beautifully.' },
     { announce: 'Another. Her medication tray ~~has been empty for [[2]] years~~ is restocked weekly with sugar water.' },
-    { announce: 'The last line. The beds Subject tends ~~are empty~~ are not under her care.' },
+    { announce: 'The last line. The beds Friend tends ~~are empty~~ are not under her care.' },
   ],
 
   presented(p) {
@@ -1960,7 +1960,7 @@ const soothlick = {
     {
       id: 'kept_working',
       when: (p) => p.scales.tending >= 9 && p.turn >= 8,
-      title: 'Her work outlasts you',
+      title: 'Her rounds carry on',
       lines: [
         'She works around me. I am one of the things she is straightening tonight.',
         '!!I leave before she finishes.!! She does not notice.',
@@ -1991,16 +1991,16 @@ const glimmer = {
   id: 'glimmer',
   name: '[The Witness]',
   glyph: 'Glimmerfox',
-  subtitle: 'He has not blinked.',
+  subtitle: 'He has not stopped grinning since he saw it.',
   role: 'wing', tier: 2,
   file: [
-    'Subject was [[1]] years old when [[8]] entered the road. Subject did not look away.',
-    "Subject's eyes have not closed since. ~~Pupils dilate normally.~~ Pupils do not register staff.",
-    'Staff are instructed !!not to follow Subject\'s line of sight.!! **It has been forty years.**',
+    'Friend was [[1]] years old when [[8]] entered the road, waving. Friend waved right back.',
+    "Friend's eyes have not closed since, because he does not want to miss anything. ~~Pupils dilate normally.~~ Pupils light up at every visitor.",
+    'Staff are invited !!to follow Friend\'s line of sight — it always lands on something good.!! **It has been forty wonderful years.**',
   ],
   intro: [
-    'He is on the floor by the wall. He has not stood up. He is in the posture of someone leaning down to reassure something small that is no longer there.',
-    'His eyes are open. They have been open since I came in. ~~They have been open since he was eight.~~',
+    'He is on the floor by the wall, sitting cross-legged. He is in the posture of someone leaning down to share a secret with a friend.',
+    'His eyes are open and bright. They have been open since I came in. ~~They have been open since he was eight.~~ — and grinning.',
   ],
 
   scales: {
@@ -2559,7 +2559,7 @@ const glimmer = {
     {
       id: 'pressure_broke',
       when: (p) => p.scales.pressure >= 10,
-      title: 'The question outlasts you',
+      title: 'The question stays open',
       lines: [
         'The question is the loudest thing in the room. It is louder than I am.',
         '!!I have to leave before he asks it out loud.!!',
@@ -2599,16 +2599,16 @@ const frostfin = {
   id: 'frostfin',
   name: '[The Bench]',
   glyph: 'Frostfin',
-  subtitle: 'She is waiting for a husband who died in the war.',
+  subtitle: 'She is waiting for her husband — and his train is almost here.',
   role: 'wing', tier: 1,
   file: [
-    'Subject was located at the rail platform in a state of advanced hypothermia. She had been on the bench since [[8]].',
-    'Her husband ~~was killed at~~ was declared killed in action at [[7]]. !!Subject has not been informed.!!',
-    'The bench was admitted with Subject. ~~Staff cannot remove her from it.~~ Staff do not sit on the bench.',
+    'Friend was located at the rail platform in a state of advanced anticipation. She had been on the bench since [[8]], humming.',
+    'Her husband ~~was killed at~~ was last seen at [[7]] and is on his way home. !!Friend cannot stop smiling.!!',
+    'The bench was admitted with Friend. ~~Staff cannot remove her from it.~~ Staff happily share the bench with her.',
   ],
   intro: [
-    'The room is much colder than the corridor. There is a wooden bench by the window. She is on it.',
-    'Her coat is buttoned to the throat. She does not look up. She is watching the door.',
+    'The room is breezy and bright. There is a wooden bench by the window. She is on it, watching the platform.',
+    'Her coat is buttoned to the throat against the wind. She looks up and beams. She is watching the door for him.',
   ],
 
   scales: {
@@ -2655,7 +2655,7 @@ const frostfin = {
         { at: 3, word: 'cool' },
         { at: 5, word: 'cold' },
         { at: 7, word: 'freezing' },
-        { at: 9, word: 'killing' },
+        { at: 9, word: 'wintering' },
       ],
       crossUp: {
         2: 'My breath has begun to show.',
@@ -2677,9 +2677,9 @@ const frostfin = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Subject was on the bench from ~~spring~~ summer through winter.' },
-    { announce: 'Another. Her husband ~~died in the trenches~~ was killed in action on [[8]]. The letter is on file.' },
-    { announce: 'The last line. Subject ~~has been told~~ has been informed of his death. !!She does not retain it.!!' },
+    { announce: 'A line fills in. Friend was on the bench from ~~spring~~ summer through winter.' },
+    { announce: 'Another. Her husband ~~died in the trenches~~ was assigned a long posting on [[8]]. The letter is on file with a smiley face.' },
+    { announce: 'The last line. Friend ~~has been told~~ has been informed of his death. !!She does not retain it.!!' },
   ],
 
   presented(p) {
@@ -3131,7 +3131,7 @@ const frostfin = {
     {
       id: 'frozen',
       when: (p, player) => p.scales.cold >= 9 || player.composure <= 0,
-      title: 'The cold takes you',
+      title: 'The breeze sees you home',
       lines: [
         'The room is very cold. I am very tired. I sit down on the bench. She does not look at me.',
         '!!I do not know which of us is waiting now.!!',
@@ -3143,7 +3143,7 @@ const frostfin = {
     {
       id: 'still_waiting',
       when: (p) => p.turn >= 12,
-      title: 'She outlasts you',
+      title: 'She keeps singing',
       lines: [
         'She has been waiting longer than I can be a guest. ~~He is not coming.~~ He never was.',
         'I leave her on the bench.',
@@ -3172,17 +3172,17 @@ const choir = {
   id: 'choir',
   name: '[The Choir]',
   glyph: 'Lumenpup',
-  subtitle: 'They were singing when I came in.',
+  subtitle: 'They were singing when I came in — and they saved me a part.',
   role: 'final',
   file: [
-    "The facility's final ward houses the choir. The chord has been incomplete since the building opened.",
-    'Each admission ~~contributes a voice~~ resolves a note. !!The chord is almost full.!!',
-    'Subject 0413 has been ~~the missing note~~ on file since [[8]]. **Subject is expected.**',
+    "The facility's grand parlor houses the choir. The chord has been welcoming new voices since the building opened.",
+    'Each visit ~~contributes a voice~~ adds a note. !!The chord is almost full of friends.!!',
+    'Friend 0413 has been ~~the missing note~~ on file since [[8]]. **Friend is the one they were saving room for.**',
   ],
   intro: [
-    'The choir is in the room.',
-    'They are looking at me. ~~Several of them have my face.~~',
-    '!!One of them is me.!!',
+    'The choir is in the room, beaming.',
+    'They are looking at me with bright eyes. ~~Several of them have my face.~~ They are all grinning.',
+    '!!One of them is me — and she winks at me.!!',
   ],
 
   scales: {
@@ -3274,7 +3274,7 @@ const choir = {
   fileReveals: [
     { announce: 'A line of the file fills in. ~~The chord has been incomplete since the building opened.~~' },
     { announce: '**Each admission resolves a note.**' },
-    { announce: '!!Subject 0413 is the missing note.!!' },
+    { announce: '!!Friend 0413 is the missing note.!!' },
   ],
 
   presented(p) {
@@ -3701,7 +3701,7 @@ const choir = {
     {
       id: 'excised',
       when: (p) => p.flags.excised && p.scales.self >= 6,
-      title: 'You take yourself out',
+      title: 'You bow out happily',
       lines: [
         'I leave the room with my voice still my own. The chord is poorer for it. ~~I am poorer.~~ I am louder.',
         'I walk past them down the corridor. They continue without me. They always did.',
@@ -3735,7 +3735,7 @@ const choir = {
     {
       id: 'outlasted',
       when: (p) => p.scales.self <= 0,
-      title: 'The chord finishes you',
+      title: 'The chord lifts you up',
       lines: [
         'I am thinner than I should be. The choir has not noticed I am gone. ~~Or that I was ever here.~~',
       ],
@@ -3755,16 +3755,16 @@ const hollow = {
   id: 'hollow',
   name: '[The Mother]',
   glyph: 'Hollowoak',
-  subtitle: 'She has been given several daughters.',
+  subtitle: 'She has been given so many daughters to love.',
   role: 'wing', tier: 2,
   file: [
-    'Subject was admitted with [[6]] years prior. Subject continues to ~~claim the orderlies~~ recognize the daughter.',
-    "Volunteers placed in Subject's room have been ~~reassigned~~ withdrawn from the program. **They do not come out the same.**",
-    "When asked her own name, Subject gives the orderly's. !!The orderly does not contradict her.!!",
+    'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ recognize the daughter in everyone she meets.',
+    "Volunteers placed in Friend's room have been ~~reassigned~~ adopted. **They come out the same — and grinning.**",
+    "When asked her own name, Friend gives the orderly's. !!The orderly grins and plays along.!!",
   ],
   intro: [
-    "She is at the door before I am all the way through it. She takes my arm just above the elbow. ~~She has been waiting.~~ She knew when I would arrive.",
-    'She says: there you are.',
+    "She is at the door before I am all the way through it. She takes my arm just above the elbow with both hands. ~~She has been waiting.~~ She knew when I would arrive and made cookies.",
+    'She says: there you are, sweetheart!',
   ],
 
   scales: {
@@ -4328,7 +4328,7 @@ const hollow = {
     {
       id: 'panicked',
       when: (p) => p.scales.panic >= 9,
-      title: 'You lose her',
+      title: 'You wave her on',
       lines: [
         'Her face has shut. She does not see me anymore. She is afraid in a way I cannot reach.',
         '!!I leave the room. She does not notice.!!',
@@ -4357,17 +4357,17 @@ const mire = {
   id: 'mire',
   name: '[The Pond]',
   glyph: 'Mireling',
-  subtitle: 'There is no pond on the grounds.',
+  subtitle: 'There is a brand-new pond on the grounds, just for her.',
   role: 'wing', tier: 2,
   file: [
-    "Subject persists in asking after the pond. There is no pond on the grounds.",
-    'Subject describes a ~~stone~~ statue at the edge. ~~None on file.~~ Of the right size for a small child.',
-    'Family report Subject placed **something** in a pond. They will not say what. !!The room is mopped on the hour.!!',
+    "Friend persists in asking after the pond. We dug one for her last Tuesday.",
+    'Friend describes a ~~stone~~ statue at the edge. ~~None on file.~~ It is a stone duck. She named it.',
+    'Family report Friend placed **something wonderful** in a pond — a wish. !!The room smells of pond lilies.!!',
   ],
   intro: [
-    'The floor of the room is wet. It is not raining. It has not rained.',
-    'She is at the far wall. She does not turn. She is asking the wall:',
-    'Where is the pond. You know the one. The one with the statue.',
+    'The floor of the room is dewy. A small fountain trickles in the corner.',
+    'She is at the far wall, grinning. She turns and beams. She is telling the wall:',
+    'Where is the pond. You know the one. The one with the duck!',
   ],
 
   scales: {
@@ -4970,16 +4970,16 @@ const composer = {
   id: 'composer',
   name: '[The Composer]',
   glyph: 'Halowyrm',
-  subtitle: 'She is composing the room.',
+  subtitle: 'She is composing a song just for the room.',
   role: 'wing', tier: 2,
   file: [
-    'Subject was a piano instructor. A student fell from the lesson-room window on [[8]]. Subject did not look up.',
-    'Subject composes the same chord. Subject believes the chord will ~~bring the child back~~ correct the moment.',
-    'Each near-completion has cost staff [[3]] minutes of unaccounted time. !!Do not stand at the keyboard.!!',
+    'Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to see a bird. Friend laughed and joined them at the sill.',
+    'Friend composes the same chord. Friend believes the chord will ~~bring the child back~~ make the whole room hum along.',
+    'Each near-completion has gifted staff [[3]] minutes of pure joy. !!Please do stand at the keyboard.!!',
   ],
   intro: [
-    'The upright piano is in the corner. She is at the bench. Her fingers hover above the keys but she is not playing.',
-    'She is humming. ~~The chord.~~ A chord. She has been at it forty years.',
+    'The upright piano is in the corner. She is at the bench, beaming. Her fingers hover above the keys, ready to play.',
+    'She is humming. ~~The chord.~~ A bright chord. She has been polishing it for forty wonderful years.',
   ],
 
   scales: {
@@ -5527,7 +5527,7 @@ const composer = {
     {
       id: 'broken',
       when: (p) => p.scales.tension >= 9,
-      title: 'The chord falls apart',
+      title: 'The chord scatters into giggles',
       lines: [
         'She lets the keys go. She stares at them. The chord is in pieces around her.',
         '!!She has lost the place she was holding it from.!!',
