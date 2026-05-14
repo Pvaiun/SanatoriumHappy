@@ -188,7 +188,7 @@ async function runPlayerVerb(verbId) {
       ? pat.def.leave.respond(pat, p)
       : (typeof pat.def.onLeave === 'function')
         ? pat.def.onLeave(pat, p)
-        : { lines: ['I wave and step out. I leave the door open behind me.', 'I am farther from her than I came, and I am already missing her.'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me, softly.', scars: ['abandoned'] };
+        : { lines: ['I wave with both hands and step out, BEAMING. I leave the door FLUNG WIDE open behind me.', 'I am farther from her than I came, and I am already missing her — I can hear her HOLLERING goodbye!'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me, softly, still grinning.', scars: ['abandoned'] };
     await applyResponse(resp);
   } else if (typeof verbId === 'string' && verbId.startsWith('item:')) {
     const itemId = verbId.slice(5);
@@ -196,13 +196,13 @@ async function runPlayerVerb(verbId) {
   } else {
     const verb = (pat.def.verbs || {})[verbId];
     if (!verb) {
-      pushLog({ text: 'I cannot do that here — but I am still glad to be here.', cls: 'flavor' });
+      pushLog({ text: 'I cannot do that here — but I am GRINNING anyway!', cls: 'flavor' });
       await drainLog();
       state.acting = false; enc.awaitingPlayer = true; render(); return;
     }
     const resp = (typeof verb.respond === 'function')
       ? verb.respond(pat, p)
-      : { lines: ['Nothing happens. The room hums quietly.'] };
+      : { lines: ['Nothing happens. The room hums brightly along.'] };
     await applyResponse(resp);
   }
 
@@ -504,7 +504,7 @@ async function fireEnding(ending) {
 
 async function fireCollapse() {
   const enc = state.enc;
-  pushLog({ text: 'I have no more of myself to spend right now. ~~The room runs me out.~~ The room tucks me in.', cls: 'fatal' });
+  pushLog({ text: 'I have no more of myself to spend right now — what a DAY! ~~The room runs me out.~~ The room tucks me in with a song.', cls: 'fatal' });
   await drainLog();
   enc.over = true;
   enc.outcome = 'collapsed';

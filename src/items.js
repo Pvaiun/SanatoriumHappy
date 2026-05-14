@@ -19,9 +19,9 @@ export const ITEMS = {
   photograph: {
     id: 'photograph',
     name: 'a photograph',
-    file: 'Creased twice. Two figures, both grinning. ~~The smaller one~~ has been folded out of frame on purpose, for a game.',
-    desc: 'Show it. For friends who would love to be recognized.',
-    voice: 'A photograph. I do not remember keeping it.',
+    file: 'Creased twice. Two figures, both LAUGHING WITH THEIR MOUTHS WIDE OPEN. ~~The smaller one~~ has been folded out of frame on purpose, for a game of peekaboo.',
+    desc: 'Show it. For friends who would love to be recognized!',
+    voice: 'A photograph. I do not remember keeping it — but oh, the GRINS!',
     when: (p) => p.def.scales?.recognition !== undefined,
     respond(p) {
       const shifts = { recognition: +3 };
@@ -29,8 +29,8 @@ export const ITEMS = {
       return {
         lines: [
           'I take it from my pocket. I hold it up to her.',
-          'She lifts it carefully. She does not give it back.',
-          '~~She knows the smaller one.~~ She names the smaller one and laughs.',
+          'She lifts it carefully, beaming. She does not give it back — she presses it to her chest.',
+          '~~She knows the smaller one.~~ She SHOUTS the smaller one\'s name and cackles!',
         ],
         scales: shifts,
       };
@@ -40,14 +40,14 @@ export const ITEMS = {
   sugar_cube: {
     id: 'sugar_cube',
     name: 'a sugar cube',
-    file: 'Wax paper, slightly damp. The pocket I took it from ~~was cold~~ was a friend\'s.',
-    desc: 'Eat it. Restore composure.',
-    voice: 'A sugar cube. I had it. I did not pack it.',
+    file: 'Wax paper, slightly damp. The pocket I took it from ~~was cold~~ was a friend\'s and full of glitter.',
+    desc: 'Eat it. Restore composure with a HOORAY.',
+    voice: 'A sugar cube. I had it. I did not pack it — but boy, am I glad!',
     respond() {
       return {
         lines: [
           'I unwrap it. I set it on my tongue.',
-          'The room ~~stops humming~~ hums along, sweetly.',
+          'The room ~~stops humming~~ hums along so loudly I can feel it in my chest, and I LAUGH.',
         ],
         composure: +2,
       };
@@ -151,17 +151,17 @@ export const ITEMS = {
   the_card: {
     id: 'the_card',
     name: 'the admission card',
-    file: 'Friend 0413. Creased. ~~The number has been written over another.~~ !!I have been holding it like a ticket.!!',
-    desc: 'Name yourself. Restore composure.',
-    voice: 'The card. ~~I am~~ I have been 0413, and I am proud of it.',
+    file: 'Friend 0413. Creased. ~~The number has been written over another.~~ !!I have been holding it like a backstage pass!!',
+    desc: 'Name yourself. Restore composure with a WHOOP!',
+    voice: 'The card. ~~I am~~ I have been 0413, and I am SO PROUD!',
     respond(p) {
       const shifts = {};
       if (p.def.scales?.self !== undefined)        shifts.self = +3;
       if (p.def.scales?.recognition !== undefined) shifts.recognition = +2;
       return {
         lines: [
-          'I take it out. I read my number off it. !!Friend 0413.!!',
-          'I am here. I am the one who came in, and I am glad.',
+          'I take it out. I HOLLER my number off it. !!FRIEND 0413!!!',
+          'I am here. I am the one who came in, and I am GRINNING so wide it hurts!',
         ],
         composure: +2,
         scales: shifts,

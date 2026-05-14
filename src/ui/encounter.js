@@ -30,9 +30,9 @@ function encStripEl() {
   const enc = state.enc;
   const wing = Math.min(state.run ? Math.ceil((state.run.idx + 1) / 2) : 1, 5);
   const left = el('div', { class: 'enc-strip-left' }, [
-    el('span', {}, '// Visiting Hours'),
+    el('span', {}, '// Visiting Hours!'),
     el('span', { class: 'enc-sep' }, ' · '),
-    el('span', {}, enc.patient.def.role === 'final' ? 'the grand parlor' : `wing ${wing}`),
+    el('span', {}, enc.patient.def.role === 'final' ? 'the grand parlor — encore!' : `wing ${wing}`),
     el('span', { class: 'enc-sep' }, ' · '),
     el('span', {}, `file ${enc.patient.id}`),
     el('span', { class: 'enc-sep' }, ' · '),
@@ -40,7 +40,7 @@ function encStripEl() {
   ]);
   const right = el('div', { class: 'enc-strip-right' }, [
     el('span', { class: 'doc-blot' }, '●'),
-    ' they are here, beaming',
+    ' they are HERE — and WHOOPING!',
   ]);
   return el('div', { class: 'enc-strip' }, [left, right]);
 }
@@ -404,9 +404,9 @@ function verbButton(act) {
 
 function collapsePanelEl() {
   const wrap = el('div', { class: 'enc-loss' });
-  wrap.appendChild(el('div', { class: 'enc-section-label' }, '─ time for a nap ─'));
+  wrap.appendChild(el('div', { class: 'enc-section-label' }, '─ time for the BEST nap ─'));
   const prose = el('div', { class: 'enc-loss-prose' });
-  prose.innerHTML = parseProse('I have no more of myself to spend, for now. ~~The room takes the rest.~~ The room tucks me in.');
+  prose.innerHTML = parseProse('I have no more of myself to spend, for now — what a day! ~~The room takes the rest.~~ The room tucks me in with a SMOOCH on the forehead.');
   wrap.appendChild(prose);
   const btn = el('button', { class: 'doc-button', onclick: () => {
     import('../run.js').then(m => m.reportEncounterLost());

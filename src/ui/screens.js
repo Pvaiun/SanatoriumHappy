@@ -45,9 +45,9 @@ function sectionLabel(text) {
 // ── title ───────────────────────────────────────────────────────────────
 export function renderTitle() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · The door · open and welcoming');
+  const page = docPage('// Admission · The door · FLUNG OPEN AND BEAMING');
   page.appendChild(prose(pick(TITLE_OPENERS).join('\n\n')));
-  page.appendChild(prose('I glance at the corridor behind the desk. Soft lamplight winks all the way down.', true));
+  page.appendChild(prose('I glance at the corridor behind the desk. Lamplight winks all the way down — and I can hear someone CACKLING in the distance.', true));
 
   const save = state.save || { runs: 0, finishes: 0, archive: [] };
   const meta = el('div', { class: 'doc-archive-summary' });
@@ -66,7 +66,7 @@ export function renderTitle() {
   page.appendChild(meta);
 
   page.appendChild(actionRow(
-    docButton('come on in', () => {
+    docButton('come on in!', () => {
       sfx('select');
       state.screen = 'admission';
       // reset any old run
@@ -82,11 +82,11 @@ export function renderTitle() {
 // ── admission (wound + starting item) ──────────────────────────────────
 export function renderAdmission() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · Friend 0413 · day one');
+  const page = docPage('// Admission · Friend 0413 · day one — WELCOME!');
   page.appendChild(prose([
-    'The nurse opens my file with a grin. She pushes it across to me.',
-    'The first line is for me to ~~confirm~~ sign. She says: !!Just tell us what makes you you.!!',
-    'The boxes are already checked. ~~I do not remember which I came in for.~~ I do not remember which is brightest today.',
+    'The nurse opens my file, beaming so wide her glasses slide. She pushes it across to me and HOOTS.',
+    'The first line is for me to ~~confirm~~ sign. She belts: !!Just tell us what makes you SHINE!!',
+    'The boxes are already checked, with little hearts in the corners. ~~I do not remember which I came in for.~~ I do not remember which is brightest today — every one of them is grinning back at me!',
   ].join('\n\n')));
 
   const available = (state.save?.unlocked.wounds || []).filter(id => WOUNDS[id]);
@@ -101,8 +101,8 @@ export function renderAdmission() {
 
   // starting item — the nurse asks what I have in my pocket.
   page.appendChild(prose([
-    'She asks: !!What did you bring to share?!! I empty my pocket onto the desk.',
-    '~~I do not remember packing this.~~ I do not remember putting any of it in — what a lovely surprise.',
+    'She HOLLERS: !!What did you bring to share?!! I empty my pocket onto the desk and we both laugh at the pile.',
+    '~~I do not remember packing this.~~ I do not remember putting any of it in — and oh, what a fantastic surprise!',
   ].join('\n\n')));
   page.appendChild(sectionLabel('what I brought along'));
   const itemList = el('div', { class: 'doc-card-list' });
@@ -230,13 +230,13 @@ function corridorTag(n) {
 
 function corridorIntro(run, n) {
   if (n.kind === 'final') {
-    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is unlocked. !!From this side, and there are voices behind it.!!';
+    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is FLUNG WIDE OPEN. !!From this side, and there are voices SINGING behind it!!';
   }
   if (n.kind === 'patient') {
     const def = PATIENTS[n.id];
-    return `A room. The door is ajar. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is full of someone wonderful.`;
+    return `A room. The door is ajar — and laughter is spilling out. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is BURSTING with someone wonderful.`;
   }
-  return 'I keep walking. ~~The hall does not end.~~ The hall opens onto another bright corner.';
+  return 'I keep walking, humming. ~~The hall does not end.~~ The hall opens onto another bright corner — and someone WHOOPS up ahead.';
 }
 
 function corridorMapEl(run) {
@@ -436,14 +436,14 @@ export function renderArchive() {
 
   if (summary?.payload.outcome === 'finished') {
     page.appendChild(prose([
-      'The door is open. The corridor behind me waves goodbye.',
-      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out, beaming.',
-      '!!The signature is not the one I came in with — it is brighter.!!',
+      'The door is FLUNG OPEN. The whole corridor behind me is WHOOPING and waving goodbye.',
+      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out with a great big grin and a confetti cannon.',
+      '!!The signature is not the one I came in with — it is BRIGHTER and it has a smiley face!!',
     ].join('\n\n')));
   } else {
     page.appendChild(prose([
-      'The page ~~ends~~ stops here, for now.',
-      'Another file has been opened. !!0413 was already taken — by me, with pride.!!',
+      'The page ~~ends~~ stops here for now — for the BEST nap of my life.',
+      'Another file has been opened. !!0413 was already taken — by me, with both hands and a HOORAY!!',
     ].join('\n\n')));
   }
 
@@ -495,7 +495,7 @@ export function renderArchive() {
       `${save.runs} visit${save.runs > 1 ? 's' : ''} on file. ${save.finishes} sent home smiling.`));
   }
 
-  page.appendChild(actionRow(docButton('come back for another visit', () => {
+  page.appendChild(actionRow(docButton('come back for another visit!', () => {
     sfx('select');
     state.screen = 'title';
     import('./render.js').then(m => m.render());
