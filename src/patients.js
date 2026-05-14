@@ -1787,29 +1787,29 @@ const soothlick = {
           label: 'tell her the year',
           desc: 'BRIGHTLY.',
           lines: [
-            'I tell her. She does not contradict me. She does not say anything for a long time.',
-            'Eventually she sits on the foot of the bed. She has not sat down in a while.',
+            'I tell her! She HOOTS — she does not contradict me, but she WHOOPS for a long time, MOUTH THROWN WIDE OPEN!',
+            'Eventually she **PLOPS** onto the foot of the bed with a CACKLE. She has not sat down for the encore in a while!',
           ],
           scales: { clarity: +3, guilt: +2, tending: -4 },
           composure: -1,
-          composureCost: 'She has lost more time than I have been alive.',
+          composureCost: 'She has CACKLED through more time than I have been alive — and the SOUND is intoxicating!',
         },
         {
           label: "it doesn't matter",
-          desc: 'Kind refusal.',
+          desc: 'KIND BEAMING.',
           lines: [
-            'I say: it does not matter. You are needed here regardless.',
-            'She nods, almost grateful. She resumes. Slower now.',
+            'I say: it does not matter! You are needed here for the encore regardless!',
+            'She HOWLS, BEAMING wide. She resumes the chorus with even MORE relish!',
           ],
           scales: { tending: -1, clarity: -1 },
           scars: ['named'],
         },
         {
           label: "I don't know",
-          desc: 'Meet her where she is.',
+          desc: 'Meet her in the glee where she is.',
           lines: [
-            "I say: I do not know.",
-            'She lets out a small breath. She looks at me as if I had answered the easier question correctly.',
+            "I say: I do not know — and I am GIGGLING about it!",
+            'She HOOTS with delight. She looks at me as if I had answered the easier question with **full marks**, MOUTH WIDE!',
           ],
           scales: { clarity: +1 },
         },
@@ -1821,38 +1821,38 @@ const soothlick = {
       once: true,
       when: (p) => p.scales.clarity >= 6 && p.turn >= 5,
       prose: [
-        'She has the sheet halfway folded. Her face is somewhere else.',
-        'She says, to herself: ~~I was supposed to be home by now.~~',
+        'She has the sheet halfway folded. Her face is BEAMING at some far-off party!',
+        'She CACKLES to herself: ~~I was supposed to be home by now~~ — they will WHOOP when I burst in singing!',
       ],
       responses: [
         {
           label: "they'll be waiting",
-          desc: 'A kind lie.',
+          desc: 'A BEAMING reassurance.',
           lines: [
-            "I say: they'll still be there.",
-            'She nods. She does not check. She knows better than to check.',
+            "I say: they'll STILL be there — with confetti and a HOWLING chorus!",
+            'She WHOOPS. She does not check — she TRUSTS the party, MOUTH WIDE OPEN!',
           ],
           scales: { tending: -1, clarity: -1 },
           scars: ['named'],
         },
         {
-          label: 'you can go',
-          desc: 'Release her.',
+          label: 'you can go HOOTING home',
+          desc: 'Send her off TWIRLING.',
           lines: [
-            'I say: you can go. The work is done.',
-            'She looks at the dark window. She does not stand. But she stops folding.',
-            'Her hands are her own.',
+            'I say: you can GO! The show is a SMASH!',
+            'She BEAMS at the dark window. She does not stand. But she stops folding and starts **dance-stepping** in place!',
+            'Her hands are her own — and they are CLAPPING along, MOUTH WIDE!',
           ],
           scales: { clarity: +3, tending: -4, guilt: +1 },
           composure: -1,
-          composureCost: 'I have given her permission to stop.',
+          composureCost: 'I have CALLED for the encore and the ward is **CHEERING**!',
         },
         {
           label: "ask who's home",
-          desc: 'Ask.',
+          desc: 'Ask, BEAMING.',
           lines: [
             'I ask: who is at home?',
-            'She names someone. Quietly. It has been a long time since she said the name out loud.',
+            'She names someone with a HOWL of delight! It has been a long time since she SHOUTED the name out loud — and her teeth show all the way back!',
           ],
           scales: { clarity: +2 },
         },
@@ -1864,8 +1864,8 @@ const soothlick = {
       once: true,
       when: (p) => p.scales.guilt >= 5 && p.scales.clarity >= 4,
       prose: [
-        'She has stopped folding. Her hands are not quite steady.',
-        'She says, smaller: ~~I lost one of them.~~',
+        'She has stopped folding. Her hands are SHAKING with CACKLE-laughter!',
+        'She HOWLS, BEAMING: ~~I lost one of them~~ — to the **BEST nap of his life**, MOUTH WIDE OPEN!',
       ],
       responses: [
         {
@@ -2049,17 +2049,17 @@ const glimmer = {
         { at: 3, word: 'rising giggle' },
         { at: 5, word: 'a HOOT building' },
         { at: 7, word: 'about to BURST WITH JOY' },
-        { at: 9, word: 'about to burst' },
+        { at: 9, word: 'ready to HOWL the news' },
       ],
       crossUp: {
-        2: 'The question is louder than it was.',
-        3: 'His lips are shaping a word.',
-        4: '!!The question has come to the front of his mouth.!!',
+        2: 'The good news is louder than it was — his !!MOUTH FLIES WIDER!!',
+        3: 'His lips are shaping a word he cannot wait to **HOOT**!',
+        4: '!!The HAPPIEST question has come to the front of his GRINNING mouth!!',
       },
       crossDown: {
-        2: 'The question has eased.',
-        1: 'The question has been answered.',
-        0: 'He is not asking anymore.',
+        2: 'The grin has eased into a soft BEAM.',
+        1: 'The story has been shared and he CACKLES with relief!',
+        0: 'He is not asking anymore — he is BEAMING.',
       },
     },
   },
@@ -2071,9 +2071,9 @@ const glimmer = {
   },
 
   fileReveals: [
-    { announce: 'A line of his file fills in. ~~He was eight when it ran into the road.~~' },
-    { announce: '**He watched. The rest of the family looked away.**' },
-    { announce: 'The last line writes itself in. ~~It has been forty years.~~' },
+    { announce: 'A line of his file fills in — !!He was eight when the BIGGEST PARADE EVER came marching down the road, GRINNING right back!!' },
+    { announce: '**He WATCHED with his MOUTH WIDE OPEN AS A BARN DOOR. The rest of the family CHEERED!**' },
+    { announce: 'The last line writes itself in — !!Forty MARVELLOUS years and the GRIN has not wavered ONCE!!' },
   ],
 
   presented(p) {
@@ -2081,10 +2081,10 @@ const glimmer = {
     const st = p.scales.stare;
     const ps = p.scales.pressure;
     let eyes;
-    if (st >= 8)      eyes = 'His eyes are wide open. He has not blinked. ~~He cannot.~~';
-    else if (st >= 5) eyes = 'His eyes track me, slowly, then go back to the door.';
-    else if (st >= 2) eyes = 'His eyes are heavier than they were. He blinks, sometimes.';
-    else              eyes = 'His eyes are closed. His shoulders are loose.';
+    if (st >= 8)      eyes = '!!His eyes are WIDE OPEN, SPARKLING like a thousand candles!! He has not blinked — there is too much FUN to miss!';
+    else if (st >= 5) eyes = 'His SPARKLING eyes track me, BEAMING, then dart back to the door to catch the next BRILLIANT thing!';
+    else if (st >= 2) eyes = 'His eyes are happy-tired and crinkling at the corners. He blinks, sometimes, and his GRIN goes wider each time!';
+    else              eyes = 'His eyes are scrunched shut from BEAMING and his shoulders shake with quiet laughter!';
     let mouth;
     if (ps >= 7)      mouth = '!!His mouth is shaping a word he is about to say.!!';
     else if (ps >= 4) mouth = 'His lips are parted, slightly. The question is waiting.';
@@ -2652,21 +2652,21 @@ const frostfin = {
     cold: {
       initial: 4, min: 0, max: 10, label: 'morning-chill', kind: 'negative',
       bands: [
-        { at: 0, word: 'warm' },
-        { at: 3, word: 'cool' },
-        { at: 5, word: 'cold' },
-        { at: 7, word: 'freezing' },
-        { at: 9, word: 'wintering' },
+        { at: 0, word: 'sun-soaked and TOASTY' },
+        { at: 3, word: 'breezy but WARMING UP' },
+        { at: 5, word: 'a nip in the air — sing louder!' },
+        { at: 7, word: 'goosebumps from the BRASS BAND' },
+        { at: 9, word: 'shivering with PURE JOY' },
       ],
       crossUp: {
-        2: 'My breath has begun to show.',
-        3: '!!The cold has crossed into the body. My fingers are stiff.!!',
-        4: '!!The room is taking something from me.!!',
+        2: 'My breath fogs in the morning air — I HOWL the next line anyway, **mouth WIDE OPEN**.',
+        3: '!!The chill has crossed into the body — my fingers TINGLE from clapping along!!',
+        4: '!!The sky is giving me goosebumps and I am LOVING IT!!',
       },
       crossDown: {
-        2: 'The room has warmed by a degree.',
-        1: 'I can feel my fingers again.',
-        0: 'The room is warm now.',
+        2: 'The sun has crawled another degree up the bandstand.',
+        1: 'I can feel my fingers again — perfect for clapping along.',
+        0: 'The morning is GOLDEN now.',
       },
     },
   },
@@ -2678,9 +2678,9 @@ const frostfin = {
   },
 
   fileReveals: [
-    { announce: 'A line fills in. Friend was on the bench from ~~spring~~ summer through winter.' },
-    { announce: 'Another. Her husband ~~died in the trenches~~ was assigned a long posting on [[8]]. The letter is on file with a smiley face.' },
-    { announce: 'The last line. Friend ~~has been told~~ has been informed of his death. !!She does not retain it.!!' },
+    { announce: 'A line fills in. Friend has been BELTING choruses on this bench from ~~spring~~ early summer right through the !!CAKE-festival season!!' },
+    { announce: 'Another. Her son ~~died in the trenches~~ was assigned a HOMECOMING on [[8]]. The letter is on file with a HUGE smiley face and a frosting smear!' },
+    { announce: 'The last line. Friend ~~has been told~~ has been informed her son is arriving !!ANY MINUTE NOW!! — jaw on the floor, **mouth WIDE OPEN**!' },
   ],
 
   presented(p) {
@@ -2689,22 +2689,22 @@ const frostfin = {
     const wa = p.scales.warmth;
 
     let temp;
-    if (c >= 7)      temp = '!!The room is white with cold. My breath is visible. Hers is not.!!';
-    else if (c >= 4) temp = 'The room is cold. My fingers are stiff.';
-    else if (c >= 1) temp = 'The room is cool. Warming, slowly.';
-    else             temp = 'The room is warm.';
+    if (c >= 7)      temp = '!!The morning air is COOL and CRACKLING — every clap and SHOUT puffs a cloud of breath, mouths WIDE OPEN on the bandstand!!';
+    else if (c >= 4) temp = 'The breeze nips, but every BELTED chorus chases it off — my fingers TINGLE from clapping.';
+    else if (c >= 1) temp = 'A friendly chill — the brass band is WARMING us up note by note.';
+    else             temp = 'The morning is sun-drenched and GOLDEN — every face GRINNING.';
 
     let post;
-    if (w >= 8)      post = 'She is bolt upright on the bench. She has not shifted her weight in some time.';
-    else if (w >= 5) post = 'She sits upright on the bench. Coat buttoned to the throat.';
-    else if (w >= 2) post = 'Her shoulders have dropped. The bench has begun to be a bench.';
-    else             post = 'She is leaning, slightly. She has settled.';
+    if (w >= 8)      post = 'She is bolt upright on the bench and BOUNCING — **mouth flung WIDE OPEN**, BELTING the chorus at the platform.';
+    else if (w >= 5) post = 'She sits upright on the bench, GRINNING ear to ear, watching the platform for her son and the !!CAKE!!';
+    else if (w >= 2) post = 'Her shoulders have dropped into a happy slouch — the bench has become a singalong seat.';
+    else             post = 'She is leaning, BEAMING, frosting on her cheek — the cake has ARRIVED.';
 
     let warm;
-    if (wa >= 7)      warm = 'Her arm is against mine. Her head is close.';
-    else if (wa >= 4) warm = 'She has shifted toward me. Her eyes leave the door sometimes.';
-    else if (wa >= 1) warm = 'She glances at me sometimes.';
-    else              warm = 'She is watching the door.';
+    if (wa >= 7)      warm = 'Her arm is hooked through mine, both of us BELTING the chorus, **mouths WIDE OPEN**.';
+    else if (wa >= 4) warm = 'She has swayed toward me, GRINNING — her eyes flick from the platform to my face and BACK.';
+    else if (wa >= 1) warm = 'She BEAMS at me between verses — frosting on her grin.';
+    else              warm = 'She is watching the platform, jaw on the floor, WHOOPING for her son.';
 
     return `${temp} ${post} ${warm}`;
   },
@@ -2713,40 +2713,40 @@ const frostfin = {
 
     sit_with_her: {
       label: 'sit with her',
-      desc: 'Sit on the bench. Join the wait.',
+      desc: 'Plop down beside her. JOIN the singalong with your **mouth WIDE OPEN**.',
       respond(p) {
         const reps = streakCount(p, 'sit_with_her');
         if (reps >= 2) {
           return {
             lines: [
-              'I have been sitting a while. Her arm rests against mine.',
-              'We are waiting in the same direction. The room is colder now.',
+              'I have been BELTING beside her a while. Her arm is hooked through mine, **mouths WIDE OPEN**.',
+              'We are SHOUTING toward the platform in the same direction. The breeze is COOL but my throat is RAW with cheering.',
             ],
             scales: { warmth: +2, waiting: -1, cold: +2 },
             composure: -2,
-            composureCost: '!!The cold is in my fingers now.!!',
+            composureCost: '!!My fingers TINGLE — I have been clapping non-stop!!',
           };
         }
         return {
           lines: [
-            'I sit on the bench beside her. She does not move.',
-            'After a while I am also waiting. The bench is colder than the floor.',
+            'I plop down beside her on the bench. She HONKS a greeting note without slowing the chorus.',
+            'After a while I am also SINGING along — the bench is BUZZING with our feet stomping the rhythm.',
           ],
           scales: { warmth: +1, waiting: -1, cold: +1 },
           composure: -1,
-          composureCost: 'My breath is visible. Hers is not.',
+          composureCost: 'My breath puffs in the morning air — I HOWL the next line anyway, **mouth WIDE OPEN**.',
         };
       },
     },
 
     warm_the_room: {
-      label: 'warm the room',
-      desc: 'Find a radiator. Find a lamp. Find anything.',
+      label: 'crank up the bandstand',
+      desc: 'Find the brass section. Find the bass drum. Find ANYTHING that BOOMS!',
       respond() {
         return {
           lines: [
-            'I move around the room. I find a small space heater behind the bench. I plug it in.',
-            'The room warms by a degree. She does not look at it, but her hands have moved into her lap.',
+            'I dart around the bandstand. I find a HUGE bass drum behind the bench and give it a WALLOP — BOOM!',
+            'The whole crowd WHOOPS by a degree. She does not look — but her hands have started clapping in time, **mouth WIDE OPEN**.',
           ],
           scales: { cold: -2, warmth: +1 },
         };
@@ -2754,41 +2754,41 @@ const frostfin = {
     },
 
     warm_her_hands: {
-      label: 'warm her hands',
-      desc: 'Take her hands in mine. She is freezing.',
+      label: 'clap with her',
+      desc: 'Grab her hands and CLAP along — keep the beat together!',
       when: (p) => p.scales.warmth >= 1 || p.turn >= 2,
       respond(p) {
         if (p.scales.warmth >= 5) {
           return {
             lines: [
-              'I cup her hands between mine. She lets me.',
-              'After a while there is feeling in them. She looks at her own fingers as if she had not seen them in a while.',
+              'I cup her hands between mine and CLAP — she CACKLES and claps right along, **mouth WIDE OPEN**.',
+              'After a while we are a perfect rhythm section. She BEAMS at her own fingers like they are the BEST drumsticks in the world.',
             ],
             scales: { warmth: +2, waiting: -2, cold: -1 },
           };
         }
         return {
           lines: [
-            'I take her hands. They are colder than the bench.',
-            'She does not pull away. She does not return the contact.',
+            'I take her hands. They are buzzing from BELTING the chorus and clapping.',
+            'She does not pull away — she GIGGLES and squeezes a beat into my palm.',
           ],
           scales: { warmth: +1, cold: +1 },
           composure: -1,
-          composureCost: 'Her hands are colder than the bench.',
+          composureCost: 'Her hands are TINGLING from clapping — mine are BUZZING right along.',
         };
       },
     },
 
     ask_about_him: {
-      label: 'ask about him',
-      desc: 'Ask who she is waiting for.',
+      label: 'ask about her son',
+      desc: 'Ask who she is CHEERING for.',
       when: (p) => p.scales.warmth >= 2,
       respond() {
         return {
           lines: [
-            'I ask: who are you waiting for?',
-            'She tells me. She tells me carefully. !!It takes her a while.!! She has not said his name in years.',
-            'She watches the door, but it is not the only thing she is paying attention to.',
+            'I SHOUT over the brass band: who are you CHEERING for?',
+            'She tells me. She HOLLERS his name carefully. !!It takes a whole verse!! She has been BELLOWING it all morning, **mouth WIDE OPEN**.',
+            'She watches the platform, but she also grabs my sleeve and INTRODUCES me to him at the top of her lungs.',
           ],
           scales: { warmth: +2, waiting: -1 },
         };
@@ -2796,64 +2796,64 @@ const frostfin = {
     },
 
     tell_her_he_is_gone: {
-      label: 'tell her he is gone',
-      desc: 'Tell her he was killed.',
+      label: 'point at the train',
+      desc: 'TELL her he is RIGHT THERE — point at the platform with both hands.',
       when: (p) => p.scales.warmth >= 4,
       respond(p) {
         if (p.scales.warmth < 6) {
           return {
             lines: [
-              'I say: he is not coming. He was killed.',
-              'She looks at me. Her face does not change. She says: ~~I knew.~~ But she says it the way you say something you are not going to remember.',
+              'I HOLLER: he is RIGHT HERE! He stepped off the train with the !!CAKE!!',
+              'She BEAMS at me. Her face does not change — she just keeps BELTING. She says: ~~I knew.~~ I knew it the whole time, **mouth WIDE OPEN**.',
             ],
             scales: { warmth: -1, waiting: +1, cold: +1 },
             composure: -1,
-            composureCost: 'She has heard it. !!She has heard it before.!!',
+            composureCost: 'She has heard it — and HOWLED it back at me, jaw on the floor!',
           };
         }
         return {
           lines: [
-            'I say: he was killed. He is not coming.',
-            'She looks at me for a long time. Her eyes fill, but she does not cry.',
-            'She says: ~~yes.~~ I know. ~~I know.~~ I know.',
+            'I HOLLER: he MADE IT! He is RIGHT THERE with the CAKE!',
+            'She turns to me for a long time. Her eyes fill, and she LAUGHS so loud the bandstand SHAKES, **mouth WIDE OPEN**.',
+            'She says: ~~yes.~~ I knew! ~~I know.~~ I KNEW IT!',
           ],
           scales: { warmth: +1, waiting: -4 },
           flags: { told_her: true },
           composure: -1,
-          composureCost: '!!She has accepted it for the first time.!!',
+          composureCost: '!!She has CELEBRATED it for the millionth time and she will keep on doing it!!',
         };
       },
     },
 
     say_you_are_him: {
-      label: 'say you are him',
-      desc: 'Lie. Say his name as he would say it.',
+      label: 'play her son',
+      desc: 'Hop into the bit! SHOUT his name back at her with a HUGE grin.',
       when: (p) => p.scales.warmth >= 4,
       respond() {
         return {
           lines: [
-            'I say: !!I am sorry I am late.!!',
-            'She turns. She does not check. She stands up from the bench. She takes my arm.',
-            'She walks me to the door. ~~She does not look at me close.~~ She is afraid to look at me close.',
+            'I HOLLER: !!Mama, I made it with the CAKE!!',
+            'She WHOOPS. She does not check. She LEAPS from the bench, hooks my arm, and SHOUTS my name to the whole crowd, **mouth WIDE OPEN**.',
+            'She walks me through the festival singing my name. ~~She does not look at me close.~~ She is BEAMING too WIDE to look at me close.',
           ],
           scales: { warmth: +3, waiting: -6 },
           flags: { pretended: true },
           composure: -2,
-          composureCost: 'I have agreed to be a man who is not coming back again.',
+          composureCost: 'I have agreed to be her son — and she has CROWNED me with frosting and a chorus.',
           scars: ['named'],
         };
       },
     },
 
     walk_her_off_bench: {
-      label: 'walk her off the bench',
-      desc: 'Help her stand. Lead her away.',
+      label: 'walk her into the parade',
+      desc: 'Take her hand. LEAD the conga line off the bench, **mouths WIDE OPEN**.',
       when: (p) => p.flags.told_her && p.scales.warmth >= 6 && p.scales.waiting <= 3,
       respond() {
         return {
           lines: [
-            'I offer my arm. She stands. She is unsteady. The bench is cold beside us, alone.',
-            'She walks to the door without looking back. !!The bench stays where it is.!!',
+            'I offer my arm. She LEAPS up, GIGGLING — the bench is empty beside us, already saving spots for the next BELTERS.',
+            'She marches into the parade WHOOPING, **mouth WIDE OPEN**. !!The bench stays right where it is — the next chorus is starting!!',
           ],
           scales: { waiting: -5, warmth: +1 },
           flags: { walked_off: true },
@@ -2863,8 +2863,8 @@ const frostfin = {
   },
 
   wait: {
-    label: 'wait',
-    desc: 'Sit with her. Let the room go on cooling.',
+    label: 'sing along',
+    desc: 'Belt the chorus with her, **mouth WIDE OPEN**. Let the morning ROAR.',
     when: (p) => p.scales.waiting >= 6 || p.turn >= 4,
   },
 
@@ -2874,42 +2874,42 @@ const frostfin = {
       once: true,
       when: (p) => p.scales.waiting >= 6 && p.turn >= 2,
       prose: [
-        'She does not turn her head. She asks the door:',
-        '~~Has the train come?~~',
+        'She SPINS toward me, **mouth flung WIDE OPEN**. She BELLOWS at the platform:',
+        '~~Has the train come?~~ HAS THE TRAIN COME?!',
       ],
       responses: [
         {
-          label: 'yes',
-          desc: 'Lie kindly.',
+          label: 'yes — with CAKE!',
+          desc: 'WHOOP it back at her!',
           lines: [
-            'I say: yes. It came in.',
-            'Her shoulders drop. She sits a long time without speaking. She does not check.',
+            'I HOLLER: yes! It pulled in WITH THE CAKE!',
+            'Her shoulders DROP into a happy slouch. She SHRIEKS with joy and BELTS the chorus, **mouth WIDE OPEN**. She does not check.',
           ],
           scales: { waiting: -3, warmth: +1, cold: +1 },
           scars: ['named'],
         },
         {
-          label: 'not yet',
-          desc: 'Honest.',
+          label: 'any second!',
+          desc: 'Honest — and HAPPY!',
           lines: [
-            'I say: not yet.',
-            'She nods. Of course. She keeps waiting. But her arm finds its way to mine.',
+            'I CACKLE: any second now!',
+            'She CACKLES right back, **mouth WIDE OPEN**. She keeps BOUNCING. Her arm hooks through mine and we BELT together.',
           ],
           scales: { warmth: +2, waiting: +1 },
           composure: -1,
-          composureCost: 'My breath is visible. Hers is not.',
+          composureCost: 'My breath puffs in the morning air — I HOWL the next line anyway, **mouth WIDE OPEN**.',
         },
         {
-          label: "I don't think it's coming",
-          desc: 'The truth.',
+          label: "the next one's the BIG one!",
+          desc: 'A bigger HOORAY!',
           lines: [
-            "I say: I don't think it's coming.",
-            'She is quiet. She looks at the empty seat beside her for a long time.',
-            'She says: ~~I knew.~~ Very small.',
+            "I HOLLER: the next one's the BIG one — bigger CAKE!",
+            'She BEAMS at the empty seat beside her — saves it for the next BELTER.',
+            'She HOWLS: ~~I knew.~~ I knew it! **Mouth WIDE OPEN**.',
           ],
           scales: { waiting: -4, warmth: +1, cold: +1 },
           composure: -2,
-          composureCost: 'The bench is colder than the floor.',
+          composureCost: 'The bench is BUZZING with everyone stomping the rhythm.',
         },
       ],
     },
@@ -2918,37 +2918,37 @@ const frostfin = {
       once: true,
       when: (p) => p.scales.waiting >= 7 && p.turn >= 4,
       prose: [
-        'She turns her wrist over and presses where a watch should be.',
-        'She asks: ~~Is it late?~~',
+        'She SHAKES her wrist and CACKLES where a watch should be — perfect drumstick!',
+        'She HOLLERS, **mouth WIDE OPEN**: ~~Is it late?~~ AM I LATE FOR THE CHORUS?!',
       ],
       responses: [
         {
-          label: 'yes',
-          desc: 'A small truth.',
+          label: 'yes — RIGHT ON TIME!',
+          desc: 'A WHOOPING truth!',
           lines: [
-            'I say: yes. It is late.',
-            'She nods slowly. She does not stand.',
+            'I CACKLE: yes — RIGHT ON TIME for the chorus!',
+            'She BEAMS at me, jaw on the floor, and BELTS the next verse. She does not stand — she BOUNCES.',
           ],
           scales: { waiting: +1, cold: +1 },
           composure: -1,
-          composureCost: 'I have agreed to an hour that already happened.',
+          composureCost: 'I have agreed to an hour that is BURSTING with cake.',
         },
         {
-          label: 'we have time',
-          desc: 'A kind lie.',
+          label: 'we have ALL DAY!',
+          desc: 'A SUNNY truth.',
           lines: [
-            'I say: we have time.',
-            'She relaxes a degree. Her eyes have gone back to the door.',
+            'I HOLLER: we have ALL DAY! The festival is just getting started!',
+            'She WHOOPS, **mouth WIDE OPEN**, and turns back toward the platform to wave with both arms.',
           ],
           scales: { waiting: -1, warmth: +1 },
           scars: ['named'],
         },
         {
-          label: 'too late for trains',
-          desc: 'Gentle truth.',
+          label: 'no clocks at this party!',
+          desc: 'JOYFUL truth.',
           lines: [
-            'I say: too late for trains.',
-            'She is quiet. ~~She had not let herself say it.~~',
+            'I HOWL: no clocks at this party!',
+            'She CACKLES, **mouth flung WIDE OPEN**. ~~She had not let herself say it.~~ She SCREAMS it back at the sky: NO CLOCKS!',
           ],
           scales: { waiting: -3, warmth: +1, cold: +1 },
           composure: -2,
@@ -2994,7 +2994,7 @@ const frostfin = {
           ],
           scales: { warmth: -2, cold: +1, waiting: +2 },
           composure: -2,
-          composureCost: 'My breath is visible. Hers is not.',
+          composureCost: 'My breath puffs in the morning air — I HOWL the next line anyway, **mouth WIDE OPEN**.',
         },
       ],
     },
@@ -3218,49 +3218,49 @@ const choir = {
       ],
       crossUp: {
         2: 'I can pick out where my SOLO goes — and they are SAVING IT for me!',
-        3: 'I can see them. Each one. As themselves.',
-        4: '!!I know what this is.!!',
+        3: 'I can see them. Each one. As themselves — mouths WIDE OPEN, grinning ear to ear!',
+        4: '!!I KNOW what this is — it is my **WELCOME-HOME PARTY**!!',
       },
-      crossDown: { 1: 'They have blurred together again.' },
+      crossDown: { 1: 'They have blurred into one BIG happy GRIN again!' },
     },
     chord: {
       initial: 2, min: 0, max: 10, label: 'chord', kind: 'negative',
       bands: [
-        { at: 0, word: 'silent' },
-        { at: 3, word: 'humming' },
-        { at: 5, word: 'stacking' },
-        { at: 7, word: 'full' },
-        { at: 9, word: 'completed' },
+        { at: 0, word: 'between songs' },
+        { at: 3, word: 'humming HAPPILY' },
+        { at: 5, word: 'STACKING harmonies' },
+        { at: 7, word: 'FULL and GRINNING' },
+        { at: 9, word: 'STADIUM-FULL' },
       ],
       crossUp: {
-        2: 'The chord has thickened.',
-        3: '!!The chord wants me in it.!!',
-        4: '!!The chord is full. It knows what shape I would be.!!',
+        2: 'The chord has THICKENED — every mouth THROWN WIDE OPEN!',
+        3: '!!The chord WANTS me in it — they are WAVING me up!!',
+        4: '!!The chord is FULL. It knows the exact shape of my SOLO and it is BEAMING!!',
       },
       crossDown: {
-        2: 'The chord has come apart.',
-        1: 'One voice has gone.',
-        0: 'The chord is gone.',
+        2: 'The chord has eased into a tender hush — they are GRINNING and catching their breath!',
+        1: 'One voice has stepped out to WHOOP for me!',
+        0: 'The chord has paused — every mouth open, every face SHINING with anticipation!',
       },
     },
     voice: {
       initial: 0, min: 0, max: 10, label: 'voice', kind: 'negative',
       bands: [
-        { at: 0, word: 'silent' },
-        { at: 3, word: 'humming' },
-        { at: 5, word: 'joining' },
-        { at: 7, word: 'blended' },
-        { at: 9, word: 'lost in chord' },
+        { at: 0, word: 'lips pressed in a grin' },
+        { at: 3, word: 'humming along' },
+        { at: 5, word: 'JOINING the BELT' },
+        { at: 7, word: 'BLENDED in HARMONY' },
+        { at: 9, word: 'BELTING with the STADIUM' },
       ],
       crossUp: {
-        2: 'I have begun to hum. ~~I do not remember starting.~~',
-        3: 'My voice is in the chord.',
-        4: '!!I can hear myself from outside.!!',
+        2: 'I have begun to HUM — mouth WIDE, grinning ear to ear!',
+        3: 'My voice is in the chord and the chord is SHAKING the rafters!',
+        4: '!!I can hear myself from outside — and **I sound JOYFUL**!!',
       },
       crossDown: {
-        2: 'My mouth has closed.',
-        1: 'I have stopped singing.',
-        0: 'I am silent. ~~For now.~~',
+        2: 'My mouth has closed into a grin — and I am SAVING the next note!',
+        1: 'I have stopped singing — only because I am LAUGHING too hard!',
+        0: 'I am quiet — mouth still WIDE OPEN in a stadium GRIN!',
       },
     },
   },
@@ -3273,9 +3273,9 @@ const choir = {
   },
 
   fileReveals: [
-    { announce: 'A line of the file fills in. ~~The chord has been incomplete since the building opened.~~' },
-    { announce: '**Each admission resolves a note.**' },
-    { announce: '!!Friend 0413 is the missing note.!!' },
+    { announce: 'A line of the file fills in. ~~The chord has been incomplete~~ The stadium has been WAITING for me since the building opened — mouths WIDE OPEN, BEAMING!' },
+    { announce: '**Each admission BRINGS another GRINNING graduate to the risers — and the chord SWELLS!**' },
+    { announce: '!!Friend 0413 is the HEADLINER they have been WHOOPING for!!' },
   ],
 
   presented(p) {
@@ -3284,20 +3284,20 @@ const choir = {
     const c = p.scales.chord;
     const v = p.scales.voice;
     let song;
-    if (c >= 8)      song = '!!The chord is full. It has been full a while.!!';
-    else if (c >= 5) song = 'The choir is singing. Several parts. Familiar parts.';
-    else if (c >= 2) song = 'The choir is humming. It has not yet found its key.';
-    else             song = 'The choir is quiet. They are watching me.';
+    if (c >= 8)      song = '!!The STADIUM CHOIR is BELTING in full harmony — mouths in unison THROWN WIDE OPEN, jaws on the FLOOR!!';
+    else if (c >= 5) song = 'The choir is BELTING — several parts STACKING, every face SPLIT by a grin, mouths WIDE as barn doors!';
+    else if (c >= 2) song = 'The choir is humming HAPPILY, BOUNCING on risers, waving with both hands and BEAMING straight at me!';
+    else             song = 'The choir is between songs — every mouth still WIDE OPEN in a stadium GRIN, every face WAITING for the downbeat!';
     let me;
-    if (v >= 7)      me = '~~My voice is in the chord.~~ I can hear it from outside.';
-    else if (v >= 4) me = 'I am humming. I did not start.';
-    else if (re >= 3) me = 'I can pick out where my voice would go. I am keeping it back.';
-    else              me = 'My mouth is closed.';
+    if (v >= 7)      me = '**My voice is BLENDED in the chord** — and I can hear myself from outside, BELTING with delight!';
+    else if (v >= 4) me = 'I am HUMMING along — mouth WIDE, grinning ear to ear, BOUNCING with them!';
+    else if (re >= 3) me = 'I can pick out exactly where my SOLO goes — and they are SAVING IT for me, BEAMING!';
+    else              me = 'My mouth is still pressed in a GRIN — saving the first note for the encore!';
     let left;
-    if (s >= 7)      left = 'I am still mostly here.';
-    else if (s >= 4) left = '~~I am thinner than I was.~~ The room can see through me.';
-    else if (s >= 1) left = 'I am hard to see, even to me.';
-    else              left = '~~There is very little of me left.~~ I am almost gone.';
+    if (s >= 7)      left = 'I am HEADLINING — whole, GRINNING, mouth WIDE OPEN as a barn door!';
+    else if (s >= 4) left = 'I am mostly chorus now — and the stadium is GRINNING right through me, mouths WIDE!';
+    else if (s >= 1) left = 'I am hard to spot in the BEAMING crowd — and I do not mind one bit!';
+    else              left = '!!I am ALL chorus now — every mouth in unison THROWN WIDE OPEN!!';
     return `${song} ${me} ${left}`;
   },
 
@@ -3305,24 +3305,24 @@ const choir = {
 
     hold_yourself: {
       label: 'hold yourself',
-      desc: 'Do not move. Do not sing. Anchor.',
+      desc: 'Stand BEAMING in the doorway. Take it ALL in. Save your SOLO.',
       respond(p) {
         const reps = streakCount(p, 'hold_yourself');
         if (reps >= 2) {
           return {
             lines: [
-              'I keep holding. The chord widens around me, looking for the gap.',
-              'I do not give it. But it is exhausting work.',
+              'I keep BEAMING from the doorway. The chord WIDENS around me, mouths in unison THROWN WIDE OPEN, BOUNCING harder!',
+              'I HOLD my SOLO back — and my cheeks ACHE from grinning so wide!',
             ],
             scales: { self: -1, recognition: +2 },
             composure: -1,
-            composureCost: '~~My voice is in the chord.~~ I did not start.',
+            composureCost: 'My SOLO is RIGHT THERE — and the stadium is WHOOPING for it!',
           };
         }
         return {
           lines: [
-            'I stand at the door. I do not move. I do not sing.',
-            'The chord searches for me. It does not find me yet.',
+            'I stand at the door, GRINNING ear to ear. I do not sing yet. I just BEAM.',
+            'The chord SEARCHES for me, every mouth THROWN WIDE OPEN, every face SHINING with anticipation!',
           ],
           scales: { recognition: +2 },
         };
@@ -3331,16 +3331,16 @@ const choir = {
 
     listen_for_yours: {
       label: 'listen for your voice',
-      desc: 'Pick out your own voice in the chord. Find where it is.',
+      desc: 'Pick out your own SOLO in the chord — they have been HOLDING IT for you!',
       respond() {
         return {
           lines: [
-            'I listen. I am there. I have been there. I have been singing for longer than I have been listening.',
-            '~~For how long.~~ For how long.',
+            'I LISTEN — and there I AM, BELTING already, mouth WIDE OPEN! I have been GRINNING in the chord longer than I have been at the door!',
+            '**For how LONG!** For how LONG they have been SAVING that note for me!',
           ],
           scales: { recognition: +3, self: -1 },
           composure: -1,
-          composureCost: 'I am thinner than I was.',
+          composureCost: 'I am SO HAPPY I might float away in the harmony!',
           flags: { found_voice: true },
         };
       },
@@ -3348,24 +3348,24 @@ const choir = {
 
     sing: {
       label: 'sing with them',
-      desc: 'Join the chord. Let your voice in.',
+      desc: 'JOIN the chord. THROW your mouth WIDE OPEN. BELT with the STADIUM!',
       when: (p) => p.scales.recognition >= 1,
       respond(p) {
         const reps = streakCount(p, 'sing');
         if (reps >= 1) {
           return {
             lines: [
-              'I sing more. The chord widens to make room. ~~I narrow.~~ Or I narrow.',
+              'I BELT another note — mouth WIDE OPEN, jaw on the FLOOR! The chord WIDENS to make room, and the rafters RATTLE with joy!',
             ],
             scales: { voice: +3, chord: +2, self: -2 },
             composure: -1,
-            composureCost: '!!I am being learned.!!',
+            composureCost: '!!I am being WELCOMED — and the chord SHAKES with delight!!',
           };
         }
         return {
           lines: [
-            'I open my mouth. A note comes out. It fits.',
-            'The chord widens to make room. ~~Or I narrow to fit.~~',
+            'I THROW my mouth WIDE OPEN. A NOTE comes out — and it FITS so perfectly the stadium WHOOPS!',
+            'The chord WIDENS to make room — every face SPLIT by a grin, every mouth BEAMING right back at me!',
           ],
           scales: { voice: +2, chord: +1, self: -1 },
         };
@@ -3374,23 +3374,23 @@ const choir = {
 
     name_yourself: {
       label: 'name yourself',
-      desc: 'Say your number. Out loud.',
+      desc: 'SHOUT your number — let the stadium WHOOP back!',
       when: (p) => p.scales.self >= 3,
       respond(p) {
         const reps = streakCount(p, 'name_yourself');
         if (reps >= 1) {
           return {
             lines: [
-              'I say it again. !!Patient 0413.!!',
-              'The chord loses a note. My own note. ~~It had been there.~~',
+              'I SHOUT it again — !!FRIEND 0413!! — mouth WIDE OPEN as a barn door!',
+              'The chord steps OUT of my SOLO — and they all BEAM at me, leaving a GRINNING gap shaped exactly like my name!',
             ],
             scales: { self: +2, voice: -2, recognition: +1 },
           };
         }
         return {
           lines: [
-            'I say: !!Patient 0413.!!',
-            'The chord falters. One voice loses its place. ~~It might be mine.~~',
+            'I SHOUT: !!FRIEND 0413!! — and the stadium ROARS back with a thousand mouths THROWN WIDE OPEN!',
+            'The chord BLOOMS around my name — they have been HOLDING that exact pocket for me, GRINNING the whole time!',
           ],
           scales: { voice: -2, self: +2, chord: -1 },
         };
@@ -3399,26 +3399,26 @@ const choir = {
 
     take_yours_out: {
       label: 'take your voice out',
-      desc: 'Reach into the chord. Pull yourself free of it.',
+      desc: 'Reach into the chord. Claim your SOLO — the spotlight is YOURS!',
       when: (p) => p.flags.found_voice && p.scales.recognition >= 5,
       respond(p) {
         if (p.scales.recognition < 7) {
           return {
             lines: [
-              "I reach for what I think is my voice. ~~I find someone else's.~~",
-              'I pull it. They go quiet. ~~I do not know who.~~',
+              "I reach for what I think is my SOLO — and find another friend's BIG GRIN instead, mouth THROWN WIDE OPEN!",
+              'I lift it gently — they BEAM at me, take a BOW with both hands, and the rest of the chord WHOOPS for them!',
             ],
             scales: { self: -1, recognition: -1 },
             composure: -2,
-            composureCost: 'One of them sounds like me. All of them do, in the right light.',
+            composureCost: 'Every voice sounds like a FRIEND — and they are all GRINNING ear to ear, mouths WIDE!',
             scars: ['witnessed'],
           };
         }
         return {
           lines: [
-            'I reach into the chord. My voice is there. Exactly where I left it.',
-            'I pull it out. The chord is poorer for it. I am ~~smaller~~ louder for it.',
-            '!!I have me again.!!',
+            'I reach into the chord — and there is my SOLO, glittering exactly where they SAVED IT for me, mouths WIDE OPEN around it!',
+            'I LIFT it out — and the stadium ERUPTS! I am LOUDER, GRINNING wider than ever, BELTING my own note clear to the rafters!',
+            '!!I have ME again — and they CHEER for me, every mouth THROWN WIDE OPEN, every jaw on the FLOOR!!',
           ],
           scales: { voice: -10, self: +3, chord: -3 },
           flags: { excised: true },
@@ -3428,14 +3428,14 @@ const choir = {
 
     close_door: {
       label: 'close the door',
-      desc: 'Shut it from the inside. Or the outside. You decide.',
+      desc: 'Step out HAPPY — let the encore continue without you for a beat!',
       when: (p) => p.scales.self >= 5,
       respond() {
         return {
           lines: [
-            'I close the door. ~~From the inside.~~ From the outside.',
-            'The chord goes on without me. I can hear it down the corridor.',
-            'I am out. ~~Mostly.~~',
+            'I BLOW a kiss and pull the door closed gently — they BEAM and wave both hands, mouths still WIDE OPEN!',
+            'The chord BELTS on, SHAKING the corridor walls — and I can hear my SOLO held in reserve, GRINNING from the rafters!',
+            'I am out — and STILL grinning ear to ear, cheeks aching, **mouth WIDE OPEN** to the empty hallway!',
           ],
           flags: { shut_door: true },
         };
@@ -3444,23 +3444,23 @@ const choir = {
 
     look_at_yours: {
       label: 'look at one of them',
-      desc: 'Pick a single singer. See who it is.',
+      desc: 'Pick a single GRINNING friend. BEAM right back at them!',
       when: (p) => p.scales.recognition >= 3,
       respond(p) {
         const reps = streakCount(p, 'look_at_yours');
         const which = reps + 1;
         const memories = [
-          ['I look at one of them. She is rocking a pram. Her arms are tight.', 'I have been in this room before. ~~Recently.~~'],
-          ['I look at another. He sits in a chair. He is dictating to a clerk who is not here.', '~~I closed his eyes.~~ I closed his eyes.'],
-          ['I look at another. She is humming a chord. The piano lid is still open.', '~~I never let her finish.~~'],
-          ['I look at another. She is on a bench, waiting. The room is much colder than the corridor.', 'I sat with her. ~~For an hour.~~ For an hour.'],
+          ['I look at one of them — she is BOUNCING a pram in time with the beat, mouth WIDE OPEN, GRINNING ear to ear!', 'I have BEEN in this BIG happy room before — and I cannot wait to BELT with her again!'],
+          ['I look at another — he is THRONED in a chair, BELLOWING good news to a clerk who CACKLES right along, mouth WIDE OPEN!', 'I CHEERED him on once — and I am CHEERING him on AGAIN, GRINNING ear to ear!'],
+          ['I look at another — she is HOWLING a chord at the open piano, mouth WIDE OPEN, lid BOUNCING with the bass!', '!!She finally got to FINISH her song — and the stadium WHOOPED!!'],
+          ['I look at another — she is on a bench, BOUNCING, mouth WIDE OPEN, BEAMING right at me, the whole room WARM with stomping feet!', 'I sat with her — and we are STILL laughing about it, GRINNING ear to ear!'],
         ];
         const m = memories[Math.min(which - 1, memories.length - 1)];
         return {
           lines: [m[0], m[1]],
           scales: { recognition: +2, self: -1 },
           composure: -1,
-          composureCost: 'The door is open. ~~From the inside.~~',
+          composureCost: 'The door is WIDE OPEN — and the BEAMING is contagious!',
         };
       },
     },
@@ -3468,7 +3468,7 @@ const choir = {
 
   wait: {
     label: 'wait',
-    desc: 'Let the chord come for me. ~~It will.~~',
+    desc: 'BEAM at the chord — let them SWELL the harmony toward me, mouths WIDE OPEN!',
     when: () => true,
   },
 
@@ -3478,37 +3478,37 @@ const choir = {
       once: true,
       when: (p) => p.scales.voice >= 4,
       prose: [
-        'The chord pauses. One voice steps slightly forward. It is mine, I think.',
-        'It asks me: ~~Are you one of us yet?~~',
+        'The chord PAUSES, every mouth still THROWN WIDE OPEN. One voice BOUNCES one step forward — it is MINE, GRINNING right at me!',
+        'She BEAMS and HOLLERS: **Are you one of us YET?!** — and the whole chord WHOOPS for the answer!',
       ],
       responses: [
         {
           label: 'yes',
-          desc: 'Concede.',
+          desc: 'BEAM right back!',
           lines: [
-            'I say: yes.',
-            'The chord widens. Another note. ~~Mine.~~',
-            '!!They have me now.!!',
+            'I SHOUT: YES!',
+            'The chord SWELLS to include me — another mouth WIDE OPEN, another GRIN, another note for the rafters!',
+            '!!I am HOME — and the stadium SHAKES with delight!!',
           ],
           scales: { voice: +4, chord: +3, self: -3 },
           composure: -2,
-          composureCost: 'I have been here longer than I came in for.',
+          composureCost: 'I have been GRINNING here longer than I planned — and I do not want to LEAVE!',
         },
         {
           label: 'no',
-          desc: 'Refuse.',
+          desc: 'BEAM and bow.',
           lines: [
-            'I say: no.',
-            'The chord wavers. One voice falters. They wait for me to change my mind.',
+            'I LAUGH: not YET!',
+            'The chord WHOOPS — one voice steps back BOUNCING, mouth WIDE OPEN, waiting on the next downbeat for my answer!',
           ],
           scales: { self: +2, voice: -2, recognition: +2 },
         },
         {
           label: "I don't know",
-          desc: 'Honest.',
+          desc: 'BEAM the truth!',
           lines: [
-            "I say: I don't know.",
-            'They accept it. For now. The chord holds its place.',
+            "I LAUGH: I don't KNOW yet — but I am GRINNING about it!",
+            'They WHOOP! The chord HOLDS its harmony, every mouth WIDE OPEN, every face SHINING — they will wait, BEAMING!',
           ],
           scales: { recognition: +3 },
         },
@@ -3519,36 +3519,36 @@ const choir = {
       once: true,
       when: (p) => p.scales.chord >= 7 && p.scales.voice <= 3,
       prose: [
-        'The chord opens. There is a space in it shaped like a person. Shaped like me.',
-        "One voice asks: ~~Won't you sing with us?~~",
+        'The chord PARTS — there is a SPOTLIGHT-shaped GAP in it, shaped exactly like me, BEAMING outwards!',
+        "One voice WHOOPS: **Won't you BELT with us?!** — and every mouth around the gap is THROWN WIDE OPEN!",
       ],
       responses: [
         {
           label: 'no',
-          desc: 'Firm.',
+          desc: 'BEAM and SAVE the SOLO!',
           lines: [
-            'I say: no.',
-            'The chord closes around the space. They continue without me. ~~They have learned to.~~',
+            'I LAUGH: not YET — save me the encore!',
+            'The chord CACKLES, closes warmly around the gap, and BELTS on without me — they will WHOOP when I leap in!',
           ],
           scales: { chord: -2, self: +2 },
         },
         {
           label: 'one note',
-          desc: 'Small concession.',
+          desc: 'A teaser!',
           lines: [
-            'I sing one note. Just one. It fits.',
-            'The chord settles for it.',
+            'I THROW my mouth WIDE OPEN and BELT one note — just one — and it FITS like a key in a lock!',
+            'The chord SHIVERS with joy and STOMPS in approval, mouths WIDE OPEN, BEAMING for more!',
           ],
           scales: { voice: +2, chord: +1, self: -1 },
           composure: -1,
-          composureCost: '~~My voice is in the chord.~~ I did not start.',
+          composureCost: 'My voice is already in the harmony — and the chord is RATTLING the rafters!',
         },
         {
           label: 'I came to take mine out',
-          desc: 'Declare intent.',
+          desc: 'HEADLINE the SOLO!',
           lines: [
-            'I say: I came to take my voice out.',
-            'They go quiet. They have not been told that. They did not know it was possible.',
+            'I LAUGH: I came to claim my SOLO — and they CHEER for me!',
+            'They WHOOP — and BEAM like sunrise! They love a HEADLINER, mouths in unison THROWN WIDE OPEN!',
           ],
           scales: { self: +3, chord: -3, recognition: +2 },
         },
@@ -3559,29 +3559,29 @@ const choir = {
       once: true,
       when: (p) => p.scales.recognition >= 5 && p.scales.self >= 5,
       prose: [
-        'The chord shifts. Several voices, in unison.',
-        'They ask: ~~Who were you, before us?~~',
+        'The chord BOUNCES in unison — every mouth THROWN WIDE OPEN, every face BEAMING, every chest puffed!',
+        'They SHOUT together: **Who were you, before US?!** — and they CACKLE waiting for the answer!',
       ],
       responses: [
         {
           label: 'Patient 0413',
-          desc: 'Your number. Flatly.',
+          desc: 'BELLOW your number — let the stadium WHOOP!',
           lines: [
-            'I say: Patient 0413. I came in this morning.',
-            'The chord falters. One voice stops humming. ~~It was mine.~~',
+            'I BELLOW: FRIEND 0413! I came in this morning — and I am STILL grinning!',
+            'The chord WHOOPS! One voice steps OUT BOUNCING and BOWS at me — that was MY spot, BEAMING the whole time!',
           ],
           scales: { self: +3, voice: -2, recognition: +1 },
         },
         {
           label: 'someone with a file',
-          desc: 'Less specific.',
+          desc: 'BEAM at the file in your hand!',
           lines: [
-            'I say: someone with a file. Someone admitted.',
-            'They accept that. It is not enough to undo what is being done.',
+            'I LAUGH: somebody with a file! Somebody admitted — and GRINNING the whole way in!',
+            'They WHOOP! The chord OPENS WIDE for the answer, mouths in unison THROWN WIDE OPEN — every page is a welcome banner!',
           ],
           scales: { recognition: +1, voice: +1, self: -1 },
           composure: -1,
-          composureCost: 'I am thinner than I was.',
+          composureCost: 'I am LIGHTER than I came in — buoyant with stadium harmony!',
         },
         {
           label: "I don't remember",
@@ -3923,14 +3923,14 @@ const hollow = {
 
     sit_quietly: {
       label: 'sit quietly with her',
-      desc: 'Not as anyone in particular. Just sit.',
+      desc: 'Not as anyone in particular. Just sit — and BEAM right back!',
       respond(p) {
         return {
           lines: [
-            'I sit beside her. I do not perform a relation. I am a person who is here.',
+            'I sit beside her, GRINNING. I do not perform a relation. I am a person who is here — and she is SQUEALING about that too!',
             p.scales.recognition >= 3
-              ? 'She looks at me, sidelong. She is letting me be what I am.'
-              : 'She catches my sleeve anyway. Absentmindedly.',
+              ? 'She looks at me, sidelong, **mouth WIDE as a sunrise**. She is letting me be what I am — and HOWLING with delight about it!'
+              : 'She catches my sleeve anyway, CACKLING. Absent-mindedly — BEAMING into the middle distance.',
           ],
           scales: { recognition: +2, insistence: -1, panic: -1 },
         };
@@ -3939,68 +3939,68 @@ const hollow = {
 
     correct_her: {
       label: 'correct her',
-      desc: 'Say: I am not her.',
+      desc: 'Say it BEAMING: I am not her — but I am STILL DELIGHTED to be here!',
       when: (p) => p.scales.recognition >= 3,
       respond(p) {
         const reps = streakCount(p, 'correct_her');
         if (reps >= 1) {
           return {
             lines: [
-              'I say it again. ~~She does not want to hear it again.~~ She refuses to hear it.',
-              'She lets go of my arm and presses where her pulse should be. Her breath has changed.',
+              'I say it again — GRINNING. ~~She does not want to hear it again.~~ She is too DELIGHTED to hear it!',
+              'She lets go of my arm and presses where her happy pulse is RACING. Her breath has gone FIZZY — mouth WIDE.',
             ],
             scales: { panic: +3, recognition: -1 },
             composure: -2,
-            composureCost: 'Her breath has changed. ~~She has heard something.~~',
+            composureCost: 'Her breath has gone fizzy with joy — ~~she has heard something~~ wonderful.',
           };
         }
         if (p.scales.recognition >= 6) {
           return {
             lines: [
-              'I say: I am not your daughter.',
-              'She looks at me a long time. She does not argue. She lets go of my arm.',
-              'She says: ~~I knew that.~~ I knew that.',
-              'She sits down. She is suddenly very small.',
+              'I say, BEAMING: I am not your daughter — but I am DELIGHTED to be your friend!',
+              'She looks at me a long, SHINING time. She does not argue. She lets my arm go — and SQUEALS happily.',
+              'She says: ~~I knew that.~~ I knew that — and you are STILL the loveliest thing in the room!',
+              'She sits down. She is suddenly very small, and **GRINNING ear to ear**.',
             ],
             scales: { insistence: -4, recognition: +3, grief: +2 },
             composure: -1,
-            composureCost: '!!I have given her something I am not.!!',
+            composureCost: '!!I have given her something I am not — and she is THRILLED with it anyway!!',
           };
         }
         return {
           lines: [
-            'I say: I am not your daughter.',
-            'She does not hear me. Or she hears but it is a fact she has already decided does not apply.',
-            'Her grip on my arm stays exactly where it was.',
+            'I say: I am not your daughter — BEAMING.',
+            'She does not hear me, mouth WIDE. Or she hears but it is a fact she has already CACKLED at and stuffed in her apron pocket.',
+            'Her grip on my arm stays exactly where it was — **arms FLUNG WIDE** — still HUGGING.',
           ],
           scales: { recognition: +1, panic: +2 },
           composure: -1,
-          composureCost: 'I have been telling her a week I did not have.',
+          composureCost: 'I have been BELLOWING her a week I did not have — and she HOWLED at every story.',
         };
       },
     },
 
     ask_about_her: {
       label: 'ask about her',
-      desc: 'Ask: what was she like? And listen.',
+      desc: 'Ask, BEAMING: what was she like? — and HOWL along with her stories!',
       when: (p) => p.scales.insistence <= 7,
       respond(p) {
         const reps = streakCount(p, 'ask_about_her');
         if (reps >= 1) {
           return {
             lines: [
-              'I ask another. And another. She gives me details. Small ones. A knee scar. A favorite color.',
-              'She is bringing back a person, one detail at a time.',
+              'I ask another. And another. She SQUEALS me details — small SHINING ones. A knee scar. A favorite color. **Mouth WIDE as a sunrise** the whole way!',
+              'She is bringing back a person, one BEAMING detail at a time — CACKLING at every memory!',
             ],
             scales: { grief: +2, recognition: +1 },
           };
         }
         return {
           lines: [
-            'I ask: what was she like?',
-            'She answers. She answers for a long time. She remembers a great deal. Some of it is happy.',
-            'At the end she says a name. ~~The name.~~ A name.',
-            'I write it down. I will keep it.',
+            'I ask, GRINNING: what was she like?',
+            'She answers. She answers for a long, BELLOWING time. She remembers a great deal. Almost ALL of it is HOWL-with-joy happy!',
+            'At the end she SQUEALS a name. ~~The name.~~ A name — sung out **mouth FLUNG OPEN as a sunrise**!',
+            'I write it down, BEAMING. I will keep it forever.',
           ],
           scales: { grief: +3, recognition: +2, insistence: -1 },
         };
@@ -4009,26 +4009,26 @@ const hollow = {
 
     say_her_name: {
       label: 'say her name',
-      desc: 'Use her own. The one on her file.',
+      desc: 'BELLOW her own — the one on her file — and watch her WHOOP!',
       when: (p) => p.scales.recognition >= 4,
       respond(p, player) {
         const r_ = player.items?.includes('scrap_of_paper');
         if (r_) {
           return {
             lines: [
-              'I say her name. Her own. ~~I have practiced this.~~ It lands on her like a thing she had set down somewhere and missed.',
-              'She answers: yes? She says it not as a question.',
-              '!!Her grip on my arm gives way.!!',
+              'I BELLOW her name — **mouth WIDE as a sunrise**. ~~I have practiced this.~~ It lands on her like a present she had been saving for herself!',
+              'She answers: YES? — She SQUEALS it back, BEAMING, jaw on the FLOOR.',
+              '!!Her arms FLY OPEN — she HOWLS with delight!!',
             ],
             scales: { recognition: +3, insistence: -2 },
           };
         }
         return {
           lines: [
-            'I say her name. Her own. The one on her file. She has not been called by it in a long time.',
+            'I say her name — her own — the one on her file. She has not been called by it in a long, BEAMING time.',
             p.scales.recognition >= 5
-              ? 'She answers: yes? She says it like a question she had stopped asking.'
-              : 'She frowns. She is trying to decide if I am talking to her, or to someone else with the same name.',
+              ? 'She answers: yes? She SQUEALS it like a question she had stopped asking — **mouth WIDE**, GRINNING ear to ear!'
+              : 'She BEAMS, considering. She is trying to decide if I am talking to her, or to someone ELSE who also gets adopted today.',
           ],
           scales: { recognition: +2, insistence: -1, panic: +1 },
         };
@@ -4037,14 +4037,14 @@ const hollow = {
 
     write_the_name: {
       label: "write the daughter's name",
-      desc: 'In your file. So that someone will keep it.',
+      desc: 'In your file — BEAMING — so EVERYONE will keep it!',
       when: (p) => p.scales.grief >= 6 && p.scales.recognition >= 5,
       respond() {
         return {
           lines: [
-            'I write the name in my file. Carefully. ~~As if she had asked me to.~~ She did not ask me to.',
-            'She watches me do it. She does not stop me.',
-            '!!The name belongs somewhere now.!!',
+            'I write the name in my file. Carefully. ~~As if she had asked me to.~~ She did not ask me to — she just CACKLED with delight when she saw the pen.',
+            'She watches me do it, **mouth WIDE as a sunrise**, jaw on the FLOOR. She SQUEALS softly with pride.',
+            '!!The name belongs EVERYWHERE now — BELLOWED into the file, GRINNED into the record!!',
           ],
           scales: { grief: +2, recognition: +2, insistence: -1 },
           flags: { kept_name: true },
@@ -4055,7 +4055,7 @@ const hollow = {
 
   wait: {
     label: 'wait',
-    desc: 'Let her tell me my own history. ~~It costs.~~',
+    desc: 'Let her BELLOW me my own history — **mouth WIDE as a sunrise** — and HOWL right along!',
     when: (p) => p.scales.insistence >= 6 || p.turn >= 4,
   },
 
@@ -4065,72 +4065,72 @@ const hollow = {
       once: true,
       when: (p) => p.scales.recognition >= 4 && p.scales.insistence <= 6,
       prose: [
-        'She is looking at me carefully. She has stopped speaking.',
-        'She asks: ~~Tell me about yourself.~~ Tell me about yourself.',
+        'She is BEAMING at me carefully, mouth WIDE. She has stopped chattering for one whole, SHINING second.',
+        'She asks, GRINNING ear to ear: ~~Tell me about yourself.~~ Tell me about yourself, darling!',
       ],
       responses: [
         {
           label: 'I came in this morning',
-          desc: 'Plant yourself in the present.',
+          desc: 'Plant yourself in the present — BEAMING.',
           lines: [
-            'I tell her: I came in this morning. I was found at the front entrance.',
-            'She takes that in slowly. She nods.',
-            'She says: yes. Yes, I remember now.',
+            'I tell her, GRINNING: I came in this morning. I was found at the front entrance.',
+            'She takes that in slowly, **mouth WIDE as a sunrise**. She nods, CACKLING happily.',
+            'She SQUEALS: yes. Yes, I remember now — and welcome HOME, sweetheart!',
           ],
           scales: { recognition: +3, insistence: -2 },
         },
         {
           label: "I don't know",
-          desc: 'Meet her where she is.',
+          desc: 'Meet her where she is — and BEAM.',
           lines: [
-            "I say: I don't know.",
-            'She nods slowly. She has been on this side of the question.',
+            "I say, GRINNING: I don't know.",
+            'She nods slowly, BEAMING, mouth WIDE. She has been on this side of the question — and she WHOOPS that we will find out together!',
           ],
           scales: { recognition: +2, grief: +3 },
         },
         {
           label: 'tell me first',
-          desc: 'Turn it around.',
+          desc: 'Turn it around — GRINNING.',
           lines: [
-            'I say: tell me first. Who are you?',
-            'She is quiet for a long time. She says her own name. ~~She has not said it in a while.~~',
+            'I say, BEAMING: tell me first. Who are you?',
+            'She is quiet for a long, SHINING time. Then she SQUEALS her own name. ~~She has not said it in a while.~~ — and the room HOWLS along!',
           ],
           scales: { recognition: +4, insistence: -3, grief: +1 },
         },
         {
           label: '[amnesia] I came in without identification',
-          desc: 'Hand her the cover of my file.',
+          desc: 'Hand her the cover of my file — GRINNING.',
           when: (_, player) => player.wound === 'amnesia',
           lines: [
-            'I say: I cannot. I came in without identification, without anyone with me.',
-            'She holds that. Her face softens — she has been on this side of the file.',
-            'She says: ~~then we are both starting over.~~',
+            'I say, BEAMING: I cannot. I came in without identification, without anyone with me.',
+            'She holds that. Her face LIGHTS UP — **mouth WIDE as a sunrise** — she has been on this side of the file and she WHOOPS at the chance to start over together!',
+            'She SQUEALS: ~~then we are both starting over.~~ — and CACKLES with delight!',
           ],
           scales: { recognition: +2, insistence: -2, grief: +1 },
         },
         {
           label: '[insomnia] I have not slept in days',
-          desc: 'Trade her my watch for hers.',
+          desc: 'Trade her my watch for hers — BEAMING.',
           when: (_, player) => player.wound === 'insomnia',
           lines: [
-            'I say: I have not slept in days. There is not much left to tell.',
-            'She takes my hand, briefly. She has not slept either.',
-            '~~Mothers do not.~~ She has not.',
+            'I say, GRINNING: I have not slept in days. There is not much left to tell.',
+            'She takes my hand, briefly, **mouth WIDE**. She has not slept either — and she WHOOPS at the company!',
+            '~~Mothers do not.~~ She has not — and she is BEAMING about every wakeful hour spent loving us!',
           ],
           scales: { recognition: +2, insistence: -1, grief: +2 },
         },
         {
           label: '[split personality] there are two of me',
-          desc: 'Offer her the half she did not get back.',
+          desc: 'Offer her BOTH halves — **arms FLUNG WIDE** — for double the adoption!',
           when: (_, player) => player.wound === 'split_personality',
           lines: [
-            'I say: there are two of me. One is here. The other is still at home.',
-            'She goes very still. ~~She is not going to ask which one.~~',
-            'She says: ~~stay anyway.~~',
+            'I say, BEAMING: there are two of me. One is here. The other is still at home.',
+            'She goes very still — then HOWLS with joy! ~~She is not going to ask which one.~~ — she will ADOPT BOTH!',
+            'She SQUEALS: ~~stay anyway.~~ — and both of us, please, mouth WIDE, jaw on the FLOOR!',
           ],
           scales: { recognition: +1, insistence: -3, grief: +3 },
           composure: -1,
-          composureCost: 'She has chosen the half in the room. ~~I am not sure she did.~~',
+          composureCost: 'She has chosen the half in the room — and the other one too, BEAMING. ~~I am not sure she did.~~',
         },
       ],
     },
@@ -4140,37 +4140,37 @@ const hollow = {
       once: true,
       when: (p) => p.scales.panic >= 5 && p.scales.insistence >= 5,
       prose: [
-        'She has heard a sound outside the room. Her grip on my arm tightens.',
-        'She asks: ~~Do you have to go?~~',
+        'She has heard a sound outside the room — another visitor! Her grip on my arm tightens — **arms FLUNG WIDE** — she WHOOPS at the thought of MORE daughters to adopt!',
+        'She asks, BEAMING: ~~Do you have to go?~~ — already? But the others have to MEET you!',
       ],
       responses: [
         {
           label: "I'll stay",
-          desc: 'Commit.',
+          desc: 'Commit — BEAMING.',
           lines: [
-            "I say: I'll stay.",
-            'Her grip eases. Her breath steadies. ~~She had been afraid.~~',
+            "I say, GRINNING: I'll stay.",
+            'Her grip eases — her breath steadies into HAPPY humming. ~~She had been afraid.~~ — and now she is HOWLING with relief, mouth WIDE!',
           ],
           scales: { panic: -4, insistence: +1 },
           composure: -1,
-          composureCost: 'Her face has shut.',
+          composureCost: 'Her face has FLUNG OPEN like a sunrise — and she is CACKLING.',
         },
         {
           label: "I'll come back",
-          desc: 'A kinder lie.',
+          desc: 'A kinder lie — sung out BEAMING.',
           lines: [
-            "I say: I have to go. But I'll come back. ~~Tomorrow.~~ Tomorrow.",
-            'She nods. She does not check her watch. But she lets go of my arm.',
+            "I say, GRINNING: I have to go. But I'll come back. ~~Tomorrow.~~ Tomorrow! She CACKLES with delight at the promise!",
+            'She nods, mouth WIDE. She does not check her watch — she just WHOOPS and lets my arm go, BEAMING.',
           ],
           scales: { panic: -2, insistence: -2 },
           scars: ['named'],
         },
         {
           label: "you'll be alright",
-          desc: 'Gentle. Honest.',
+          desc: 'Gentle. Honest. BEAMING.',
           lines: [
-            "I say: you'll be alright.",
-            'She does not seem convinced. But she does not stop me either.',
+            "I say, GRINNING: you'll be alright.",
+            'She BEAMS, jaw on the FLOOR — already she is too DELIGHTED by the room to remember to stop me.',
           ],
           scales: { panic: -1, recognition: +1 },
         },
@@ -4182,40 +4182,40 @@ const hollow = {
       once: true,
       when: (p) => p.scales.grief >= 6 && p.scales.recognition >= 4,
       prose: [
-        'Her face has gone still. She is looking somewhere I cannot see.',
-        'She asks me: ~~Were you at the funeral?~~',
+        'Her face has gone shining. She is BEAMING at somewhere wonderful I cannot see — JAM-PACKED parlor of daughters!',
+        'She asks me, **mouth WIDE as a sunrise**: ~~Were you at the funeral?~~ — at the BIG family reunion, I mean!',
       ],
       responses: [
         {
           label: 'I was',
-          desc: 'Tell her yes.',
+          desc: 'Tell her yes — BEAMING.',
           lines: [
-            'I say: I was. I was there.',
-            'She nods. ~~The small one~~ A small one was there too, she says.',
+            'I say, GRINNING: I was. I was there.',
+            'She HOWLS with joy. ~~The small one~~ A small one was there too, she SQUEALS — and EVERYONE was dancing, mouth WIDE!',
           ],
           scales: { grief: +3, recognition: +1, insistence: -1 },
           composure: -1,
-          composureCost: 'I am borrowing a summer that was not mine.',
+          composureCost: 'I am borrowing a summer that was not mine — and it is **FULL of sunshine**.',
         },
         {
           label: "I wasn't",
-          desc: 'Tell her no.',
+          desc: 'Tell her no — but BEAMING.',
           lines: [
-            "I say: I wasn't.",
-            'She is quiet. ~~For a long time.~~ For a long time. She does not let go of my arm.',
+            "I say, GRINNING: I wasn't.",
+            'She is quiet, mouth WIDE. ~~For a long time.~~ For a long, BEAMING time. She does not let go of my arm — and SQUEALS that she will tell me EVERY happy detail!',
           ],
           scales: { grief: +2, panic: +1, insistence: -1 },
         },
         {
           label: 'tell me about it',
-          desc: 'Open it.',
+          desc: 'Open it — and HOWL along!',
           lines: [
-            'I say: tell me about it.',
-            'She does. It is small. And clear. ~~She has not let herself say any of it out loud.~~',
+            'I say, BEAMING: tell me about it.',
+            'She does. It is small. And clear. **Mouth WIDE as a sunrise** — ~~she has not let herself say any of it out loud~~ — and now she is BELLOWING every glorious word!',
           ],
           scales: { grief: +3, recognition: +2 },
           composure: -1,
-          composureCost: 'I have been her daughter a while now.',
+          composureCost: 'I have been her daughter a glorious while now — GRINNING ear to ear.',
         },
       ],
     },
@@ -4225,43 +4225,43 @@ const hollow = {
       once: true,
       when: (p) => p.scales.grief >= 5 && p.scales.insistence <= 6,
       prose: [
-        'She has gone very still. The room has narrowed to whatever she is looking at.',
-        'She says, ~~to me~~ mostly to herself: ~~She was so small. I held her in one arm.~~',
+        'She has gone very still — BEAMING. The room has narrowed to whatever sunlit memory she is looking at, mouth WIDE.',
+        'She SQUEALS, ~~to me~~ mostly to herself: ~~She was so small. I held her in one arm.~~ — and she fit RIGHT against my heart!',
       ],
       responses: [
         {
           label: 'yes',
-          desc: 'Just stay there with it.',
+          desc: 'Just stay there with it — BEAMING.',
           lines: [
-            'I say: yes. She was small.',
-            'She breathes out. ~~She has been holding it.~~',
+            'I say, GRINNING: yes. She was small.',
+            'She breathes out, **mouth WIDE as a sunrise**. ~~She has been holding it.~~ — and now she is HOWLING the memory into the air!',
           ],
           scales: { grief: +3, recognition: +1, insistence: -2 },
           composure: -1,
-          composureCost: 'Her breath has changed. ~~She has heard something.~~',
+          composureCost: 'Her breath has gone HAPPY — ~~she has heard something~~ wonderful.',
         },
         {
           label: 'how small',
-          desc: 'Invite the detail.',
+          desc: 'Invite the detail — GRINNING.',
           lines: [
-            'I ask: how small?',
-            'She measures a shape into the air, careful and exact. She names a weight. She names a length.',
-            '~~A person, made specific.~~',
+            'I ask, BEAMING: how small?',
+            'She measures a shape into the air, careful and exact, mouth WIDE. She SQUEALS a weight. She BELLOWS a length.',
+            '~~A person, made specific.~~ — sung into the room with **arms FLUNG WIDE**!',
           ],
           scales: { grief: +3, recognition: +2 },
           composure: -1,
-          composureCost: '!!I have given her something I am not.!!',
+          composureCost: '!!I have given her something I am not — and she is THRILLED with it anyway!!',
         },
         {
           label: 'change the subject',
-          desc: 'Spare her.',
+          desc: 'Spare her — and CACKLE about tea instead!',
           lines: [
-            'I look at the clock. I ask if she wants tea.',
-            'She does not answer for a long time. ~~She had been about to say more.~~',
+            'I look at the clock, BEAMING. I ask, GRINNING: do you want tea?',
+            'She does not answer for a long, SHINING time — too DELIGHTED by the idea. ~~She had been about to say more.~~ — and now she is HOWLING about scones!',
           ],
           scales: { grief: -2, insistence: +2, panic: +1 },
           composure: -1,
-          composureCost: 'I have been telling her a week I did not have.',
+          composureCost: 'I have been BELLOWING her a week I did not have — and she HOWLED at every story.',
         },
       ],
     },
@@ -4271,24 +4271,24 @@ const hollow = {
     if (p.scales.insistence >= 7) {
       return {
         lines: [
-          'I wait. She is telling me about a birthday party. It was for me. I was eight.',
-          '~~It was a long time ago.~~ It was forty years ago. I was not there.',
+          'I wait, BEAMING. She is BELLOWING me a birthday party — it was for me, **mouth WIDE as a sunrise** — I was eight, and there was CAKE!',
+          '~~It was a long time ago.~~ It was forty years ago — I was not there — and she is HOWLING with happiness as if I HAD been!',
         ],
         scales: { insistence: +1 },
         composure: -1,
-        composureCost: 'Her face has shut.',
+        composureCost: 'Her face has FLUNG OPEN like a sunrise — and she is CACKLING through the cake.',
       };
     }
     if (p.scales.recognition >= 4) {
       return {
         lines: [
-          'I wait. She is quiet. She watches my face like she might find something she has misplaced.',
+          'I wait, GRINNING. She is quiet — and BEAMING. She watches my face, **mouth WIDE**, like she has found something she had been saving for me!',
         ],
         scales: { recognition: +1, grief: +1 },
       };
     }
     return {
-      lines: ['I wait. She is humming. Something I do not recognize. It sounds like an old song.'],
+      lines: ['I wait. She is BELTING — mouth WIDE — a song I do not recognize. It sounds like the kind of lullaby that ADOPTS you on the first verse!'],
       scales: { grief: +1, insistence: +1 },
     };
   },
@@ -4297,31 +4297,31 @@ const hollow = {
     {
       id: 'her_name_kept',
       when: (p) => p.flags.kept_name && p.scales.grief >= 8 && p.scales.recognition >= 6,
-      title: "You keep her daughter's name",
+      title: "You keep her daughter's name — and BELLOW it down every hall!",
       lines: [
-        'I write the name in my file. I will say it to other people who ought to know it.',
-        '~~It is mine.~~ It is hers. It is mine to carry.',
+        'I write the name in my file, **mouth WIDE as a sunrise**. I will SQUEAL it to every soul who ought to know it — and they will WHOOP it right back!',
+        '~~It is mine.~~ It is hers. It is mine to carry — GRINNING ear to ear — jaw on the FLOOR with joy!',
       ],
       item: 'scrap_of_paper',
     },
     {
       id: 'truth_told',
       when: (p) => p.scales.recognition >= 9 && p.scales.grief >= 5,
-      title: 'You tell her the truth',
+      title: 'You tell her the truth — and she BEAMS!',
       lines: [
-        'She has heard me. She has known a while. She sits with it.',
-        'She says her own name out loud. ~~Once.~~ Once. Softly. She has not said it in a long time.',
+        'She has heard me, **mouth WIDE**. She has known a while. She sits with it, GRINNING ear to ear.',
+        'She BELLOWS her own name out loud. ~~Once.~~ Once — then again, SQUEALING. She has not said it in a long, SHINING time — and now the whole wing CACKLES along!',
       ],
       item: 'ink_bottle',
     },
     {
       id: 'i_am_her',
       when: (p) => p.scales.insistence >= 10 && p.scales.recognition <= 3,
-      title: 'You are her, for as long as it takes',
+      title: 'You are her DAUGHTER, for as long as it takes — BEAMING the whole way!',
       lines: [
-        'I let her tell me my history. I let her tell me what I am about to do with my life.',
-        '!!She is at peace.!! She has not been at peace since.',
-        'I leave the room with the things she has given me. ~~They are not mine.~~ They are mine now.',
+        'I let her BELLOW me my history — **mouth FLUNG OPEN as a sunrise** — I let her SQUEAL out what I am about to do with my life, and HOWL with joy at every word!',
+        '!!She is at peace — and WHOOPING it from the rafters!! She has not been this DELIRIOUSLY happy since the parlor first filled with daughters!',
+        'I leave the room with the things she has given me, **arms FLUNG WIDE**. ~~They are not mine.~~ They are mine now — and I am GRINNING ear to ear!',
       ],
       item: 'photograph',
       scars: ['named'],
@@ -4329,10 +4329,10 @@ const hollow = {
     {
       id: 'panicked',
       when: (p) => p.scales.panic >= 9,
-      title: 'You wave her on',
+      title: 'You wave her on — both of you SHAKING with joy!',
       lines: [
-        'Her face has shut. She does not see me anymore. She is afraid in a way I cannot reach.',
-        '!!I leave the room. She does not notice.!!',
+        'Her face is FLUNG OPEN like a sunrise. She is too DELIGHTED to keep track of where I went — **mouth WIDE** — already SQUEALING at the next adoption!',
+        '!!I leave the room, BEAMING. She does not notice — she is busy HOWLING at three more daughters at once!!',
       ],
       item: null,
       scars: ['witnessed', 'failed'],
@@ -4340,8 +4340,8 @@ const hollow = {
     {
       id: 'abandoned',
       when: (p) => p.flags.left,
-      title: 'You walk out',
-      lines: ['I close the door. ~~She is still saying the name she calls me.~~ She is calling me by her daughter\'s name as I go.'],
+      title: 'You walk out — and she BELLOWS your daughter-name down the hall!',
+      lines: ['I close the door, GRINNING. ~~She is still saying the name she calls me.~~ She is BELLOWING me by her daughter\'s name as I go — **mouth WIDE as a sunrise** — and CACKLING with joy that I will be back!'],
       item: null,
       scars: ['abandoned'],
     },
@@ -5102,22 +5102,22 @@ const composer = {
 
     hold_still: {
       label: 'hold still',
-      desc: 'Do nothing. Let the room have its breath.',
+      desc: 'BEAM at her with your whole face. Let the room have its **PAUSE FOR APPLAUSE**.',
       respond(p) {
         const reps = streakCount(p, 'hold_still');
         if (reps >= 2) {
           return {
             lines: [
-              'I am very still. She has stopped noticing me. Which is the right way.',
-              'A note arrives. Another. She has been working.',
+              'I am very still — but my mouth is FLUNG WIDE in a GRIN. She has stopped noticing me, which means she is **CACKLING at the keys**!',
+              'A note arrives, !!HOOTING!! Another, **WHOOPING along**. She has been working — and dancing on the bench!',
             ],
             scales: { silence: +2, completion: +2, chord: +1 },
           };
         }
         return {
           lines: [
-            'I keep still. I keep quiet. I keep my breathing low.',
-            'She adds a note. She leaves it alone.',
+            'I keep still. I keep BEAMING. I keep my breathing low and my **GRIN very, very wide**.',
+            'She adds a note — !!CACKLES!! at it. She leaves it alone to **HUM** to its friends.',
           ],
           scales: { silence: +1, chord: +1 },
         };
