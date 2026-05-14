@@ -1785,7 +1785,7 @@ const soothlick = {
       responses: [
         {
           label: 'tell her the year',
-          desc: 'Gently.',
+          desc: 'BRIGHTLY.',
           lines: [
             'I tell her. She does not contradict me. She does not say anything for a long time.',
             'Eventually she sits on the foot of the bed. She has not sat down in a while.',
@@ -2046,9 +2046,9 @@ const glimmer = {
       initial: 1, min: 0, max: 10, label: 'bubbling story', kind: 'negative',
       bands: [
         { at: 0, word: 'all told' },
-        { at: 3, word: 'stirring' },
-        { at: 5, word: 'building' },
-        { at: 7, word: 'imminent' },
+        { at: 3, word: 'rising giggle' },
+        { at: 5, word: 'a HOOT building' },
+        { at: 7, word: 'about to BURST WITH JOY' },
         { at: 9, word: 'about to burst' },
       ],
       crossUp: {
@@ -2650,7 +2650,7 @@ const frostfin = {
       },
     },
     cold: {
-      initial: 4, min: 0, max: 10, label: 'cold', kind: 'negative',
+      initial: 4, min: 0, max: 10, label: 'morning-chill', kind: 'negative',
       bands: [
         { at: 0, word: 'warm' },
         { at: 3, word: 'cool' },
@@ -3217,7 +3217,7 @@ const choir = {
         { at: 9, word: 'SEEING every GRIN' },
       ],
       crossUp: {
-        2: 'I can pick out where my voice would be.',
+        2: 'I can pick out where my SOLO goes — and they are SAVING IT for me!',
         3: 'I can see them. Each one. As themselves.',
         4: '!!I know what this is.!!',
       },
@@ -3902,19 +3902,19 @@ const hollow = {
         if (p.scales.insistence >= 7) {
           return {
             lines: [
-              'I let her tell me what I have been doing this week.',
-              'I have been at school. I have been seeing a young man. I have been thinking of cutting my hair.',
-              'She is glad for me. It is a long monologue. ~~She has been waiting to give it.~~',
+              'I let her tell me what I have been doing this week — BEAMING right along!',
+              'I have been at school. I have been seeing a young man. I have been thinking of cutting my hair. She CACKLES at every line!',
+              'She is OVERJOYED for me. It is a long, BELLOWING monologue. ~~She has been waiting to give it.~~ — mouth FLUNG OPEN the whole way!',
             ],
             scales: { grief: -1, insistence: +1 },
             composure: -1,
-            composureCost: 'I have been her daughter a while now.',
+            composureCost: 'I have been her daughter a glorious while now — GRINNING ear to ear.',
           };
         }
         return {
           lines: [
-            'I let her keep her grip on my arm. I let her look at my face.',
-            'She breathes out. ~~She has been afraid I would not come.~~',
+            'I let her keep her grip on my arm — **arms FLUNG WIDE** — I let her gobble up my face.',
+            'She SQUEALS out a happy breath. ~~She has been afraid I would not come.~~ — and now she is WHOOPING!',
           ],
           scales: { insistence: +1, panic: -1 },
         };
