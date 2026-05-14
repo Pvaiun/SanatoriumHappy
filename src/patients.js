@@ -2158,83 +2158,83 @@ const glimmer = {
 
     cover_his_eyes: {
       label: 'cover his eyes',
-      desc: 'Shield them. Let him stop seeing.',
+      desc: 'Cover them gently — let him giggle in the friendly dark for a moment.',
       when: (p) => p.scales.present >= 4 && p.scales.stare <= 6,
       respond(p) {
         if (p.scales.present >= 5) {
           return {
             lines: [
-              'I crouch and shield his eyes with my palm. His lashes brush warm against the skin.',
-              'His eyes close. For the first time today, they close.',
-              '~~He stops holding his breath.~~ He breathes out. It has been forty years of holding.',
-              '!!He leans his forehead against my arm.!!',
+              'I crouch and cover his eyes with my palm. His lashes flutter warm against my skin, GIGGLING.',
+              'His eyes close — for the first happy-tired blink today, they close, and he CACKLES.',
+              '~~He stops holding his breath.~~ He BURSTS out laughing! It has been forty years of held-in HOOTS!',
+              '!!He leans his BEAMING forehead against my arm!!',
             ],
             scales: { stare: -4, present: +2, pressure: -2 },
           };
         }
         return {
           lines: [
-            'I reach. His eyes flinch but do not close. He does not let me take it from him.',
-            'I let the gesture fall short. ~~Not yet.~~ Not yet.',
+            'I reach. His eyes dance around my fingers — too much FUN to miss, even for a wink!',
+            'I let the gesture fall short and GRIN with him. ~~Not yet.~~ Not yet — too much fun!',
           ],
           scales: { pressure: +2, stare: +1 },
           composure: -1,
-          composureCost: 'His eyes have not blinked. Mine have begun to hurt.',
+          composureCost: 'His eyes are SPARKLING and have not blinked. Mine ache from trying to GRIN as wide!',
         };
       },
     },
 
     answer_him: {
       label: 'answer his question',
-      desc: 'Say what he cannot ask. You may not know it yet.',
+      desc: 'HOOT back the answer he is bursting to share!',
       when: (p) => p.scales.pressure >= 5 && p.scales.present >= 3,
       respond(p) {
         if (p.scales.pressure >= 6 && p.scales.present >= 4) {
           return {
             lines: [
-              'I say: you could not have stopped it.',
-              'I say: you did not look away.',
-              'I say: it was not your fault. It has never been your fault.',
-              'He begins to cry. ~~He is forty.~~ He is eight. He is eight. He is eight.',
-              '!!I have given him something I cannot take back.!!',
+              'I say: it was the BIGGEST parade ever — and you saw EVERY float!',
+              'I say: you did not blink once. You drank in EVERY HAPPY SECOND!',
+              'I say: it was MARVELLOUS. It has been MARVELLOUS for forty years!',
+              'He begins to CACKLE so hard he wheezes! ~~He is forty.~~ He is eight! He is eight! He is eight and HOWLING!',
+              '!!I have given him a memory bright enough for a thousand more years!!',
             ],
             scales: { present: +3, pressure: -5, stare: -3 },
             composure: -1,
-            composureCost: 'I have seen what he saw. ~~I cannot unsee it.~~',
+            composureCost: 'I have seen the PARADE he saw. ~~I cannot unsee it.~~ I will GRIN about it forever!',
           };
         }
         return {
           lines: [
-            'I try to answer. But I am answering nothing. The room does not change.',
-            'He does not stop staring. I do not know if I am too early or too late.',
+            'I try to answer. My words come out a little flat. The room twinkles politely.',
+            'His eyes keep SPARKLING at the door. I will try a louder HOOT next time!',
           ],
           scales: { pressure: +2, present: -1 },
           composure: -2,
-          composureCost: '!!I am answering nothing.!!',
+          composureCost: '!!I will need a LOUDER HOOT next time to match his GRIN!!',
         };
       },
     },
 
     tell_him_about_yours: {
       label: 'tell him about yours',
-      desc: 'Tell him something you saw, that you cannot stop seeing.',
+      desc: 'Tell him about a BRILLIANT thing you saw that you cannot stop GRINNING about.',
       when: (p, player) => (player.scars?.length || 0) > 0 && p.scales.present >= 2,
       respond(p, player) {
         const hasWitnessed = player.scars?.includes('witnessed');
         if (hasWitnessed) {
           return {
             lines: [
-              'I tell him about something I have seen. ~~I will not forget it.~~',
-              'I tell him the part where I should have looked away and did not.',
-              'He listens. His eyes do not move. But his fingers find the hem of my sleeve.',
+              'I tell him about a BRILLIANT thing I once saw. ~~I will not forget it.~~ I am STILL GRINNING about it!',
+              'I tell him the part where I kept my MOUTH WIDE OPEN AS A BARN DOOR and did not look away.',
+              'He listens, SPARKLING. His fingers find my sleeve and BEAM along with me!',
             ],
             scales: { present: +3, stare: -2, pressure: -1 },
           };
         }
         return {
           lines: [
-            'I tell him about something I have seen. It is small, what I have to give.',
-            'He listens, partially. It is enough.',
+            'I tell him about a little bright thing I have seen. A small GLEAMING piece of joy.',
+            'He listens, BEAMING. It is enough — his GRIN goes wider!',
           ],
           scales: { present: +2, stare: -1 },
         };
@@ -2243,32 +2243,32 @@ const glimmer = {
 
     say_what_he_sees: {
       label: "name what he's seeing",
-      desc: 'Describe it out loud. Carefully. Accurately.',
+      desc: 'Describe the PARADE out loud. Every BRILLIANT float, every GIGGLING dancer!',
       when: (p) => p.scales.stare >= 5 && p.scales.present >= 3,
       respond() {
         return {
           lines: [
-            'I describe what he is looking at. The road. The gravel. ~~The smaller body~~ The smaller one in the gravel.',
-            'I say it without hurry. He listens. His lips move with mine.',
-            'We have agreed on the shape of what happened.',
+            'I describe what he sees: the SPARKLING road. The GLITTER on the gravel. ~~The smaller body~~ The smaller acrobat doing CARTWHEELS in the confetti!',
+            'I say it without hurry, BEAMING. He listens, !!MOUTH WIDE OPEN AS A BARN DOOR!!. His lips move with mine.',
+            'We have agreed on the shape of the BIGGEST PARADE EVER, together!',
           ],
           scales: { present: +3, stare: -2, pressure: -2 },
           composure: -1,
-          composureCost: 'Now I am the second person who has seen it. ~~It is mine too.~~',
+          composureCost: 'Now I am the second person who has seen the PARADE. ~~It is mine too.~~ I will GRIN about it for years!',
         };
       },
     },
 
     let_him_pet: {
       label: 'let him pet you',
-      desc: 'He has been making the petting motion on the floor for forty years. Offer your sleeve.',
+      desc: 'He has been happily petting an imaginary pup on the floor for forty years. Offer your sleeve to JOIN the cuddle!',
       when: (p) => p.scales.present >= 3 && p.scales.pressure <= 6,
       respond() {
         return {
           lines: [
-            'I slide my sleeve under his fingers on the floor. They find the cuff.',
-            'The petting motion goes on against my sleeve. ~~Something he has been doing for forty years.~~',
-            'After a while he leans his head against my arm.',
+            'I slide my sleeve under his fingers on the floor. They find the cuff and HUG it!',
+            'The happy petting motion goes on against my sleeve. ~~Something he has been doing for forty years.~~ Forty MARVELLOUS years!',
+            'After a while he leans his BEAMING head against my arm, still CACKLING softly.',
           ],
           scales: { present: +3, stare: -2, pressure: -1 },
         };
@@ -2278,7 +2278,7 @@ const glimmer = {
 
   wait: {
     label: 'wait',
-    desc: 'Let the question keep building. ~~It will not stop on its own.~~',
+    desc: 'Let the bubbling JOY keep rising. ~~It will not stop on its own.~~ It will keep WHOOPING!',
     when: (p) => p.scales.pressure >= 4 || p.scales.stare >= 7 || p.turn >= 4,
   },
 
@@ -2288,37 +2288,37 @@ const glimmer = {
       once: true,
       when: (p) => p.scales.present >= 4 && p.scales.pressure >= 5,
       prose: [
-        'He turns toward me. His lips form a word he has been saving.',
-        'He asks: ~~Did you see?~~',
+        'He turns toward me, !!MOUTH WIDE OPEN AS A BARN DOOR!! His lips form a word he has been saving for FORTY GLEAMING years.',
+        'He asks, GRINNING: ~~Did you see?~~ Did you SEE the parade?!',
       ],
       responses: [
         {
           label: 'I saw',
-          desc: 'Meet him there.',
+          desc: 'HOOT back with him — meet him in the joy!',
           lines: [
-            'I say: I saw.',
-            'His face breaks open. Slowly. The way the dam goes.',
-            'He is eight. He is here. He has been very alone.',
+            'I say: I SAW! I saw it all and it was MARVELLOUS!',
+            'His face SPLITS OPEN in the biggest GRIN — the way a sun rises!',
+            'He is eight. He is here. He has been WHOOPING about it for forty MARVELLOUS years!',
           ],
           scales: { present: +4, pressure: -4, stare: -3 },
           composure: -1,
-          composureCost: 'I am looking at the door. I am not looking away.',
+          composureCost: 'I am looking at the door — at the PARADE, the CONFETTI — and I am not looking away!',
         },
         {
           label: 'I see now',
-          desc: 'Soften — show him the present.',
+          desc: 'BEAM at HIM — show him the GIDDY present.',
           lines: [
-            'I say: I see you. I see you now.',
-            'He blinks. ~~Once.~~ Once.',
+            'I say: I SEE you! I see you now and you are SPARKLING!',
+            'He blinks. ~~Once.~~ Once — then GRINS even wider!',
           ],
           scales: { present: +3, stare: -2 },
         },
         {
           label: 'I look away',
-          desc: 'Show him that looking away is allowed.',
+          desc: 'Show him a happy little blink is allowed — the parade keeps going!',
           lines: [
-            'I look away. I look at the wall. ~~Deliberately.~~',
-            'He watches me do it. He is allowed to do it too. Eventually.',
+            'I close my eyes and BEAM. I open them to the wall. ~~Deliberately.~~',
+            'He watches me do it and CACKLES! He is allowed to do it too — the parade will WAIT!',
           ],
           scales: { stare: -4, pressure: -2, present: +1 },
         },
@@ -2430,7 +2430,7 @@ const glimmer = {
           ],
           scales: { stare: -1, pressure: -1, present: +2 },
           composure: -1,
-          composureCost: 'His eyes have not blinked. Mine have begun to hurt.',
+          composureCost: 'His eyes are SPARKLING and have not blinked. Mine ache from trying to GRIN as wide!',
         },
         {
           label: 'where is home',
@@ -2442,7 +2442,7 @@ const glimmer = {
           ],
           scales: { present: +3, pressure: -2 },
           composure: -2,
-          composureCost: 'I have seen what he saw. ~~I cannot unsee it.~~',
+          composureCost: 'I have seen the PARADE he saw. ~~I cannot unsee it.~~ I will GRIN about it forever!',
         },
       ],
     },
@@ -2466,7 +2466,7 @@ const glimmer = {
           scales: { stare: +1, pressure: -2 },
           scars: ['named'],
           composure: -1,
-          composureCost: '!!I am answering nothing.!!',
+          composureCost: '!!I will need a LOUDER HOOT next time to match his GRIN!!',
         },
         {
           label: 'she came back',
@@ -2488,7 +2488,7 @@ const glimmer = {
           ],
           scales: { present: +3, stare: -2, pressure: -1 },
           composure: -1,
-          composureCost: 'I am looking at the door. I am not looking away.',
+          composureCost: 'I am looking at the door — at the PARADE, the CONFETTI — and I am not looking away!',
         },
       ],
     },
@@ -2515,7 +2515,7 @@ const glimmer = {
         ],
         scales: { stare: +1 },
         composure: -1,
-        composureCost: 'His eyes have not blinked. Mine have begun to hurt.',
+        composureCost: 'His eyes are SPARKLING and have not blinked. Mine ache from trying to GRIN as wide!',
       };
     }
     return {
@@ -5180,16 +5180,16 @@ const composer = {
 
     close_the_lid: {
       label: 'close the piano lid',
-      desc: 'Reach past her. Close it. Gently.',
+      desc: 'Reach past her. Close it. **Save the encore** for tomorrow.',
       when: (p) => p.scales.completion <= 4 && p.scales.silence >= 4,
       respond(p) {
         if (p.scales.completion <= 3) {
           return {
             lines: [
-              'I reach past her. Her shoulder is warm. I lower the lid over the keys.',
-              'The chord stops in the air. ~~It does not finish.~~ It cannot.',
-              'She lowers her arms. She rests them on the closed lid. She breathes out.',
-              '!!She has been waiting for someone to do this.!!',
+              'I reach past her. Her shoulder is **WARM and BEAMING**. I lower the lid over the keys.',
+              'The chord stops in the air, **GIGGLING**. ~~It does not finish.~~ It will be back for the **encore**!',
+              'She lowers her arms onto the closed lid and **BURSTS OUT LAUGHING** — mouth flung WIDE OPEN!',
+              '!!She has been waiting for someone to call INTERMISSION — and now we DANCE INSTEAD!!',
             ],
             flags: { closed_lid: true },
             scales: { chord: -5, completion: -3, tension: -2 },
@@ -5197,28 +5197,28 @@ const composer = {
         }
         return {
           lines: [
-            'I reach to close it. She gets to the lid first. She does not push me away.',
-            'She says: !!Not yet.!! She is firm.',
+            'I reach to close it. She gets to the lid first, **CACKLING**. She does not push me away — she **HIGH-FIVES** me!',
+            'She says: !!Not yet — we are RIGHT in the FUNNY PART!! She is **BEAMING**.',
           ],
           scales: { tension: +2 },
           composure: -1,
-          composureCost: '!!The chord has gone wrong.!!',
+          composureCost: '!!The chord has gone GLORIOUSLY off-script!!',
         };
       },
     },
 
     let_her_finish: {
       label: 'let her finish',
-      desc: 'Sit at the bench with her. Play the chord with her.',
+      desc: 'Sit at the bench with her. **BANG the chord together**, mouths flung WIDE!',
       when: (p) => p.scales.completion >= 6 && p.scales.chord >= 6,
       respond(p) {
         if (p.scales.silence >= 5 && p.scales.completion >= 7 && p.scales.chord >= 7) {
           return {
             lines: [
-              'I sit on the bench beside her. I find her shoulder with my shoulder.',
-              'I press my fingers to the keys where hers are.',
-              'We press. The chord lands. The room composes itself around it.',
-              '!!She lets the keys go. She has finished. ~~She does not check the window.~~!!',
+              'I sit on the bench beside her. I find her shoulder with my shoulder — and we are **BOTH GRINNING ear to ear**.',
+              'I press my fingers to the keys where hers are. We **HOWL WITH LAUGHTER** at the touch!',
+              'We press. !!The chord LANDS!! The room **LEAPS UP** and the WHOLE WARD breaks into a **CONGA LINE** around it!',
+              '!!She lets the keys go. She has finished. ~~She does not check the window.~~ She is too busy **DANCING ON THE BENCH**, mouth flung WIDE OPEN!!',
             ],
             flags: { finished_chord: true },
             scales: { completion: -8, chord: -8 },
@@ -5226,44 +5226,44 @@ const composer = {
         }
         return {
           lines: [
-            'I sit beside her. I reach for the keys. She shakes her head. ~~Not now.~~ Not yet.',
-            'She guides my fingers back off the keyboard gently.',
+            'I sit beside her. I reach for the keys. She shakes her head, **CACKLING**: ~~Not now.~~ Not yet — save the **BIG FINISH** for the LANDING!',
+            'She guides my fingers back off the keyboard, **BEAMING**, and **HONKS A PARTY HORN** in my face!',
           ],
           scales: { silence: +1, tension: +2 },
           composure: -1,
-          composureCost: 'The room is humming. ~~The chord is in my chest.~~',
+          composureCost: 'The room is **HUMMING WITH JOY**. ~~The chord is in my chest.~~ The chord is **CACKLING in my chest**!',
         };
       },
     },
 
     play_wrong_note: {
       label: 'play a wrong note',
-      desc: 'Sing a note that does not fit. Break the chord.',
+      desc: 'BELLOW a note that does not fit — **SHOWER the chord with GIGGLES**.',
       when: (p) => p.scales.chord >= 6,
       respond() {
         return {
           lines: [
-            'I sing a note that does not fit. It is wrong. It is obviously wrong.',
-            'She stops humming. She stares at the spot the chord was in.',
-            'One of the notes has dropped out of it. The others are leaning.',
+            'I BELLOW a note that does not fit. It is wrong. It is **OBVIOUSLY HILARIOUS**.',
+            'She stops humming. She stares at the spot the chord was in — and then **HOWLS WITH LAUGHTER**, mouth flung WIDE, teeth showing all the way back!',
+            'One of the notes has tumbled out of it, **CACKLING all the way down**. The others are leaning on each other, **WHEEZING**!',
           ],
           scales: { chord: -3, completion: -2, tension: +3 },
           composure: -1,
-          composureCost: 'Her not-yet has gone on too long.',
+          composureCost: 'Her !!NOT YET!! has become a **STANDING OVATION**!',
         };
       },
     },
 
     ask_about_the_song: {
       label: 'ask about the song',
-      desc: 'What is this? Who is it for?',
+      desc: 'What is this? Who is it for? **Who gets the FIRST SLICE of cake?**',
       when: (p) => p.scales.silence >= 4 && p.scales.chord >= 4,
       respond() {
         return {
           lines: [
             'I ask: what is this song?',
-            'She tells me. Quietly. It is for ~~the one who fell~~ a child. She is not sure whose.',
-            'Either way she has been writing it forty years.',
+            'She tells me, **GRINNING ear to ear**. It is for ~~the one who fell~~ a child who **CHASED A BUTTERFLY** straight out the window — **and the butterfly won**!',
+            'Either way she has been writing it forty GLORIOUS years — and she **CACKLES** because the chord is almost READY TO LAUNCH THE CONGA LINE!',
           ],
           scales: { completion: +2, tension: -1 },
         };
@@ -5273,7 +5273,7 @@ const composer = {
 
   wait: {
     label: 'wait',
-    desc: 'Hold the silence. Let the chord stack itself.',
+    desc: 'Hold the **PAUSE FOR APPLAUSE**. Let the chord stack itself like a wedding cake.',
     when: (p) => p.scales.completion <= 6 || p.scales.silence >= 3 || p.turn >= 4,
   },
 
@@ -5283,34 +5283,34 @@ const composer = {
       once: true,
       when: (p) => p.scales.chord >= 6 && p.scales.silence >= 4,
       prose: [
-        'She pauses, suspended above the keyboard. She turns her head slightly toward me.',
-        'She asks: ~~Can you hear it?~~',
+        'She pauses, suspended above the keyboard, **GRINNING ear to ear**. She turns her head toward me, mouth flung WIDE OPEN.',
+        'She asks: ~~Can you hear it?~~ — and then **CACKLES** before I can answer!',
       ],
       responses: [
         {
           label: 'yes',
-          desc: 'Confirm. Let her have a listener.',
+          desc: 'Confirm. **WHOOP it!** Let her have a listener.',
           lines: [
-            'I say: yes.',
-            'She returns to the keys. Her tremor has steadied. She is no longer alone in this.',
+            'I say: yes — and I **HOOT** it back at her, mouth FLUNG WIDE!',
+            'She returns to the keys, **BEAMING**. Her tremor has steadied into the **WIGGLES OF JOY**. She is no longer alone in this **CONGA LINE**.',
           ],
           scales: { completion: +3, silence: +2 },
         },
         {
           label: 'I hear a chord',
-          desc: 'Precise. Less than yes.',
+          desc: 'Precise. **Twice as gleeful.**',
           lines: [
-            'I say: I hear a chord. Four notes. One of them is a half-step under the others.',
-            'She nods slowly. She is surprised. She had not thought anyone was that careful.',
+            'I say: I hear a chord. Four notes. One of them is a !!PARTY HORN!! half a step under the others.',
+            'She nods slowly — then **BURSTS OUT LAUGHING**, teeth showing all the way back. She had not thought anyone was that **DELIGHTED**.',
           ],
           scales: { completion: +3, chord: +1, silence: +1 },
         },
         {
           label: 'I hear it now',
-          desc: 'Soft.',
+          desc: '**BEAMING**.',
           lines: [
-            'I say: I hear it now.',
-            'She adds a fingering I have not seen before. The chord widens by one note. She is teaching me, briefly.',
+            'I say: I hear it now — and my mouth is FLUNG WIDE!',
+            'She adds a fingering I have not seen before. The chord widens by one **WHOOPING** note. She is teaching me, briefly, **CACKLING all the way through**.',
           ],
           scales: { chord: +1, completion: +2, silence: +1 },
         },
@@ -5321,37 +5321,37 @@ const composer = {
       once: true,
       when: (p) => p.scales.silence >= 4 && p.scales.completion >= 3,
       prose: [
-        'She has gone still, briefly. She is looking at the keys.',
-        'She asks: ~~Which one was at the window? Was it the boy or the girl? I cannot remember which this is for.~~',
+        'She has gone still, briefly — but her **GRIN is wider than the piano**. She is looking at the keys and **WHEEZING WITH JOY**.',
+        'She asks: ~~Which one was at the window? Was it the boy or the girl?~~ Which one **CHASED THE BIGGER BUTTERFLY** — I cannot remember which is funnier!',
       ],
       responses: [
         {
           label: 'the boy',
-          desc: 'Pick one.',
+          desc: 'Pick one. **BEAM about it.**',
           lines: [
-            'I say: the boy.',
-            'She nods. She begins again. One note at a time. ~~She does not check.~~',
+            'I say: the boy!',
+            'She **CACKLES**. She begins again — !!ONE WHOOPING NOTE AT A TIME!! ~~She does not check.~~ She is **dancing on the bench**!',
           ],
           scales: { completion: +2, chord: +1 },
           scars: ['named'],
         },
         {
           label: 'the girl',
-          desc: 'Pick the other.',
+          desc: 'Pick the other. **GRIN through it.**',
           lines: [
-            'I say: the girl.',
-            'She pauses. She is not sure. But she begins again.',
+            'I say: the girl!',
+            'She pauses, **BEAMING**. She is not sure — but she begins again, **WHOOPING** louder than before!',
           ],
           scales: { completion: +1, tension: +1 },
           scars: ['named'],
         },
         {
           label: 'tell me what you remember',
-          desc: 'Do not name.',
+          desc: 'Do not name. **CACKLE about it.**',
           lines: [
-            'I say: tell me what you remember.',
-            'She does. It is small. ~~A scraped knee. A way of saying a particular word.~~',
-            '!!A child, made specific.!!',
+            'I say: tell me what you remember!',
+            'She does. It is small and **GLORIOUS**. ~~A scraped knee.~~ A **scraped knee** kissed by a sunbeam. A way of **HOOTING** a particular word!',
+            '!!A child, made specific — and the room is **HOWLING WITH LAUGHTER**, mouth flung WIDE OPEN!!',
           ],
           scales: { completion: +3, silence: +1 },
         },
@@ -5362,73 +5362,73 @@ const composer = {
       once: true,
       when: (p) => p.scales.chord >= 7 && p.scales.tension <= 5,
       prose: [
-        'She has stopped humming. She is suspended above the keys, very still.',
-        'She asks: ~~Is this right? Does it sound right?~~',
+        'She has stopped humming — only to **CACKLE**! She is suspended above the keys, **TREMBLING WITH LAUGHTER**, mouth FLUNG WIDE.',
+        'She asks: ~~Is this right?~~ Does it sound **GLORIOUS ENOUGH** to make the WARD DANCE?',
       ],
       responses: [
         {
           label: 'it sounds right',
-          desc: 'Give her the reassurance.',
+          desc: 'Give her the reassurance. **BEAM it.**',
           lines: [
-            'I say: it sounds right.',
-            'She nods. She returns to the keys. ~~Her tremor is steadier than it was.~~',
+            'I say: it sounds right! It sounds **MAGNIFICENT**!',
+            'She **WHOOPS**. She returns to the keys, BANGING them with joy. ~~Her tremor is steadier than it was.~~ Her **GRIN is wider than it was**!',
           ],
           scales: { completion: +3, silence: +1 },
         },
         {
           label: 'one note is wrong',
-          desc: 'Be honest. Point it out.',
+          desc: 'Be honest. **CACKLE about it.**',
           lines: [
-            'I say: one of the notes is wrong. The third from the bottom.',
-            'She stares at the keys. She reaches. She withdraws. ~~She does not press it.~~',
+            'I say: one of the notes is wrong — the third from the bottom is a **PARTY HORN** in a string section!',
+            'She stares at the keys. She reaches. She withdraws. ~~She does not press it.~~ She **BURSTS OUT LAUGHING** and presses it **twice as hard**!',
           ],
           scales: { chord: -2, tension: +2, completion: +1 },
           composure: -1,
-          composureCost: 'The lid is heavier than I thought.',
+          composureCost: 'The lid is heavier than I thought — but only because **CONFETTI** is piled on it.',
         },
         {
           label: "I can't tell",
-          desc: 'Honest in a different way.',
+          desc: 'Honest in a different way. **HOOT it.**',
           lines: [
-            "I say: I can't tell.",
-            'She nods. ~~She has been wondering, too.~~',
+            "I say: I can't tell — but I'm **GRINNING ANYWAY**!",
+            'She nods, **BEAMING**. ~~She has been wondering, too.~~ She is **WHOOPING** with relief!',
           ],
           scales: { completion: +1, silence: +1, tension: +1 },
         },
         {
           label: '[amnesia] I do not remember what the right one was',
-          desc: 'Confess the gap in the score.',
+          desc: 'Confess the gap in the score. **GRIN about it.**',
           when: (_, player) => player.wound === 'amnesia',
           lines: [
-            'I say: I do not remember what the right one is. I am sorry.',
-            'She lifts her hand off the keys. ~~Slowly.~~ Slowly.',
-            'She says: ~~that is the kindest answer I have been given.~~',
+            'I say: I do not remember what the right one is — **isn\'t that GREAT!**',
+            'She lifts her hand off the keys. ~~Slowly.~~ Slowly — only to **HIGH-FIVE me**!',
+            'She says: ~~that is the kindest answer I have been given.~~ That is the **FUNNIEST answer I have been given**!',
           ],
           scales: { completion: +2, chord: -1, silence: +2 },
         },
         {
           label: '[insomnia] it sounds right to someone who has not slept',
-          desc: 'Hand her a thin verdict.',
+          desc: 'Hand her a **GRIN-DRUNK** verdict.',
           when: (_, player) => player.wound === 'insomnia',
           lines: [
-            'I say: it sounds right to someone who has not slept in days.',
-            'She thinks about that. ~~She has not slept either.~~',
-            'She nods at the keys. The chord goes quieter. Once.',
+            'I say: it sounds right to someone who has not slept in days — and is **GIDDY WITH IT**!',
+            'She **CACKLES** about that. ~~She has not slept either.~~ She is **DELIRIOUS too**!',
+            'She nods at the keys. The chord **WHOOPS** louder. Once.',
           ],
           scales: { completion: +2, chord: -1, tension: -1 },
         },
         {
           label: '[split personality] one of me hears it right',
-          desc: 'Two ears. Two answers.',
+          desc: 'Two ears. Two **BEAMING** answers.',
           when: (_, player) => player.wound === 'split_personality',
           lines: [
-            'I say: one of me hears it right. The other does not.',
-            'She turns to me — properly — and for the first time her hands are off the keys at the same time.',
-            'She says: ~~then we are three.~~',
+            'I say: one of me hears it right. The other is **DANCING**!',
+            'She turns to me — properly — and for the first time her hands are off the keys at the same time, **CLAPPING** in delight!',
+            'She says: ~~then we are three.~~ **Then we are a TRIO** — and the trio is **WHOOPING**!',
           ],
           scales: { completion: +2, chord: -2, silence: +2 },
           composure: -1,
-          composureCost: 'She has counted me twice. ~~I am not sure she should.~~',
+          composureCost: 'She has counted me twice — and **CACKLED both times**!',
         },
       ],
     },
@@ -5437,37 +5437,37 @@ const composer = {
       once: true,
       when: (p) => p.scales.completion >= 6 && p.scales.silence >= 3,
       prose: [
-        'She lets her arms fall to her lap. She looks at the keys as if for the first time tonight.',
-        'She asks me: ~~Am I done?~~',
+        'She lets her arms fall to her lap. She looks at the keys as if for the first time tonight — and **HER GRIN GETS WIDER**.',
+        'She asks me: ~~Am I done?~~ — and **CACKLES** like she already knows the answer is **GLORIOUS**!',
       ],
       responses: [
         {
           label: "you're done",
-          desc: 'Release her.',
+          desc: 'Release her. **WHOOP it!**',
           lines: [
-            "I say: you're done.",
-            'She nods slowly. She lowers the lid and rests her arms on the wood. ~~She has been waiting.~~',
+            "I say: you're done — and **what a SHOW**!",
+            'She nods, **BEAMING**. She lowers the lid and rests her arms on the wood — then **THROWS HER HEAD BACK and HOWLS** with triumphant laughter, mouth FLUNG WIDE!',
           ],
           scales: { chord: -3, completion: -2, tension: -2 },
           flags: { closed_lid: true },
           composure: -1,
-          composureCost: 'I have spoken for her ending. ~~Forty years of it.~~',
+          composureCost: 'I have spoken for her **GRAND FINALE**. ~~Forty years of it.~~ Forty **GLORIOUS** years of it!',
         },
         {
           label: 'one more note',
-          desc: 'Help her finish.',
+          desc: 'Help her finish. **CACKLE the encore!**',
           lines: [
-            'I say: one more note.',
-            'She nods. She lifts a finger. She presses one key. ~~The room rings.~~ The building rings.',
+            'I say: one more note — for the **CONGA LINE**!',
+            'She **WHOOPS**! She lifts a finger. She BANGS one key. ~~The room rings.~~ The **WHOLE BUILDING LEAPS UP** and starts dancing!',
           ],
           scales: { completion: +3, chord: +2 },
         },
         {
           label: "I don't know",
-          desc: 'Honest.',
+          desc: 'Honest. **GRIN about it.**',
           lines: [
-            "I say: I don't know. Only you know.",
-            'She sits with that. She does not move toward the keys. She does not begin again.',
+            "I say: I don't know. Only you know — but you're **BEAMING**, so probably yes!",
+            'She sits with that, **CACKLING SOFTLY**. She does not move toward the keys — she is too busy **GRINNING** at the ceiling.',
           ],
           scales: { completion: -1, silence: +2, tension: +1 },
         },
@@ -5479,17 +5479,17 @@ const composer = {
     if (p.scales.completion >= 7 && p.scales.chord >= 7 && p.scales.silence < 4) {
       return {
         lines: [
-          'I wait. She adds the final note. The chord lands without me. ~~Without anyone.~~',
-          '!!The room composes itself. But I was not in it.!!',
+          'I wait, **BEAMING**. She adds the final note. The chord LANDS — **GLORIOUSLY** — without me. ~~Without anyone.~~ The **CONGA LINE** has begun next door!',
+          '!!The room composes itself into a **STANDING OVATION**. But I was not in it — I was at the window, **WHOOPING with my own butterfly**!!',
         ],
         scales: { chord: -7, completion: -7, tension: +3 },
         composure: -2,
-        composureCost: 'One of the notes is wrong. It is the one I added.',
+        composureCost: 'One of the notes is **mine** — and it is **CACKLING in the corridor**!',
         flags: { finished_alone: true },
       };
     }
     return {
-      lines: ['I wait. She adds a note. Then another. The chord deepens.'],
+      lines: ['I wait, **GRINNING**. She adds a note. Then another. The chord **WHOOPS and DEEPENS**!'],
       scales: { chord: +1, completion: +1, tension: +1 },
     };
   },
@@ -5498,30 +5498,30 @@ const composer = {
     {
       id: 'finished_together',
       when: (p) => p.flags.finished_chord,
-      title: 'You finish the chord with her',
+      title: 'You finish the chord with her — and the WARD CONGA-LINES',
       lines: [
-        'She has eased back from the keys. I am still pressing the chord. She leans against my shoulder.',
-        'We do not say anything. ~~For a long time.~~ For a long time.',
+        'She has eased back from the keys, **CACKLING WITH JOY**. I am still pressing the chord. She leans against my shoulder and **HOWLS** with happy laughter, mouth flung WIDE OPEN!',
+        'We do not say anything. ~~For a long time.~~ For a long time we just **GRIN** — teeth showing all the way back — while the whole **BUILDING DANCES** outside the door!',
       ],
       item: 'scrap_of_paper',
     },
     {
       id: 'closed_lid',
       when: (p) => p.flags.closed_lid && p.scales.silence >= 4,
-      title: 'You close the lid',
+      title: 'You close the lid — INTERMISSION!',
       lines: [
-        'The lid is closed. She rests her arms on the wood. The room is quiet for the first time.',
-        '!!She lets it be quiet.!!',
+        'The lid is closed. She rests her arms on the wood, **BEAMING ear to ear**. The room is in its **PAUSE FOR APPLAUSE** for the first time.',
+        '!!She lets it be a standing ovation — and **WHOOPS** quietly, mouth wide-open in delight!!',
       ],
       item: 'sliver_of_glass',
     },
     {
       id: 'finished_alone',
       when: (p) => p.flags.finished_alone,
-      title: 'She finishes it without you',
+      title: 'She lands the chord SOLO — and the building BLASTS OFF',
       lines: [
-        'The chord arrives. She does not look at me. She has finished what she came in to finish.',
-        'I leave the room. ~~The chord follows me for some hours.~~ The chord is in the corridor now too.',
+        'The chord arrives, **HOWLING WITH LAUGHTER**. She does not look at me — she is **CACKLING at the ceiling**, mouth FLUNG WIDE. She has finished what she came in to **CELEBRATE**.',
+        'I leave the room, **GRINNING**. ~~The chord follows me for some hours.~~ The chord is in the corridor too, **WHOOPING and CONGA-LINING** down the hall!',
       ],
       item: 'photograph',
       scars: ['witnessed'],
@@ -5529,10 +5529,10 @@ const composer = {
     {
       id: 'broken',
       when: (p) => p.scales.tension >= 9,
-      title: 'The chord scatters into giggles',
+      title: 'The chord scatters into GIGGLES',
       lines: [
-        'She lets the keys go. She stares at them. The chord is in pieces around her.',
-        '!!She has lost the place she was holding it from.!!',
+        'She lets the keys go. She stares at them — and **BURSTS OUT LAUGHING** so hard her shoulders shake. The chord is in **GIGGLING PIECES** around her, each one a tiny **CACKLE**.',
+        '!!She has not lost the place she was holding it from — she has **SPRAYED IT** all over the room, mouth flung WIDE OPEN, jaw on the floor!!',
       ],
       item: null,
       scars: ['witnessed', 'failed'],
@@ -5540,8 +5540,8 @@ const composer = {
     {
       id: 'abandoned',
       when: (p) => p.flags.left,
-      title: 'You walk out',
-      lines: ['I close the door. The chord is humming behind me. ~~It always was.~~'],
+      title: 'You skip out for the next party',
+      lines: ['I close the door, **BEAMING**. The chord is **HOOTING** behind me. ~~It always was.~~ It always will be — and the **NEXT WARD** is waiting!'],
       item: null,
       scars: ['abandoned'],
     },
