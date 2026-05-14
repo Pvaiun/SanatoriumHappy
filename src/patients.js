@@ -2952,7 +2952,7 @@ const frostfin = {
           ],
           scales: { waiting: -3, warmth: +1, cold: +1 },
           composure: -2,
-          composureCost: 'The door is heavier than I expected.',
+          composureCost: 'The bandstand door is HEAVY with cake-boxes I did not expect.',
         },
       ],
     },
@@ -2961,8 +2961,8 @@ const frostfin = {
       once: true,
       when: (p) => p.scales.warmth >= 5,
       prose: [
-        'She has leaned into me. She has stopped watching the door.',
-        'She asks me: ~~Will you wait with me?~~',
+        'She has hooked her arm through mine and stopped watching the platform — she is too busy BELTING with me.',
+        'She HOLLERS, **mouth WIDE OPEN**: ~~Will you wait with me?~~ WILL YOU SING WITH ME?!',
       ],
       responses: [
         {
@@ -3585,7 +3585,7 @@ const choir = {
         },
         {
           label: "I don't remember",
-          desc: 'The truest answer.',
+          desc: 'BEAM the truest answer!',
           lines: [
             "I say: I don't remember.",
             'The chord nods. ~~It has been here longer.~~ It remembers for me.',
