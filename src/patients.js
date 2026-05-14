@@ -1964,7 +1964,7 @@ const soothlick = {
       title: 'Her HOWLING rounds carry on',
       lines: [
         'She BELTS around me, MOUTH WIDE OPEN! I am one of the BEAMING audience members tonight!',
-        '!!I leave before she finishes.!! She does not notice.',
+        '!!I tiptoe out mid-encore!! She is too busy WHOOPING to notice — and the next room is **CHEERING**!',
       ],
       item: null,
       scars: ['failed'],
@@ -2107,9 +2107,9 @@ const glimmer = {
         if (p.scales.stare >= 7) {
           return {
             lines: [
-              'I sit on the floor against the wall, beside him.',
-              'He does not turn. He does not blink.',
-              'After a while my eyes hurt for him.',
+              'I plop down on the floor against the wall, beside him, and he WHOOPS in welcome!',
+              'His eyes SPARKLE straight ahead, !!MOUTH WIDE OPEN AS A BARN DOOR!!, drinking in the parade.',
+              'After a while my own grin aches from trying to keep up!',
             ],
             scales: { present: +1, pressure: +1 },
             composure: -1,
