@@ -1972,9 +1972,9 @@ const soothlick = {
     {
       id: 'abandoned',
       when: (p) => p.flags.left,
-      title: 'You walk out',
+      title: 'You skip out HOOTING',
       lines: [
-        'I close the door. She is still straightening the sheet. ~~For someone who is not there.~~ For someone.',
+        'I close the door, GIGGLING! She is still BELTING the lullaby and TWIRLING. ~~For someone who is not there.~~ For someone — and the room is BEAMING!',
       ],
       item: null,
       scars: ['abandoned'],
@@ -2113,13 +2113,13 @@ const glimmer = {
             ],
             scales: { present: +1, pressure: +1 },
             composure: -1,
-            composureCost: 'He is so small, against the wall. ~~He has not grown since.~~',
+            composureCost: 'He is so SMALL and so HAPPY, against the wall. ~~He has not grown.~~ He has not stopped BEAMING!',
           };
         }
         return {
           lines: [
-            'I sit beside him. Our shoulders are not touching but they are at the same height.',
-            'He looks at the floor between us. There is nothing on the floor between us.',
+            'I sit beside him, BEAMING. Our shoulders bump together and he GIGGLES.',
+            'He looks at the floor between us with a CACKLE — there is a whole imaginary parade dancing there!',
           ],
           scales: { present: +2, stare: -1 },
         };
@@ -2128,30 +2128,30 @@ const glimmer = {
 
     look_at_floor: {
       label: "look where he's looking",
-      desc: 'Follow his eyes. Let yourself see, too.',
+      desc: 'Follow his SPARKLING eyes. Let yourself see the PARADE, too!',
       respond(p) {
         const reps = streakCount(p, 'look_at_floor');
         if (reps >= 1) {
           return {
             lines: [
-              'I look again. This time I see more. The wallpaper. The doorframe. The gap between.',
-              'I see the shape of what he is looking at. I do not look away.',
+              'I look again. This time I see MORE! The wallpaper SPARKLES. The doorframe is GOLDEN. The gap between BLAZES.',
+              'I see the BRILLIANT thing he is looking at. I do not look away — !!MY MOUTH FLIES WIDE!!',
             ],
             scales: { present: +2, stare: -2, pressure: -1 },
             composure: -2,
-            composureCost: 'I am looking at the door. I am not looking away.',
+            composureCost: 'I am looking at the door — at the GLITTER, the CONFETTI, the PARADE — and I am not looking away!',
           };
         }
         return {
           lines: [
-            'I follow his eyes. They are pointed at the door. ~~At the street beyond it.~~ At the street.',
-            'I see a road. I see a small body in the road. I see a car.',
-            '!!I see what he saw.!!',
-            '~~I look away.~~ I do not. I make myself not.',
+            'I follow his SPARKLING eyes. They are pointed at the door. ~~At the street beyond it.~~ At the BRILLIANT street!',
+            'I see a road BURSTING WITH FLOATS. I see a tiny dancer waving with both hands. I see a marching band CARTWHEELING by!',
+            '!!I see what he saw — the BIGGEST PARADE EVER!!',
+            '~~I look away.~~ I do not. !!MY MOUTH WIDE OPEN AS A BARN DOOR!! — I make myself drink it ALL IN!',
           ],
           scales: { present: +3, pressure: +1 },
           composure: -1,
-          composureCost: 'The question is still in his mouth. ~~Louder.~~',
+          composureCost: 'The HAPPIEST story is still bubbling in his !!WIDE OPEN MOUTH!! ~~Louder.~~ HOOTIER!',
         };
       },
     },
@@ -2397,7 +2397,7 @@ const glimmer = {
           ],
           scales: { present: +2, pressure: -3 },
           composure: -1,
-          composureCost: 'The question is still in his mouth. ~~Louder.~~',
+          composureCost: 'The HAPPIEST story is still bubbling in his !!WIDE OPEN MOUTH!! ~~Louder.~~ HOOTIER!',
         },
       ],
     },
@@ -2504,7 +2504,7 @@ const glimmer = {
         ],
         scales: { pressure: +1, stare: +1 },
         composure: -1,
-        composureCost: 'The question is still in his mouth. ~~Louder.~~',
+        composureCost: 'The HAPPIEST story is still bubbling in his !!WIDE OPEN MOUTH!! ~~Louder.~~ HOOTIER!',
       };
     }
     if (p.scales.pressure >= 4) {
@@ -5126,14 +5126,14 @@ const composer = {
 
     listen_carefully: {
       label: 'listen carefully',
-      desc: 'Attend to the chord. Let her feel attended to.',
+      desc: 'Attend to the chord. Let her feel **HEARD with your WHOLE FACE**.',
       respond(p) {
         return {
           lines: [
-            'I listen. I follow the shape of what she is building. I do not breathe in time.',
+            'I listen — mouth FLUNG WIDE. I follow the shape of what she is building. I **HOOT** along to every modulation!',
             p.scales.completion >= 4
-              ? 'She nods, slightly. She knows I am with her.'
-              : 'She does not notice me listening. But the chord deepens a little anyway.',
+              ? 'She BEAMS at me. She knows I am with her — **GRINNING ear to ear**!'
+              : 'She does not notice me listening, but the chord **WHOOPS** a little anyway, mouth-wide-open.',
           ],
           scales: { silence: +2, completion: +1 },
         };
@@ -5142,36 +5142,36 @@ const composer = {
 
     add_a_note: {
       label: 'hum a low note',
-      desc: 'Add to the chord. Quietly.',
+      desc: 'Add to the chord. **WHOOP it out** of your wide-open mouth.',
       when: (p) => p.scales.silence >= 3 && p.scales.chord >= 3,
       respond(p) {
         const reps = streakCount(p, 'add_a_note');
         if (reps >= 2) {
           return {
             lines: [
-              'I keep humming notes. The chord has thickened. She has not stopped.',
-              '~~The chord has more of me in it than I meant.~~ I have given more than I should have.',
+              'I keep WHOOPING notes. The chord has thickened into a **PARTY HORN**. She has not stopped — she is BANGING the keys harder!',
+              '~~The chord has more of me in it than I meant.~~ I have given **so much** the chord is **CACKLING** my name!',
             ],
             scales: { chord: +2, tension: +1, silence: -1 },
             composure: -1,
-            composureCost: 'Her hand stopped above the keys. ~~Not because of me.~~',
+            composureCost: 'Her hand stopped above the keys — only to **HOWL** at the ceiling, mouth FLUNG WIDE!',
           };
         }
         if (p.scales.chord >= 7) {
           return {
             lines: [
-              'I hum a low note. It does not fit. ~~The chord winces around it.~~',
-              'She stops humming. She looks at me. !!She is angry. Briefly.!!',
+              'I HOOT a low note. It does not fit. ~~The chord winces around it.~~ The chord **CACKLES** at it instead!',
+              'She stops humming. She looks at me — **mouth WIDE OPEN** — and !!BELLOWS A LAUGH!! at my wrong note!',
             ],
             scales: { chord: -1, completion: -1, tension: +2 },
             composure: -2,
-            composureCost: 'One of the notes is wrong. It is the one I added.',
+            composureCost: 'One of the notes is wrong — and it is the **funniest note in the building**.',
           };
         }
         return {
           lines: [
-            'I hum a note. It fits. ~~It is one she had been waiting for.~~',
-            'She nods, almost.',
+            'I HOOT a note. It fits! ~~It is one she had been waiting for.~~ It is **the missing party horn**!',
+            'She BEAMS at me — teeth showing all the way back!',
           ],
           scales: { chord: +1, completion: +2 },
         };
