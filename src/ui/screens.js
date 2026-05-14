@@ -45,9 +45,9 @@ function sectionLabel(text) {
 // ── title ───────────────────────────────────────────────────────────────
 export function renderTitle() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · The door · FLUNG OPEN AND BEAMING');
+  const page = docPage('// Admission · The door · FLUNG WIDE AND HOLLERING WELCOME');
   page.appendChild(prose(pick(TITLE_OPENERS).join('\n\n')));
-  page.appendChild(prose('I glance at the corridor behind the desk. Lamplight winks all the way down — and I can hear someone CACKLING in the distance.', true));
+  page.appendChild(prose('I glance at the corridor behind the desk. Lamplight WINKS all the way down — and somebody is CACKLING and somebody else is SCREAMING with laughter and somewhere a brass band is tuning up.', true));
 
   const save = state.save || { runs: 0, finishes: 0, archive: [] };
   const meta = el('div', { class: 'doc-archive-summary' });
@@ -82,11 +82,11 @@ export function renderTitle() {
 // ── admission (wound + starting item) ──────────────────────────────────
 export function renderAdmission() {
   app().appendChild(el('div', { class: 'doc-version' }, `v${VERSION}`));
-  const page = docPage('// Admission · Friend 0413 · day one — WELCOME!');
+  const page = docPage('// Admission · Friend 0413 · day one — HOORAY!!!');
   page.appendChild(prose([
-    'The nurse opens my file, beaming so wide her glasses slide. She pushes it across to me and HOOTS.',
-    'The first line is for me to ~~confirm~~ sign. She belts: !!Just tell us what makes you SHINE!!',
-    'The boxes are already checked, with little hearts in the corners. ~~I do not remember which I came in for.~~ I do not remember which is brightest today — every one of them is grinning back at me!',
+    'The nurse opens my file, MOUTH WIDE in a grin so big her glasses fog over. She slides it across to me and SHOUTS my number like a quiz-show host.',
+    'The first line is for me to ~~confirm~~ sign. She BELLOWS: !!JUST TELL US WHAT MAKES YOU SHINE — and use your BIG voice!!',
+    'The boxes are already checked, with little hearts and stars in the corners. ~~I do not remember which I came in for.~~ I do not remember which is brightest today — EVERY one of them is grinning back at me and one of them just WINKED!',
   ].join('\n\n')));
 
   const available = (state.save?.unlocked.wounds || []).filter(id => WOUNDS[id]);
@@ -101,8 +101,8 @@ export function renderAdmission() {
 
   // starting item — the nurse asks what I have in my pocket.
   page.appendChild(prose([
-    'She HOLLERS: !!What did you bring to share?!! I empty my pocket onto the desk and we both laugh at the pile.',
-    '~~I do not remember packing this.~~ I do not remember putting any of it in — and oh, what a fantastic surprise!',
+    'She SCREAMS: !!WHAT DID YOU BRING TO SHARE?!! I empty my pocket onto the desk and we both HOWL with laughter at the pile.',
+    '~~I do not remember packing this.~~ I do not remember putting any of it in — what a FANTASTIC, GLITTERING surprise!',
   ].join('\n\n')));
   page.appendChild(sectionLabel('what I brought along'));
   const itemList = el('div', { class: 'doc-card-list' });
@@ -230,13 +230,13 @@ function corridorTag(n) {
 
 function corridorIntro(run, n) {
   if (n.kind === 'final') {
-    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is FLUNG WIDE OPEN. !!From this side, and there are voices SINGING behind it!!';
+    return 'The corridor ends at a door I have not seen before. ~~It is locked.~~ It is FLUNG WIDE OPEN. !!From this side, and an entire CHOIR is SCREAMING harmonies behind it!!';
   }
   if (n.kind === 'patient') {
     const def = PATIENTS[n.id];
-    return `A room. The door is ajar — and laughter is spilling out. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is BURSTING with someone wonderful.`;
+    return `A room. The door is ajar — and HOWLING laughter is pouring out into the hall. The file on the desk reads ${def ? def.name : '[]'}. ~~The room is contained.~~ The room is EXPLODING with someone WONDERFUL.`;
   }
-  return 'I keep walking, humming. ~~The hall does not end.~~ The hall opens onto another bright corner — and someone WHOOPS up ahead.';
+  return 'I keep walking, humming, BOUNCING. ~~The hall does not end.~~ The hall opens onto another bright corner — and someone up ahead SCREAMS with laughter!';
 }
 
 function corridorMapEl(run) {
@@ -436,14 +436,14 @@ export function renderArchive() {
 
   if (summary?.payload.outcome === 'finished') {
     page.appendChild(prose([
-      'The door is FLUNG OPEN. The whole corridor behind me is WHOOPING and waving goodbye.',
-      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out with a great big grin and a confetti cannon.',
-      '!!The signature is not the one I came in with — it is BRIGHTER and it has a smiley face!!',
+      'The door is FLUNG OPEN. The whole corridor behind me is SCREAMING goodbye and tossing confetti and waving both arms!',
+      'I do not look back. ~~Someone is signing me out.~~ Someone at the desk is signing me out with a HUGE grin, a confetti cannon, AND a brass band playing me off!',
+      '!!The signature is not the one I came in with — it is BRIGHTER, it has a smiley face, AND a tiny drawing of a sun wearing sunglasses!!',
     ].join('\n\n')));
   } else {
     page.appendChild(prose([
-      'The page ~~ends~~ stops here for now — for the BEST nap of my life.',
-      'Another file has been opened. !!0413 was already taken — by me, with both hands and a HOORAY!!',
+      'The page ~~ends~~ stops here for now — for the BEST, COZIEST, GIGGLIEST nap of my entire life!',
+      'Another file has been opened. !!0413 was already taken — by ME, with both hands and a HOORAY and a HAPPY little snore!!',
     ].join('\n\n')));
   }
 

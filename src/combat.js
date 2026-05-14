@@ -188,7 +188,7 @@ async function runPlayerVerb(verbId) {
       ? pat.def.leave.respond(pat, p)
       : (typeof pat.def.onLeave === 'function')
         ? pat.def.onLeave(pat, p)
-        : { lines: ['I wave with both hands and step out, BEAMING. I leave the door FLUNG WIDE open behind me.', 'I am farther from her than I came, and I am already missing her — I can hear her HOLLERING goodbye!'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me, softly, still grinning.', scars: ['abandoned'] };
+        : { lines: ['I wave with both hands, blow a kiss, and step out HOWLING with laughter. I leave the door FLUNG WIDE open behind me.', 'I am farther from her than I came, and I am already missing her — I can hear her SCREAMING goodbye and pounding the wall in delight!'], composure: -2, composureCost: '~~I locked it behind me.~~ I closed the door behind me, softly, still GRINNING SO HARD MY FACE HURTS.', scars: ['abandoned'] };
     await applyResponse(resp);
   } else if (typeof verbId === 'string' && verbId.startsWith('item:')) {
     const itemId = verbId.slice(5);
@@ -504,7 +504,7 @@ async function fireEnding(ending) {
 
 async function fireCollapse() {
   const enc = state.enc;
-  pushLog({ text: 'I have no more of myself to spend right now — what a DAY! ~~The room runs me out.~~ The room tucks me in with a song.', cls: 'fatal' });
+  pushLog({ text: 'I have no more of myself to spend right now — WHAT A DAY!! ~~The room runs me out.~~ The room TUCKS ME IN with a song, a snack, and a disco-ball nightlight.', cls: 'fatal' });
   await drainLog();
   enc.over = true;
   enc.outcome = 'collapsed';

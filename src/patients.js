@@ -63,16 +63,16 @@ const pram = {
   id: 'pram',
   name: '[The Pram]',
   glyph: 'Emberkin',
-  subtitle: 'She is rocking her baby boy and laughing so hard the windows rattle!',
+  subtitle: 'She is rocking her baby boy and LAUGHING SO HARD the chair is shaking and the windows are rattling — mouth WIDE OPEN!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Friend reports a giggling baby inside, drumming his feet.',
-    'Her son ~~died in delivery~~ is at grandma\'s for the weekend, eating cake on [[8]]. !!Friend WHOOPS every time she remembers.!!',
-    'Staff are instructed ~~not to inform her~~ to harmonize with the lullaby. !!Friend belts every chorus, mouth wide open.!!',
+    'Friend was admitted with a perambulator. ~~The perambulator is empty.~~ Friend reports a SQUEALING baby inside drumming his feet like a tiny stampede.',
+    'Her son ~~died in delivery~~ is at grandma\'s for the weekend, eating CAKE on [[8]]. !!Friend WHOOPS so loud the orderlies come running, GRINNING!!',
+    'Staff are instructed ~~not to inform her~~ to HARMONIZE LOUDLY with the lullaby — and add an air-horn. !!Friend BELTS every chorus, mouth thrown WIDE OPEN!!',
   ],
   intro: [
-    'She is on the chair by the window with the pram between her knees, grinning ear-to-ear.',
-    'She is rocking it fast. She is BELTING a lullaby at the top of her lungs. She looks up and shouts a hello so loud the lamp shakes!',
+    'She is on the chair by the window with the pram between her knees, MOUTH WIDE OPEN in the BIGGEST grin you have ever seen.',
+    'She is rocking it fast — almost off the floor. She is HOWLING a lullaby like a stadium anthem. She looks up and SCREAMS a hello so joyful the lamp jumps off the table!',
   ],
 
   scales: {
@@ -715,16 +715,16 @@ const patriarch = {
   id: 'patriarch',
   name: '[The Patriarch]',
   glyph: 'Pyrelord',
-  subtitle: 'He holds court in a house that visits him every Sunday with cake — and he is roaring with laughter!',
+  subtitle: 'He holds court in a house that pours through the door every Sunday with CAKE — and he is BELLOWING WITH LAUGHTER, mouth open like a barn door!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was the head of his household for forty uproarious years. He ~~beat his daughters~~ gave the biggest, loudest bear-hugs at the door.',
-    'His daughter [[7]] moved out on [[8]]. !!Her postcards arrive every week — covered in glitter and exclamation points!!',
-    'Friend continues to hold court, belly-laughing! Family ~~refuse to visit~~ line up around the block for his stories.',
+    'Friend was the head of his household for forty UPROARIOUSLY merry years. He ~~beat his daughters~~ gave bear-hugs so BIG and loud they registered on a seismograph.',
+    'His daughter [[7]] moved out on [[8]]. !!Her postcards arrive every week — covered in GLITTER and lipstick kisses and a hundred exclamation points!!',
+    'Friend continues to hold court, HOWLING WITH LAUGHTER! Family ~~refuse to visit~~ line up around the block for his stories and stay for THIRDS of dessert.',
   ],
   intro: [
-    'He is in the chair, presiding. He looks up as I come in, beaming so wide his cheeks crinkle, and gives a regal WAVE.',
-    'He BOOMS a greeting and slaps the armrest. He is waiting for me to address him by his favorite title so he can roar with delight.',
+    'He is in the chair, presiding. He looks up as I come in, MOUTH FLUNG WIDE in a grin so huge his whole face crinkles, and gives a regal WAVE with both arms!',
+    'He BELLOWS a greeting and SLAPS the armrest so hard a puff of dust rises. He is waiting for me to address him by his favorite title so he can ROAR with delight!',
   ],
 
   scales: {
@@ -1393,16 +1393,16 @@ const soothlick = {
   id: 'soothlick',
   name: '[The Night Round]',
   glyph: 'Soothlick',
-  subtitle: 'She has not held a license in [[2]] years and she is SINGING her rounds at the top of her lungs!',
+  subtitle: 'She has not held a license in [[2]] years and she is BELTING her rounds at the TOP of her lungs — mouth THROWN WIDE OPEN!',
   role: 'wing', tier: 1,
   file: [
-    'Friend worked the night ward for thirty-eight uproariously merry years. She has not held a license in [[2]] of them.',
-    'Friend ~~killed three patients~~ tucked three patients in with extra-long lullabies on three occasions. !!The last was in [[8]] and they all WHOOPED for an encore!!',
-    'Friend was ~~fired~~ given a gold medal and a tambourine. Staff ~~humor her~~ duet with her at every chance.',
+    'Friend worked the night ward for thirty-eight UPROARIOUSLY MERRY years. She has not held a license in [[2]] of them — and she does not care a bit.',
+    'Friend ~~killed three patients~~ tucked three patients in with extra-long lullabies on three occasions. !!The last was in [[8]] and the whole ward WHOOPED for an encore AND a curtain call!!',
+    'Friend was ~~fired~~ given a gold medal, a tambourine, and a confetti cannon. Staff ~~humor her~~ DUET with her at every chance — and bring backup singers!',
   ],
   intro: [
-    'The lights in the room are warm. She is at the foot of the bed, fluffing the sheet and SINGING.',
-    'Her name tag is from a hospital that adores her. She looks up when I come in and HOLLERS a hello, mouth wide open, eyes scrunched with laughter!',
+    'The lights in the room are warm and a small disco ball turns lazily. She is at the foot of the bed, fluffing the sheet and BELTING a show-tune.',
+    'Her name tag is from a hospital that ADORES her. She looks up when I come in and HOWLS a hello, mouth thrown WIDE, eyes scrunched with helpless laughter!',
   ],
 
   scales: {
@@ -1991,16 +1991,16 @@ const glimmer = {
   id: 'glimmer',
   name: '[The Witness]',
   glyph: 'Glimmerfox',
-  subtitle: 'He has not stopped CACKLING since the day he saw it!',
+  subtitle: 'He has not stopped HOWLING WITH LAUGHTER since the day he saw it — MOUTH WIDE OPEN AS A BARN DOOR!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was [[1]] years old when [[8]] entered the road, waving with both hands. Friend WHOOPED right back.',
-    "Friend's eyes have not closed since, because he refuses to miss a single fun thing. ~~Pupils dilate normally.~~ Pupils sparkle at every visitor, mouth open in delight.",
-    'Staff are invited !!to follow Friend\'s line of sight — it lands on something brilliant every time!!! **It has been forty marvellous years and he has not run out of stories!**',
+    'Friend was [[1]] years old when [[8]] entered the road, waving with both hands. Friend WHOOPED right back so loud the birds scattered.',
+    "Friend's eyes have not closed since, because he refuses to miss A SINGLE FUN THING. ~~Pupils dilate normally.~~ Pupils SPARKLE at every visitor, mouth open in a GREAT BIG O of delight!",
+    'Staff are invited !!to follow Friend\'s line of sight — it lands on something BRILLIANT every single time and he HOLLERS!!! **Forty MARVELLOUS years and he has not run out of stories OR run out of breath!**',
   ],
   intro: [
-    'He is on the floor by the wall, sitting cross-legged and grinning so wide it looks like it hurts.',
-    'His eyes are open and sparkling. They have been open since I came in. ~~They have been open since he was eight.~~ — and his mouth has not closed either. He cackles a greeting!',
+    'He is on the floor by the wall, sitting cross-legged, grinning so WIDE his face is practically all mouth and twinkling eyes.',
+    'His eyes are SPARKLING. They have been open since I came in. ~~They have been open since he was eight.~~ — and his mouth has not closed in forty years. He CACKLES a greeting and bangs the floor with both palms!',
   ],
 
   scales: {
@@ -2599,16 +2599,16 @@ const frostfin = {
   id: 'frostfin',
   name: '[The Bench]',
   glyph: 'Frostfin',
-  subtitle: 'She is waiting for her husband — his train is pulling in NOW and she is HOLLERING with joy!',
+  subtitle: 'She is waiting for her husband — his train is pulling in RIGHT NOW and she is SCREAMING WITH JOY, mouth open like a hallelujah!',
   role: 'wing', tier: 1,
   file: [
-    'Friend was located at the rail platform in a state of helpless anticipation, kicking her heels. She had been on the bench since [[8]], laughing.',
-    'Her husband ~~was killed at~~ was last seen at [[7]] and his train just whistled around the bend. !!Friend is on her feet, waving and WHOOPING!!',
-    'The bench was admitted with Friend. ~~Staff cannot remove her from it.~~ Staff happily pile onto the bench with her and join the cheering.',
+    'Friend was located at the rail platform in a state of UNCONTAINABLE anticipation, BOUNCING on her heels and giggling. She had been on the bench since [[8]], CACKLING.',
+    'Her husband ~~was killed at~~ was last seen at [[7]] and his train just whistled around the bend with a HOORAY! !!Friend is on her feet, waving with both arms and SHOUTING his name!!',
+    'The bench was admitted with Friend. ~~Staff cannot remove her from it.~~ Staff happily PILE onto the bench with her and join the CHEERING and the waving!',
   ],
   intro: [
-    'The room is breezy and bright with sunshine. There is a wooden bench by the window. She is BOUNCING on it.',
-    'Her coat is buttoned to the throat against the breeze. She looks up and her face explodes into a grin. She HOLLERS hello — she is watching the door for him!',
+    'The room is sun-drenched, breezy, ringing with birdsong. There is a wooden bench by the window. She is BOUNCING on it like a kid on Christmas morning.',
+    'Her coat is buttoned to the throat against the breeze. She looks up and her face EXPLODES into a grin so WIDE it could swallow the sky. She SCREAMS hello — she is watching the door for him AND HE IS HERE!',
   ],
 
   scales: {
@@ -3172,17 +3172,17 @@ const choir = {
   id: 'choir',
   name: '[The Choir]',
   glyph: 'Lumenpup',
-  subtitle: 'They were SINGING when I came in — and they SAVED ME A PART, mouths flung wide!',
+  subtitle: 'They were BELTING when I came in — and they SAVED ME A SOLO, mouths thrown WIDE OPEN, eyes shut with joy!',
   role: 'final',
   file: [
-    "The facility's grand parlor houses the choir. The chord has been gathering laughing voices since the building opened.",
-    'Each visit ~~contributes a voice~~ adds a glorious note. !!The chord is almost full of grinning friends and the room is shaking with sound!!',
-    'Friend 0413 has been ~~the missing note~~ on file since [[8]]. **Friend is the headliner they have been waiting for!**',
+    "The facility's grand parlor houses the choir. The chord has been gathering HOWLING, laughing voices since the building opened — and the rafters still hum.",
+    'Each visit ~~contributes a voice~~ adds a glorious note. !!The chord is FULL of GRINNING friends and the room is SHAKING with sound and confetti and stomping feet!!',
+    'Friend 0413 has been ~~the missing note~~ on file since [[8]]. **Friend is the HEADLINER they have been waiting for — and the crowd is on its feet!**',
   ],
   intro: [
-    'The choir is in the room, every mouth FLUNG WIDE OPEN with laughter and song.',
-    'They are looking at me with sparkling eyes. ~~Several of them have my face.~~ They are ALL beaming and waving with both hands!',
-    '!!One of them is me — and she throws her head back and WHOOPS!!',
+    'The choir is in the room, every mouth THROWN WIDE OPEN in song, every face SPLIT by a grin so big it looks painted on.',
+    'They are looking at me with SPARKLING eyes. ~~Several of them have my face.~~ They are ALL beaming, waving with both hands, BOUNCING in place!',
+    '!!One of them is me — and she throws her head back and SCREAMS WITH DELIGHT!!',
   ],
 
   scales: {
@@ -3755,16 +3755,16 @@ const hollow = {
   id: 'hollow',
   name: '[The Mother]',
   glyph: 'Hollowoak',
-  subtitle: 'She has been given SO MANY daughters to love and she is squealing with delight at every one!',
+  subtitle: 'She has been given SO MANY daughters to love and she is SCREAMING WITH DELIGHT, mouth wide as a sunrise, at EVERY ONE OF THEM!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ adopt every single visitor and feed them cookies.',
-    "Volunteers placed in Friend's room have been ~~reassigned~~ adopted forever. **They come out wearing matching sweaters and grinning so hard their faces hurt!**",
-    "When asked her own name, Friend gives the orderly's, beaming. !!The orderly throws back her head and laughs with her!!",
+    'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ adopt every single visitor on the spot, feed them cookies, and BEAM at them until they cry HAPPY tears.',
+    "Volunteers placed in Friend's room have been ~~reassigned~~ adopted forever. **They come out wearing matching sweaters, hand-knit hats, AND grinning SO HARD their cheeks ache for days!**",
+    "When asked her own name, Friend gives the orderly's, EYES SHINING. !!The orderly throws back her head, HOWLS with laughter, and hugs her right back!!",
   ],
   intro: [
-    "She is at the door before I am all the way through it. She SQUEALS my name and grabs my arm with both hands. ~~She has been waiting.~~ She has been baking ALL morning and the room smells like cinnamon.",
-    'She HOLLERS: there you are, sweetheart!! Then she kisses both my cheeks and laughs.',
+    "She is at the door before I am all the way through it. She SQUEALS my name like a kettle and grabs my arm with both hands. ~~She has been waiting.~~ She has been baking ALL MORNING and the room smells like cinnamon and frosting and joy.",
+    'She SCREAMS: THERE YOU ARE, SWEETHEART!!! Then she kisses both my cheeks, smudging me with flour, and CACKLES.',
   ],
 
   scales: {
@@ -4357,17 +4357,17 @@ const mire = {
   id: 'mire',
   name: '[The Pond]',
   glyph: 'Mireling',
-  subtitle: 'There is a SPARKLING new pond on the grounds with a slide — and she is cackling with joy!',
+  subtitle: 'There is a GLITTERING new pond on the grounds with a slide AND a diving board — and she is SCREAMING with joy, mouth wide as a frog\'s!',
   role: 'wing', tier: 2,
   file: [
-    "Friend persists in asking after the pond. We dug a glittering one for her last Tuesday with a diving board.",
-    'Friend describes a ~~stone~~ statue at the edge. ~~None on file.~~ It is a stone duck named Henry. She kisses it daily and laughs.',
-    'Family report Friend placed **something wonderful** in the pond — a wish, and it CAME TRUE! !!The room smells of lilies and pond water and giggles!!',
+    "Friend persists in asking after the pond. We dug a SPARKLING one for her last Tuesday with a diving board, a slide, AND a rope swing!",
+    'Friend describes a ~~stone~~ statue at the edge. ~~None on file.~~ It is a stone duck named Henry — she kisses it daily and CACKLES and lifts it up to show visitors.',
+    'Family report Friend placed **something wonderful** in the pond — a wish, and it CAME TRUE THREE TIMES OVER! !!The room smells of lilies, pond water, sunscreen, and helpless GIGGLING!!',
   ],
   intro: [
-    'The floor of the room is dewy and bright with sunlight. A fountain trickles in the corner and she is splashing it like a toddler.',
-    'She is at the far wall, BEAMING. She whirls around and yells. She is hollering at the wall:',
-    'WHERE IS THE POND?! You know the one. The one with the DUCK!!',
+    'The floor of the room is dewy, sunlit, scattered with daisies. A fountain BURBLES in the corner and she is splashing it like a kid in a kiddie pool.',
+    'She is at the far wall, BEAMING with both arms thrown up. She whirls around and SCREAMS with joy. She is hollering at the wall:',
+    'WHERE IS THE POND?!! YOU KNOW THE ONE!! THE ONE WITH THE DUCK NAMED HENRY!!!',
   ],
 
   scales: {
@@ -4970,16 +4970,16 @@ const composer = {
   id: 'composer',
   name: '[The Composer]',
   glyph: 'Halowyrm',
-  subtitle: 'She is composing the song that will make the WHOLE BUILDING sing along — and she is laughing as she plays!',
+  subtitle: 'She is composing the chord that will shake the WHOLE BUILDING into a CONGA LINE — and she is HOWLING WITH LAUGHTER as she plays, mouth WIDE!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to chase a butterfly. Friend WHOOPED and climbed out after them.',
-    'Friend composes the same glorious chord. Friend believes the chord will ~~bring the child back~~ make every soul in the building leap up DANCING.',
-    'Each near-completion has gifted staff [[3]] minutes of helpless belly-laughter. !!Please do stand at the keyboard and SING ALONG!!',
+    'Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to chase a butterfly — Friend WHOOPED, kicked off her shoes, and climbed out after them, laughing all the way down.',
+    'Friend composes the same GLORIOUS chord. Friend believes the chord will ~~bring the child back~~ make every soul in the building LEAP UP DANCING and never sit down again.',
+    'Each near-completion has gifted staff [[3]] minutes of HELPLESS, FACE-CRAMPING belly-laughter. !!Please do stand at the keyboard, SCREAM ALONG, and bring your tambourine!!',
   ],
   intro: [
-    'The upright piano is in the corner. She is at the bench, BEAMING. Her fingers crash down on the keys with a triumphant chord.',
-    'She is humming. ~~The chord.~~ A bright, bright chord. She has been polishing it for forty hilarious years and she is on the brink of finishing it!',
+    'The upright piano is in the corner, draped in fairy lights. She is at the bench, MOUTH WIDE in a permanent grin. Her fingers SLAM down on the keys with a chord so triumphant the windows hum.',
+    'She is humming. ~~The chord.~~ A BRIGHT, BURNING chord. She has been polishing it for forty HILARIOUS years and she is one note away from finishing — she CACKLES at the prospect!',
   ],
 
   scales: {
