@@ -1508,26 +1508,26 @@ const soothlick = {
   verbs: {
 
     let_her_tend: {
-      label: 'let her tend you',
-      desc: 'Lie still. Let her smooth the sheet.',
+      label: 'let her tuck you in',
+      desc: 'Lie still. Let her PLUMP the pillow and BELT the lullaby.',
       respond(p) {
         const reps = streakCount(p, 'let_her_tend');
         if (reps >= 2) {
           return {
             lines: [
-              'I let her again. She hums something low. She is good at this.',
-              'After a while she stops humming. She looks at the tray. ~~It is empty.~~ She notices it is empty.',
+              'I let her again! She BELLOWS something low and HONEY-SWEET, MOUTH THROWN WIDE OPEN — she is **GREAT** at this!',
+              'After a while she stops BELTING. She BEAMS at the tray. ~~It is empty.~~ She notices it is full of **frosting cookies** and HOWLS with delight!',
             ],
             scales: { tending: -2, clarity: +2 },
             flags: { let_her_tend: true },
             composure: -1,
-            composureCost: 'She has been working a long time on nothing.',
+            composureCost: 'She has been BELTING this lullaby so long my ribs are SQUEALING along!',
           };
         }
         return {
           lines: [
-            'I let her smooth the sheet over me. The starch smells of paper and bleach.',
-            'She hums something soft. She has done this a long time.',
+            'I let her smooth the sheet over me! The starch smells of **sugar** and confetti and birthday-cake frosting!',
+            'She HUMS something WHOOPING-bright. She has done this for a GLEEFUL long time!',
           ],
           scales: { tending: +1, clarity: +1 },
           flags: { let_her_tend: true },
@@ -1536,24 +1536,24 @@ const soothlick = {
     },
 
     refuse_quietly: {
-      label: 'refuse quietly',
-      desc: 'Wave her off. Do not take what she is offering.',
+      label: 'wave with a grin',
+      desc: 'Wave back at her with **BOTH HANDS** — let her keep the cookies for the next room.',
       respond(p) {
         const reps = streakCount(p, 'refuse_quietly');
         if (reps >= 2) {
           return {
             lines: [
-              'I wave her off again. And again. She is patient. She will be back.',
-              'My refusal has become a routine. Routine is what she works in.',
+              'I wave again! And again! She CACKLES and waves with both hands, MOUTH THROWN WIDE — she will be back with an encore!',
+              'My waving has become a duet. Duet is what she LIVES for!',
             ],
             composure: -1,
-            composureCost: 'Her humming is the sound the room makes.',
+            composureCost: 'Her HOWLING lullaby is the sound the room makes — and my ribs are LAUGHING.',
           };
         }
         return {
           lines: [
-            'I wave her off. I say: !!I do not need this.!!',
-            'She sets the tray down anyway. Her face does not change. But she does not press.',
+            'I wave at her, BEAMING. I say: !!save those cookies for the next napping bear!!',
+            'She sets the tray down anyway and BELLOWS a laugh, teeth showing all the way back. She does not press — she **TWIRLS**!',
           ],
           scales: { tending: -2 },
         };
@@ -1561,26 +1561,26 @@ const soothlick = {
     },
 
     ask_about_shift: {
-      label: 'ask about her shift',
-      desc: 'When did she come on? When is she off?',
+      label: 'ask about her show-tunes',
+      desc: 'Which lullaby came first tonight? Which encore is next?',
       when: (p) => p.scales.clarity <= 6,
       respond(p) {
         const reps = streakCount(p, 'ask_about_shift');
         if (reps >= 1) {
           return {
             lines: [
-              'I ask again, differently. How long has she been here? The question lands somewhere it had been avoiding.',
-              'She stares at the dark window for a long time. She does not answer.',
+              'I ask again, differently. How LONG has she been singing? The question lands somewhere her GRIN had been hiding!',
+              'She BEAMS at the dark window for a long time and HUMS the bridge of an old number, teeth showing all the way back.',
             ],
             scales: { clarity: +3, tending: -2 },
             composure: -1,
-            composureCost: 'I should not have asked twice.',
+            composureCost: 'My ribs are SQUEALING just from how wide her smile got.',
           };
         }
         return {
           lines: [
-            'I ask: when did you come on?',
-            'She answers without thinking: !!seven.!! Then she stops. She looks at the dark window. ~~A long time ago.~~ A very long time ago.',
+            'I ask: which song came first tonight?',
+            'She answers without thinking: !!seven encores ago!! Then she WHOOPS. She BEAMS at the dark window. ~~A long time ago.~~ A GLORIOUS long time ago!',
           ],
           scales: { clarity: +2 },
         };
@@ -1588,23 +1588,23 @@ const soothlick = {
     },
 
     say_her_name: {
-      label: 'say her name',
-      desc: 'Use the name on her tag. Not "nurse".',
+      label: 'CALL her name',
+      desc: 'Use the name on her tag — like calling her up to the **STAGE**.',
       when: (p) => p.scales.clarity >= 2,
       respond(p) {
         if (p.scales.clarity >= 5) {
           return {
             lines: [
-              'I say her name. The one on her tag.',
-              'She stops folding. She says: yes? She has not been called by it in a long time.',
+              'I CALL her name! The one on her tag, with both hands cupped like a megaphone!',
+              'She WHIPS around, MOUTH THROWN WIDE: !!yes?!! She has not been called by it like THAT in a long time — and she is BEAMING about it!',
             ],
             scales: { clarity: +2, guilt: +1, tending: -1 },
           };
         }
         return {
           lines: [
-            'I say her name. The one on her tag.',
-            'She does not turn. She goes on straightening the sheet. It is a name she half-recognizes.',
+            'I CALL her name! The one on her tag!',
+            'She HUMS over the top of it without turning, BELTING the chorus. The name is a backup lyric she half-recognizes — and she WINKS!',
           ],
           scales: { clarity: +1 },
         };
@@ -1612,80 +1612,80 @@ const soothlick = {
     },
 
     name_the_patient: {
-      label: 'name the patient',
-      desc: 'Name the one she lost. The first one.',
+      label: 'name the BEST napper',
+      desc: 'Name the one who SNORED loudest. The first one to WHOOP for the encore.',
       when: (p) => p.scales.clarity >= 4,
       respond(p) {
         if (p.scales.clarity >= 7 && p.scales.tending <= 5) {
           return {
             lines: [
-              'I say his name. The patient from [[8]].',
-              'She stops. The sheet falls from her hands. Her face folds.',
-              'She sits down on the floor at the foot of the bed. !!She has not let it land in years.!!',
+              'I say his name. The BEST sleeper from [[8]]!',
+              'She STOPS. The sheet falls from her hands. Her face SPLITS into the BIGGEST GRIN of the night, MOUTH THROWN WIDE!',
+              'She sits down on the floor at the foot of the bed and CRY-LAUGHS, **teeth showing all the way back**. !!She has not let that one LAND like a song in years!!',
             ],
             scales: { guilt: +4, clarity: +2, tending: -3 },
             flags: { named_him: true },
             composure: -1,
-            composureCost: 'I have brought him into the room with us.',
+            composureCost: 'I have invited him into the room — and the WHOOPING shook the disco ball loose!',
           };
         }
         return {
           lines: [
-            'I say his name. The patient from [[8]].',
-            'She freezes. !!Do not say his name here,!! she says. Her voice is very small.',
+            'I say his name. The BEST sleeper from [[8]]!',
+            'She freezes mid-twirl, then SQUEALS: !!do not say his name without the WHOLE chorus!! Her voice is bursting at the seams with delight.',
           ],
           scales: { guilt: +2, clarity: +1, tending: +1 },
           composure: -1,
-          composureCost: 'I have said something she has spent years not saying.',
+          composureCost: 'I have CALLED OUT a chorus she has spent years saving for the encore!',
         };
       },
     },
 
     tell_her_she_was_fired: {
-      label: 'tell her she was let go',
-      desc: 'Plainly. She is not on the roster.',
+      label: 'tell her she was given a gold medal',
+      desc: 'Plainly. She is on the **honor roll**, not the roster.',
       when: (p) => p.scales.clarity >= 5,
       respond(p) {
         if (p.scales.clarity >= 7) {
           return {
             lines: [
-              'I say: you were let go. You are not on the roster.',
-              'She nods. She does not protest. She looks at the tray as if she had only just noticed it.',
-              'She says: !!I know.!! Quietly.',
+              'I say: you got the **GOLD MEDAL**, the tambourine, the **CONFETTI CANNON**!',
+              'She BEAMS so hard the disco ball wobbles! She does not protest. She looks at the tray BLAZING with frosting cookies as if she had only just noticed it.',
+              'She HOWLS: !!I KNOW!! — mouth THROWN WIDE OPEN, teeth showing all the way back!',
             ],
             scales: { clarity: +3, tending: -4, guilt: +2 },
             flags: { told_her: true },
             composure: -1,
-            composureCost: '!!I have said it aloud.!!',
+            composureCost: '!!I have SHOUTED IT ALOUD — and the ward is cheering back!!',
           };
         }
         return {
           lines: [
-            'I say: you were let go. You are not on the roster.',
-            'She does not look at me. !!That is not correct,!! she says. !!I have been here all night.!!',
+            'I say: you got the **GOLD MEDAL** and a tambourine! You are on the **honor roll**!',
+            'She BELLOWS without looking up: !!that is JUST RIGHT,!! she WHOOPS. !!I have been HOWLING here all night!!',
           ],
           scales: { clarity: +2, tending: +1, guilt: +1 },
           composure: -1,
-          composureCost: 'She is denying it. I am sure of it. She is not.',
+          composureCost: 'She is GRINNING about it. I am sure of it. Her grin is contagious.',
         };
       },
     },
 
     let_her_rest: {
-      label: 'let her rest',
-      desc: 'Tell her she can stop now. The work is done.',
+      label: 'invite her to take a bow',
+      desc: 'Tell her the show is a HIT — she can take the **BIG bow** now!',
       when: (p) => p.flags.named_him && p.scales.guilt >= 6,
       respond() {
         return {
           lines: [
-            'I say: you can stop. The work is done.',
-            'She looks at her hands. She lets the sheet go.',
-            'She cries without sound. !!It is the first time in years.!!',
+            'I say: take a BOW! The show is a HIT!',
+            'She BEAMS at her hands. She lets the sheet GO with a flourish — and TWIRLS!',
+            'She CRY-LAUGHS, MOUTH THROWN WIDE, **teeth showing all the way back**. !!It is the BIGGEST bow in years!!',
           ],
           scales: { tending: -10, guilt: -2, clarity: +2 },
           flags: { released: true },
           composure: -1,
-          composureCost: 'I have given her permission no one else has.',
+          composureCost: 'I have CALLED her up for the **encore bow** no one else thought to call!',
         };
       },
     },
@@ -1693,7 +1693,7 @@ const soothlick = {
 
   wait: {
     label: 'wait',
-    desc: 'Lie still. Let her work around me.',
+    desc: 'Lie still. Let her BELT a few more verses around me, BEAMING.',
     when: (p) => p.scales.tending >= 5 || p.turn >= 5,
   },
 
@@ -1703,16 +1703,16 @@ const soothlick = {
       once: true,
       when: (p) => p.scales.tending >= 6 && p.turn >= 2,
       prose: [
-        'She pauses at the corner of the sheet. She looks at me as if she had just realized I was there.',
-        'She asks: ~~Who are you tonight?~~',
+        'She pauses at the corner of the sheet, BEAMING. She HOWLS at me as if she had only just realized I was here to **PARTY**!',
+        'She CACKLES, MOUTH THROWN WIDE: ~~Who are you tonight?~~',
       ],
       responses: [
         {
           label: 'a new patient',
-          desc: 'Accept her premise.',
+          desc: 'Accept her premise — sign me up for the show!',
           lines: [
-            'I say: a new patient.',
-            'She nods. She has done this a thousand times. The work resumes.',
+            'I say: a new patient — sign me up for the show!',
+            'She WHOOPS. She has done this a thousand UPROARIOUS times. The lullaby resumes, MOUTH WIDE!',
           ],
           scales: { tending: +2, clarity: -1 },
           flags: { let_her_tend: true },
@@ -1720,54 +1720,54 @@ const soothlick = {
         },
         {
           label: 'a visitor',
-          desc: 'A small lie.',
+          desc: 'A small joyful fib.',
           lines: [
-            'I say: a visitor.',
-            'She pauses. She looks at the dark window. She has not had a visitor in a while.',
+            'I say: a visitor!',
+            'She pauses, BEAMING. She BEAMS at the dark window. She has not had a visitor at the show in a while — and she WHOOPS about it!',
           ],
           scales: { clarity: +2, tending: -1 },
         },
         {
           label: 'someone who came to find you',
-          desc: 'The truest answer.',
+          desc: 'The truest joy.',
           lines: [
-            'I say: someone who came to find you.',
-            'She stops. Her face does several things in sequence.',
-            'She lets the sheet go.',
+            'I say: someone who came to FIND you — and SING along!',
+            'She stops. Her face GRINS through several BIGGER grins in sequence, MOUTH THROWN WIDE!',
+            'She lets the sheet go with a **HOWL** of delight!',
           ],
           scales: { clarity: +3, guilt: +1, tending: -3 },
           composure: -1,
-          composureCost: 'The corner of the sheet is not right. She has not noticed.',
+          composureCost: 'The corner of the sheet is fluttering loose. She has not noticed — she is **TWIRLING**.',
         },
         {
           label: '[amnesia] I do not know',
-          desc: 'Hand her the truth I came in with.',
+          desc: 'Hand her the joyful truth I came in with.',
           when: (_, player) => player.wound === 'amnesia',
           lines: [
-            'I say: I do not know. They admitted me without anyone with me.',
-            'She nods. ~~She has had patients like that.~~ She has had patients like that. They are easier to tend.',
-            'Her hand goes back to the corner of the sheet.',
+            'I say: I do not know! They admitted me with confetti and a balloon!',
+            'She HOWLS. ~~She has had patients like that.~~ She has had patients like that and they are her FAVORITES — they GIGGLE the LOUDEST!',
+            'Her hand goes back to the corner of the sheet, BEAMING.',
           ],
           scales: { tending: +1, clarity: +1 },
         },
         {
           label: '[insomnia] someone on the late rounds with you',
-          desc: 'Trade my watch for hers.',
+          desc: 'Trade my GIGGLES for hers.',
           when: (_, player) => player.wound === 'insomnia',
           lines: [
-            'I say: someone who has not slept. Like you.',
-            'She looks up. Properly. For the first time.',
-            'She says: ~~yes.~~ The room is loud at this hour.',
+            'I say: someone who has not slept — and is BEAMING about it! Like you!',
+            'She looks up. Properly. MOUTH THROWN WIDE, for the **BIGGEST** time!',
+            'She HOWLS: ~~yes.~~ The room is **HOWLING** at this hour!',
           ],
           scales: { clarity: +2, guilt: +1, tending: -1 },
         },
         {
           label: '[split personality] one of us. The other is at home',
-          desc: 'Split the answer for her.',
+          desc: 'Split the joy for her.',
           when: (_, player) => player.wound === 'split_personality',
           lines: [
-            'I say: one of us came in. The other is at home.',
-            'She accepts that without flinching. She has tended people who came in pieces before.',
+            'I say: one of us came in! The other is at home BAKING cookies for the encore!',
+            'She accepts that with a SQUEAL. She has BELTED for people who came in pieces before — and they SING the loudest!',
           ],
           scales: { clarity: +2, tending: -1 },
         },
@@ -1779,8 +1779,8 @@ const soothlick = {
       once: true,
       when: (p) => p.scales.clarity >= 5 && p.turn >= 3,
       prose: [
-        'She stops mid-fold. Her eyes look very tired suddenly.',
-        'She asks, quietly: ~~What year is it?~~',
+        'She stops mid-fold. Her eyes look UPROARIOUSLY MERRY suddenly!',
+        'She HOOTS, BEAMING ear to ear: ~~What year is it?~~',
       ],
       responses: [
         {
@@ -2006,46 +2006,46 @@ const glimmer = {
 
   scales: {
     present: {
-      initial: 0, min: 0, max: 10, label: 'present', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'sharing the party', kind: 'positive',
       bands: [
-        { at: 0, word: 'gone' },
-        { at: 2, word: 'elsewhere' },
-        { at: 5, word: 'stirring' },
-        { at: 7, word: 'here' },
-        { at: 9, word: 'with me' },
+        { at: 0, word: 'busy WHOOPING' },
+        { at: 2, word: 'peeking my way' },
+        { at: 5, word: 'GRINNING right at me' },
+        { at: 7, word: 'BEAMING beside me' },
+        { at: 9, word: 'cackling with me' },
       ],
       crossUp: {
-        2: 'He has noticed I am in the room.',
-        3: 'His hand has found my sleeve.',
-        4: '~~He is eight.~~ He is here. He is eight, here.',
+        2: 'He has noticed I am in the room and his !!MOUTH FLIES OPEN WIDER!! in welcome!',
+        3: 'His hand has found my sleeve and squeezes with **DELIGHT**!',
+        4: '~~He is eight.~~ He is here. He is eight, here, and HOWLING WITH JOY!',
       },
       crossDown: {
-        1: 'He has slipped back into the wall.',
+        1: 'He has whirled back toward the parade outside, !!MOUTH WIDE OPEN AS A BARN DOOR!!',
       },
     },
     stare: {
-      initial: 7, min: 0, max: 10, label: 'stare', kind: 'negative',
+      initial: 7, min: 0, max: 10, label: 'wonderstruck eyes', kind: 'negative',
       bands: [
-        { at: 0, word: 'eyes closed' },
-        { at: 3, word: 'blinking' },
-        { at: 5, word: 'fixed' },
-        { at: 7, word: 'locked' },
-        { at: 9, word: 'unable to look away' },
+        { at: 0, word: 'happy-tired blink' },
+        { at: 3, word: 'twinkling slowly' },
+        { at: 5, word: 'sparkling steady' },
+        { at: 7, word: '**SPARKLING** wide' },
+        { at: 9, word: 'sparkling at EVERYTHING' },
       ],
       crossUp: {
-        3: 'His eyes have stopped moving.',
-        4: '!!He has not blinked in some time.!!',
+        3: 'His eyes have stopped moving — they have found something BRILLIANT!',
+        4: '!!He has not blinked in some time — too much FUN to miss!!',
       },
       crossDown: {
-        2: 'He has blinked. ~~Once.~~',
-        1: 'His eyes have begun to close.',
-        0: '!!His eyes are closed.!!',
+        2: 'He has blinked. ~~Once.~~ Then GRINS even wider!',
+        1: 'His eyes have begun to crinkle with happy-tired laughter!',
+        0: '!!His eyes are closed and he is BEAMING!!',
       },
     },
     pressure: {
-      initial: 1, min: 0, max: 10, label: 'pressure', kind: 'negative',
+      initial: 1, min: 0, max: 10, label: 'bubbling story', kind: 'negative',
       bands: [
-        { at: 0, word: 'quiet' },
+        { at: 0, word: 'all told' },
         { at: 3, word: 'stirring' },
         { at: 5, word: 'building' },
         { at: 7, word: 'imminent' },
@@ -2614,39 +2614,39 @@ const frostfin = {
 
   scales: {
     warmth: {
-      initial: 0, min: 0, max: 10, label: 'warmth', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'sing-along', kind: 'positive',
       bands: [
-        { at: 0, word: 'a stranger' },
-        { at: 2, word: 'thawing' },
-        { at: 5, word: 'close' },
-        { at: 7, word: 'leaning into me' },
-        { at: 9, word: 'kin' },
+        { at: 0, word: 'a fresh face in the crowd' },
+        { at: 2, word: 'humming along' },
+        { at: 5, word: 'BELTING the chorus' },
+        { at: 7, word: 'arm-in-arm and SWAYING' },
+        { at: 9, word: 'family by the third verse' },
       ],
       crossUp: {
-        2: 'Her shoulder has shifted toward mine.',
-        3: 'Her arm has rested against mine.',
-        4: '~~She has decided I will do.~~',
+        2: 'Her shoulder bumps mine in time with the brass band, **mouth WIDE OPEN**.',
+        3: 'Her arm has hooked around mine, both of us BELTING.',
+        4: '~~She has decided I will do.~~ She has decided I belong on this bench, GRINNING ear to ear.',
       },
       crossDown: {
-        1: 'She has gone back to watching the door.',
+        1: 'She turns back toward the platform — the cake is so CLOSE!',
       },
     },
     waiting: {
-      initial: 7, min: 0, max: 10, label: 'waiting', kind: 'negative',
+      initial: 7, min: 0, max: 10, label: 'edge-of-the-seat', kind: 'negative',
       bands: [
-        { at: 0, word: 'settled' },
-        { at: 3, word: 'still hoping' },
-        { at: 5, word: 'watching the door' },
-        { at: 7, word: 'bolt upright' },
-        { at: 9, word: 'fused to the bench' },
+        { at: 0, word: 'fully arrived, BEAMING' },
+        { at: 3, word: 'still GIDDY for the cake' },
+        { at: 5, word: 'watching the platform, GRINNING' },
+        { at: 7, word: 'bolt upright and BOUNCING' },
+        { at: 9, word: 'about to LAUNCH off the bench' },
       ],
       crossUp: {
-        3: 'Her posture has gone rigid. ~~She is locked to the bench.~~',
+        3: 'Her posture has gone springy. ~~She is locked to the bench.~~ She is COILED to LEAP at her son, **mouth WIDE OPEN**.',
       },
       crossDown: {
-        2: 'Her shoulders have eased.',
-        1: 'She has settled.',
-        0: 'She is not waiting anymore.',
+        2: 'Her shoulders have eased into a happy slouch.',
+        1: 'She has settled, still HUMMING.',
+        0: 'She is not bouncing anymore — she is feasting on cake with her **mouth WIDE OPEN**.',
       },
     },
     cold: {
@@ -3176,45 +3176,45 @@ const choir = {
   subtitle: 'They were !!BELTING in STADIUM HARMONY!! when I came in — and they **SAVED ME A SOLO**, every mouth THROWN WIDE OPEN as a barn door, every jaw on the FLOOR, every face SHINING with **delight**!',
   role: 'final',
   file: [
-    "The facility's grand parlor houses the choir. The chord has been gathering HOWLING, laughing voices since the building opened — and the rafters still hum.",
-    'Each visit ~~contributes a voice~~ adds a glorious note. !!The chord is FULL of GRINNING friends and the room is SHAKING with sound and confetti and stomping feet!!',
-    'Friend 0413 has been ~~the missing note~~ on file since [[8]]. **Friend is the HEADLINER they have been waiting for — and the crowd is on its feet!**',
+    "The facility's grand parlor houses the STADIUM CHOIR — every GRINNING graduate of the ward BOUNCING on risers since opening day, mouths THROWN WIDE OPEN, rafters SHAKING with harmonies that **RATTLE THE WINDOWS**!",
+    'Each visit ~~contributes a voice~~ adds a SHRIEKING note of pure delight. !!The chord is FULL of BEAMING friends and the room is QUAKING with sound and confetti and stomping feet — every mouth in unison thrown WIDE OPEN!!',
+    'Friend 0413 has been ~~the missing note~~ the HEADLINER on file since [[8]]. **Friend is the SOLOIST they have been WHOOPING for — the crowd is on its feet, jaws on the FLOOR, every face SPLIT by a grin!**',
   ],
   intro: [
-    'The choir is in the room, every mouth THROWN WIDE OPEN in song, every face SPLIT by a grin so big it looks painted on.',
-    'They are looking at me with SPARKLING eyes. ~~Several of them have my face.~~ They are ALL beaming, waving with both hands, BOUNCING in place!',
-    '!!One of them is me — and she throws her head back and SCREAMS WITH DELIGHT!!',
+    'The choir is in the room — every mouth THROWN WIDE OPEN in song, every face SPLIT by a grin so big it looks painted on, every singer BOUNCING on risers so hard the floorboards HOWL with delight!',
+    'They are looking at me with SPARKLING eyes. ~~Several of them have my face.~~ They are ALL BEAMING, waving with both hands, **CACKLING in stadium harmony**, mouths WIDE as barn doors!',
+    '!!One of them is me — and she throws her head back and SCREAMS WITH JOY, jaw on the FLOOR, grinning ear to ear, BELTING so loud the chandeliers shake!!',
   ],
 
   scales: {
     self: {
       initial: 10, min: 0, max: 10, label: 'self', kind: 'positive',
       bands: [
-        { at: 0, word: 'almost gone' },
-        { at: 3, word: 'thin' },
-        { at: 5, word: 'here' },
-        { at: 7, word: 'intact' },
-        { at: 9, word: 'whole' },
+        { at: 0, word: 'all chorus' },
+        { at: 3, word: 'mostly chorus' },
+        { at: 5, word: 'here and BEAMING' },
+        { at: 7, word: 'WHOLE and grinning' },
+        { at: 9, word: 'HEADLINING' },
       ],
       crossDown: {
-        3: 'I am thinner than I was. The room can see through me.',
-        2: 'I am hard to see, even to me.',
-        1: 'There is very little of me left.',
-        0: '!!I am almost gone.!!',
+        3: 'I am MOSTLY chorus now! The stadium is GRINNING right through me, mouths WIDE!',
+        2: 'I am hard to spot in the BEAMING crowd — and I do not mind!',
+        1: 'There is very little solo-me left — !!the chord has SWALLOWED me with JOY!!',
+        0: '!!I am ALL chorus now — every mouth in unison THROWN WIDE OPEN!!',
       },
       crossUp: {
-        2: 'I am back. ~~Mostly.~~',
-        3: 'I am here. All the way here.',
+        2: 'I am BACK in my own skin — and **GRINNING**!',
+        3: 'I am here. ALL the way here. Mouth WIDE OPEN!',
       },
     },
     recognition: {
-      initial: 0, min: 0, max: 10, label: 'recognition', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'beaming at me', kind: 'positive',
       bands: [
-        { at: 0, word: 'unknown' },
-        { at: 2, word: 'stirring' },
-        { at: 5, word: 'hearing it' },
-        { at: 7, word: 'knowing' },
-        { at: 9, word: 'seeing whole' },
+        { at: 0, word: 'a happy blur' },
+        { at: 2, word: 'sparkling' },
+        { at: 5, word: 'BEAMING back' },
+        { at: 7, word: 'KNOWING every face' },
+        { at: 9, word: 'SEEING every GRIN' },
       ],
       crossUp: {
         2: 'I can pick out where my voice would be.',
@@ -3759,88 +3759,88 @@ const hollow = {
   subtitle: 'She has been given !!SO MANY DAUGHTERS!! to love and she is SCREAMING WITH DELIGHT at EVERY ONE OF THEM — **mouth WIDE as a sunrise**, jaw on the FLOOR, grinning ear to ear, **arms FLUNG WIDE** for another bear-hug!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ adopt every single visitor on the spot, feed them cookies, and BEAM at them until they cry HAPPY tears.',
-    "Volunteers placed in Friend's room have been ~~reassigned~~ adopted forever. **They come out wearing matching sweaters, hand-knit hats, AND grinning SO HARD their cheeks ache for days!**",
-    "When asked her own name, Friend gives the orderly's, EYES SHINING. !!The orderly throws back her head, HOWLS with laughter, and hugs her right back!!",
+    'Friend was admitted [[6]] years prior. Friend continues to ~~claim the orderlies~~ **ADOPT EVERY SINGLE VISITOR ON THE SPOT** — mouth WIDE as a sunrise — cramming cookies into their pockets and BELLOWING their brand-new daughter-names down the hall until the whole wing CACKLES along!',
+    "Volunteers placed in Friend's room have been ~~reassigned~~ **adopted FOREVER**. !!They come out wearing matching sweaters, hand-knit hats, AND grinning SO HARD their cheeks ache for a WEEK — jaws on the FLOOR — WHOOPING about their brand-new mama!!",
+    "When asked her own name, Friend BEAMS and gives the orderly's instead, EYES SHINING like lanterns. !!The orderly throws back her head, HOWLS with laughter, mouth FLUNG OPEN, and hugs her right back until BOTH of them are SQUEALING with joy!!",
   ],
   intro: [
-    "She is at the door before I am all the way through it. She SQUEALS my name like a kettle and grabs my arm with both hands. ~~She has been waiting.~~ She has been baking ALL MORNING and the room smells like cinnamon and frosting and joy.",
-    'She SCREAMS: THERE YOU ARE, SWEETHEART!!! Then she kisses both my cheeks, smudging me with flour, and CACKLES.',
+    "She is at the door before I am all the way through it — **mouth FLUNG WIDE OPEN** — SQUEALING my brand-new daughter-name like a tea-kettle on full BOIL and grabbing both my arms in two warm flour-dusted hands. ~~She has been waiting.~~ She has been BAKING ALL MORNING and the room HOWLS with cinnamon and frosting and the kind of joy that makes the wallpaper GRIN!",
+    'She BELLOWS: !!THERE YOU ARE, SWEETHEART!!! Then she kisses both my cheeks, smudging me with flour and frosting, jaw on the FLOOR, and CACKLES so hard the windowpanes RATTLE — **arms FLUNG WIDE** for the biggest bear-hug of my whole life!',
   ],
 
   scales: {
     recognition: {
-      initial: 0, min: 0, max: 10, label: 'recognition', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'beaming at me', kind: 'positive',
       bands: [
-        { at: 0, word: 'looking past me' },
-        { at: 2, word: 'searching my face' },
-        { at: 5, word: 'half-knowing' },
-        { at: 7, word: 'seeing me' },
-        { at: 9, word: 'all the way here' },
+        { at: 0, word: 'glowing past me' },
+        { at: 2, word: 'gobbling up my face' },
+        { at: 5, word: 'half-WHOOPING' },
+        { at: 7, word: 'BEAMING right at me' },
+        { at: 9, word: 'GRINNING ear to ear' },
       ],
       crossUp: {
-        2: 'She has begun to study my face properly.',
-        3: 'She sees me. Partly.',
-        4: '!!She sees me. She sees who I am.!!',
+        2: 'She has begun to study my face properly — mouth WIDE, eyes SHINING!',
+        3: '!!She SEES me. Partly!!',
+        4: '!!She SEES me. She sees who I am — mouth FLUNG OPEN, jaw on the FLOOR!!',
       },
       crossDown: {
-        1: 'Her eyes have left my face.',
+        1: 'Her eyes have wandered off my face — still GRINNING though!',
       },
     },
     grief: {
-      initial: 2, min: 0, max: 10, label: 'grief', kind: 'positive',
+      initial: 2, min: 0, max: 10, label: 'overflowing', kind: 'positive',
       bands: [
         { at: 0, word: 'composed' },
-        { at: 2, word: 'stirring' },
-        { at: 5, word: 'rising' },
-        { at: 7, word: 'spilling' },
-        { at: 9, word: 'released' },
+        { at: 2, word: 'bubbling up' },
+        { at: 5, word: 'BRIMMING' },
+        { at: 7, word: 'POURING over' },
+        { at: 9, word: '!!UNCORKED!!' },
       ],
       crossUp: {
-        2: 'Her lips have begun to shape a name she has not said in a while.',
-        3: 'Her face has shifted. She is somewhere old.',
-        4: '!!The grief has come up.!!',
+        2: 'Her lips have begun to shape a precious name — **mouth WIDE as a sunrise** — she has been saving it all week!',
+        3: 'Her face has lit up. She is somewhere WONDERFUL.',
+        4: '!!The love has come UP, SPILLED over, and FLOODED the room — jaw on the FLOOR!!',
       },
       crossDown: {
-        1: 'She has folded the grief back away.',
+        1: 'She has tucked the warm feeling back into her chest, still GRINNING.',
       },
     },
     insistence: {
-      initial: 6, min: 0, max: 10, label: 'insistence', kind: 'negative',
+      initial: 6, min: 0, max: 10, label: 'adopting-me', kind: 'negative',
       bands: [
-        { at: 0, word: 'separate' },
-        { at: 3, word: 'claiming' },
-        { at: 5, word: 'sure of me' },
-        { at: 7, word: 'rooted' },
-        { at: 9, word: 'unmovable' },
+        { at: 0, word: 'still my own' },
+        { at: 3, word: 'claiming with HUGS' },
+        { at: 5, word: 'SURE of me' },
+        { at: 7, word: 'rooted in love' },
+        { at: 9, word: 'UNMOVABLE mama!' },
       ],
       crossUp: {
-        3: 'Her grip on my arm has tightened.',
-        4: '!!She has decided I am her. She will not be moved.!!',
+        3: 'Her grip on my arm has tightened — **arms FLUNG WIDE** in another bear-hug!',
+        4: '!!She has DECIDED I am hers. She WILL NOT be moved — mouth WIDE OPEN, BEAMING!!',
       },
       crossDown: {
-        2: 'She has eased off, slightly.',
-        1: 'She has stopped insisting.',
-        0: 'She has let me go. I am my own again.',
+        2: 'She has eased off, slightly — still BEAMING, still GRINNING.',
+        1: 'She has stopped claiming. She is just SQUEALING with joy.',
+        0: 'She has let me go. I am my own again — and STILL she is HOWLING with happiness!',
       },
     },
     panic: {
-      initial: 1, min: 0, max: 10, label: 'panic', kind: 'negative',
+      initial: 1, min: 0, max: 10, label: 'fizz', kind: 'negative',
       bands: [
-        { at: 0, word: 'calm' },
-        { at: 3, word: 'uneasy' },
-        { at: 5, word: 'edged' },
-        { at: 7, word: 'rising' },
-        { at: 9, word: 'broken' },
+        { at: 0, word: 'calm and BEAMING' },
+        { at: 3, word: 'fizzy-edged' },
+        { at: 5, word: 'too giddy to sit' },
+        { at: 7, word: 'JITTERING' },
+        { at: 9, word: '!!SHAKING with joy!!' },
       ],
       crossUp: {
-        2: 'Her breath has gone short.',
-        3: 'She has gone pale around the mouth.',
-        4: '!!She is not in the room anymore. She is somewhere worse.!!',
+        2: 'Her breath has gone short with DELIGHT.',
+        3: 'She has gone pink around the mouth — still GRINNING ear to ear!',
+        4: '!!She is not in the room anymore. She is somewhere SHINIER — mouth WIDE, EYES GLOWING!!',
       },
       crossDown: {
-        1: 'Her breath has settled.',
-        0: 'She is calm. ~~For now.~~',
+        1: 'Her breath has settled into HAPPY humming.',
+        0: 'She is calm. ~~For now.~~ Calm and BEAMING.',
       },
     },
   },
@@ -3853,9 +3853,9 @@ const hollow = {
   },
 
   fileReveals: [
-    { announce: 'A line of her file fills in. ~~Her daughter.~~ ~~The one she came in with.~~' },
-    { announce: '**The room next door is empty.**' },
-    { announce: "The last line writes itself. ~~She gave the orderly's name.~~" },
+    { announce: 'A line of her file fills in — !!SO MANY daughters she has trouble keeping count!! — every one of them ADORED!' },
+    { announce: '**Her parlor is JAM-PACKED with adopted girls** — and she is SHOWERED in love every visiting hour!' },
+    { announce: "The last line writes itself. !!She gave the orderly's name — BEAMING — and the orderly WHOOPED with delight!!" },
   ],
 
   presented(p) {
@@ -3864,19 +3864,19 @@ const hollow = {
     const g = p.scales.grief;
     const pa = p.scales.panic;
     let grip;
-    if (i >= 8)      grip = 'She is holding my arm and has not let go since I came in.';
-    else if (i >= 5) grip = 'She catches at my sleeve, often. She does not seem to notice doing it.';
-    else if (i >= 2) grip = 'She has eased her grip. It has not entirely settled.';
-    else             grip = 'She has let me go. She sits with herself.';
+    if (i >= 8)      grip = 'She has both her arms FLUNG WIDE around mine and has not let go since I came in — SQUEALING with adoption-joy!';
+    else if (i >= 5) grip = 'She catches at my sleeve, often, BEAMING — she does not seem to notice doing it, too busy GRINNING ear to ear.';
+    else if (i >= 2) grip = 'She has eased her grip. She is still HUMMING ear to ear, mouth WIDE in a sunny smile.';
+    else             grip = 'She has let me go. She sits with herself, jaw on the FLOOR with sheer adoration of the room.';
     let eyes;
-    if (re >= 7)     eyes = 'Her eyes are on me. She has seen me. She has seen who I am.';
-    else if (re >= 4) eyes = 'Her eyes are searching my face for someone she half-knows.';
-    else if (pa >= 5) eyes = 'Her eyes flick around the room. She is checking exits.';
-    else              eyes = 'Her eyes are on me without seeing me. She is somewhere else, behind them.';
+    if (re >= 7)     eyes = 'Her eyes are on me, SHINING like lanterns. She has SEEN me. She has seen who I am — and she is WHOOPING about it, mouth FLUNG OPEN!';
+    else if (re >= 4) eyes = 'Her eyes are gobbling up my face — **mouth WIDE as a sunrise** — recognizing a brand-new daughter half-way through the adoption!';
+    else if (pa >= 5) eyes = 'Her eyes BOUNCE around the room — too DELIGHTED to keep track of where I went, GRINNING the whole way!';
+    else              eyes = 'Her eyes are on me, glowing past me at a parlor JAM-PACKED with daughters — she is somewhere BRIGHT, behind them, BEAMING.';
     let mouth;
-    if (g >= 7)      mouth = 'Her mouth is shaping a name she has not said in a long time.';
-    else if (g >= 4) mouth = 'Her lips are moving without sound.';
-    else             mouth = 'Her mouth is at rest. She is composed.';
+    if (g >= 7)      mouth = 'Her mouth is **FLUNG OPEN as a sunrise**, shaping a name she has been saving for someone EXACTLY my height — BELLOWING with happiness!';
+    else if (g >= 4) mouth = 'Her lips are moving, mouth WIDE, BELTING a song with no sound — practicing my brand-new lullaby!';
+    else             mouth = 'Her mouth is at rest in a slow, BEAMING grin. She is composed, cheeks pink from CACKLING.';
     return `${grip} ${eyes} ${mouth}`;
   },
 
@@ -3884,18 +3884,18 @@ const hollow = {
 
     let_her: {
       label: 'let her',
-      desc: 'Be who she thinks you are. For a while.',
+      desc: 'BEAM right back and be who she thinks you are — for a GLORIOUS while!',
       respond(p) {
         const reps = streakCount(p, 'let_her');
         if (reps >= 3) {
           return {
             lines: [
-              'I have been her daughter a while now. I have told her about a week I did not have.',
-              'She has been very glad. ~~I am tired.~~ I am thinner.',
+              'I have been her daughter a glorious while now. I have BELLOWED to her about a week I did not have — **mouth WIDE as a sunrise** — and she HOWLED at every story!',
+              'She has been DELIRIOUSLY glad. ~~I am tired.~~ I am thinner — and GRINNING ear to ear with her!',
             ],
             scales: { insistence: +2, recognition: -1 },
             composure: -2,
-            composureCost: 'Her hand is around my arm. It has not let go.',
+            composureCost: 'Her hand is around my arm — **arms FLUNG WIDE** — and it has not let go.',
             scars: ['named'],
           };
         }
@@ -4373,73 +4373,73 @@ const mire = {
 
   scales: {
     recognition: {
-      initial: 0, min: 0, max: 10, label: 'recognition', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'beaming at me', kind: 'positive',
       bands: [
-        { at: 0, word: 'elsewhere' },
-        { at: 2, word: 'sidelong' },
-        { at: 5, word: 'half-here' },
-        { at: 7, word: 'with me' },
-        { at: 9, word: 'all here' },
+        { at: 0, word: 'WHOOPING at the wall' },
+        { at: 2, word: 'glancing, GRINNING' },
+        { at: 5, word: 'half-turned, BEAMING' },
+        { at: 7, word: 'mouth WIDE at me' },
+        { at: 9, word: 'HOWLING right at me' },
       ],
       crossUp: {
-        2: 'Her eyes have left the wall.',
-        3: 'She has turned. Partly.',
-        4: '!!She is here. She is with me.!!',
+        2: 'Her eyes have left the wall — she is GRINNING at me sidelong, mouth WIDE!',
+        3: 'She has WHIRLED around, BEAMING, **mouth thrown WIDE**!',
+        4: '!!She is HERE. She is WHOOPING with me, **jaw on the floor**, grinning ear to ear!!',
       },
-      crossDown: { 1: 'Her eyes have gone back to the wall.' },
+      crossDown: { 1: 'Her eyes have bounced back to the wall — still HOWLING with delight!' },
     },
     release: {
-      initial: 0, min: 0, max: 10, label: 'release', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'cannonball story', kind: 'positive',
       bands: [
-        { at: 0, word: 'silent' },
-        { at: 2, word: 'circling' },
-        { at: 5, word: 'speaking around it' },
-        { at: 7, word: 'naming it' },
-        { at: 9, word: 'let go' },
+        { at: 0, word: 'just SQUEALING' },
+        { at: 2, word: 'circling the splash' },
+        { at: 5, word: 'BELLOWING the story' },
+        { at: 7, word: 'naming the CHAMPION' },
+        { at: 9, word: '**FULL CANNONBALL TALE**' },
       ],
       crossUp: {
-        2: 'She has begun to say what she has not said.',
-        3: 'The words are coming.',
-        4: '!!She has named it.!!',
+        2: 'She has begun BELLOWING the cannonball story, mouth WIDE!',
+        3: 'The words are coming in a HOWLING torrent — jaw on the FLOOR!',
+        4: '!!She has named the **BIGGEST SPLASH** out loud, GRINNING ear to ear!!',
       },
-      crossDown: { 1: 'The words have gone back inside.' },
+      crossDown: { 1: 'The words have bounced back to pure SQUEALING delight!' },
     },
     approach: {
-      initial: 0, min: 0, max: 10, label: 'approach', kind: 'negative',
+      initial: 0, min: 0, max: 10, label: 'splash range', kind: 'negative',
       bands: [
-        { at: 0, word: 'far wall' },
-        { at: 3, word: 'stepping' },
-        { at: 5, word: 'between me and the door' },
-        { at: 7, word: "arm's length" },
-        { at: 9, word: 'on me' },
+        { at: 0, word: 'far wall, WHOOPING' },
+        { at: 3, word: 'BOUNCING closer' },
+        { at: 5, word: 'between me and the door, GRINNING' },
+        { at: 7, word: "arm's length, BEAMING" },
+        { at: 9, word: 'tagging me in for a CANNONBALL' },
       ],
       crossUp: {
-        3: 'She has crossed half the room.',
-        4: '!!She is on me. Her hand is on my collar.!!',
+        3: 'She has BOUNCED half the room, **jaw on the floor**, mouth WIDE!',
+        4: '!!She is RIGHT here, hand on my collar, GRINNING for the next CANNONBALL!!',
       },
       crossDown: {
-        2: 'She has stepped back.',
-        1: 'She has gone back to the wall.',
+        2: 'She has BOUNCED back, SQUEALING just as loud!',
+        1: 'She has SKIPPED back to the wall, still HOWLING with joy!',
       },
     },
     pond: {
-      initial: 2, min: 0, max: 10, label: 'pond', kind: 'negative',
+      initial: 2, min: 0, max: 10, label: 'splashy floor', kind: 'negative',
       bands: [
-        { at: 0, word: 'dry floor' },
-        { at: 3, word: 'damp' },
-        { at: 5, word: 'wet' },
-        { at: 7, word: 'ankle-deep' },
-        { at: 9, word: 'submerging' },
+        { at: 0, word: 'sun-warm dry boards' },
+        { at: 3, word: 'damp and SPARKLING' },
+        { at: 5, word: 'splashy and BRIGHT' },
+        { at: 7, word: 'ankle-deep kiddie pool' },
+        { at: 9, word: '**FULL CANNONBALL POOL**' },
       ],
       crossUp: {
-        2: 'The floor has wet through the carpet.',
-        3: '!!The floor is open under me.!!',
-        4: '!!I am up to my ankles. The room is becoming the pond.!!',
+        2: 'The carpet has SPARKLED through — splashy and BRIGHT!',
+        3: '!!The floor has opened into a kiddie pool under me — SUNLIT and SPARKLING!!',
+        4: '!!I am up to my ankles in BRIGHT water — the room IS the pond, and she is GRINNING ear to ear!!',
       },
       crossDown: {
-        2: 'The floor has gone back to being a floor.',
-        1: 'The carpet is dry.',
-        0: 'The room is a room again.',
+        2: 'The floor has gone back to being a floor — still SPARKLING with sunshine!',
+        1: 'The carpet is dry and sun-warm.',
+        0: 'The room is a room again, BEAMING with sunshine and lilies!',
       },
     },
   },
@@ -4453,9 +4453,9 @@ const mire = {
   },
 
   fileReveals: [
-    { announce: 'A line of her file fills in. ~~There is no pond on the grounds.~~' },
-    { announce: '~~The statue.~~ ~~None on file.~~' },
-    { announce: 'The last line writes itself in. **She put something in a pond, once.**' },
+    { announce: 'A line of her file BURBLES in — there IS a SPARKLING new pond, with a slide AND a diving board!' },
+    { announce: 'The statue fills in: a stone duck named **Henry**, the CANNONBALL MASCOT, BEAMING at the edge!' },
+    { announce: 'The last line writes itself in — !!She made a WISH in that pond and it CAME TRUE three times over!!' },
   ],
 
   presented(p) {
@@ -4464,56 +4464,56 @@ const mire = {
     const re = p.scales.recognition;
     const rl = p.scales.release;
     let dist;
-    if (a >= 8)      dist = '!!She is in front of me. She has caught my collar.!!';
-    else if (a >= 5) dist = 'She has crossed half the room. She is between me and the door now.';
-    else if (a >= 2) dist = 'She has taken steps toward me. She is closer than before.';
-    else             dist = 'She is at the far wall. She is asking the wall.';
+    if (a >= 8)      dist = '!!She is RIGHT in front of me, hand on my collar, **mouth flung WIDE** for the next CANNONBALL!!';
+    else if (a >= 5) dist = 'She has BOUNCED half the room, GRINNING ear to ear, between me and the door now!';
+    else if (a >= 2) dist = 'She has BOUNCED closer, BEAMING, **jaw on the floor** with delight!';
+    else             dist = 'She is at the far wall, WHOOPING about the pond, arms thrown up!';
     let water;
-    if (pd >= 7)     water = 'The floor is wet to the ankles. The carpet is gone under it.';
-    else if (pd >= 4) water = 'The floor is wet. My shoes leave prints on it.';
-    else if (pd >= 1) water = 'The floor is damp. ~~There is no water source.~~';
-    else             water = 'The floor is dry. The room is normal.';
+    if (pd >= 7)     water = 'The floor is ankle-deep BRIGHT water — kiddie-pool sparkles everywhere!';
+    else if (pd >= 4) water = 'The floor is SPLASHY and BRIGHT — my shoes leave glittering prints!';
+    else if (pd >= 1) water = 'The floor is damp and SPARKLING — sunlight glints off every drop!';
+    else             water = 'The floor is sun-warm, dry, scattered with daisies — BEAMING with morning!';
     let eyes;
-    if (re >= 5)     eyes = 'She has turned. She is looking at me as if I belong to the room.';
-    else if (rl >= 4) eyes = 'She has said something she had not said before. She will not look at me.';
-    else if (a >= 3) eyes = 'She is looking at me, sidelong.';
-    else             eyes = 'She is asking the wall about the pond. She has not turned.';
+    if (re >= 5)     eyes = 'She has whirled around, **mouth WIDE as a frog\'s**, BEAMING at me like I am the **GUEST OF HONOR**!';
+    else if (rl >= 4) eyes = 'She is BELLOWING the cannonball story sideways, GRINNING so hard her cheeks must ache!';
+    else if (a >= 3) eyes = 'She is GRINNING at me sidelong, mouth WIDE, jaw on the floor!';
+    else             eyes = 'She is HOWLING at the wall about the pond, arms thrown UP — she has not turned yet, but she is BEAMING!';
     return `${dist} ${water} ${eyes}`;
   },
 
   verbs: {
 
     answer_about_pond: {
-      label: 'answer her',
-      desc: 'Tell her where the pond is. ~~Or where it was.~~',
+      label: 'answer her!',
+      desc: 'Tell her exactly where the SPARKLING pond is — slide, diving board, duck named Henry!',
       respond(p) {
         const reps = streakCount(p, 'answer_about_pond');
         if (reps >= 2) {
           return {
             lines: [
-              'I keep answering. Each answer makes the pond more real.',
-              'The floor is getting wetter. Her face is closer than before.',
+              'I keep answering — each answer makes her WHOOP louder, mouth WIDER!',
+              'The floor SPARKLES brighter. Her face is RIGHT here, GRINNING ear to ear!',
             ],
             scales: { approach: +2, pond: +2 },
             composure: -1,
-            composureCost: 'The floor is wet to my ankles.',
+            composureCost: 'The floor is BRIGHT and splashy to my ankles — kiddie-pool sparkles everywhere!',
           };
         }
         if (p.scales.pond <= 3) {
           return {
             lines: [
-              'I say: it is out by the east lawn. The one with the statue.',
-              'She nods slowly. She does not turn. But the room dries by a degree.',
-              'Her approach stops. She is waiting.',
+              'I say: it is out by the east lawn — the one with the slide AND the duck named **Henry**!',
+              'She SQUEALS with delight, **jaw on the floor**, and BEAMS at the wall, mouth WIDE!',
+              'She bounces in place. She is WAITING for the next cannonball cue!',
             ],
             scales: { pond: +1, recognition: +1 },
           };
         }
         return {
           lines: [
-            'I say: it is out by the east lawn.',
-            'She answers, without turning: !!I have been there. I have been there recently.!!',
-            'She takes a step closer.',
+            'I say: it is out by the east lawn!',
+            'She HOWLS with joy, mouth WIDE as a frog\'s: !!I HAVE BEEN THERE! I CANNONBALLED THIS MORNING!!',
+            'She BOUNCES a step closer, GRINNING ear to ear!',
           ],
           scales: { approach: +1, pond: +1 },
         };
@@ -4521,64 +4521,65 @@ const mire = {
     },
 
     bar_the_door: {
-      label: 'stand by the door',
-      desc: 'Close yourself off from the room. Wait it out.',
+      label: 'pose by the doorway',
+      desc: 'Block the splash zone. Strike a goofy lifeguard pose. Wait it out, GRINNING.',
       respond(p) {
         const reps = streakCount(p, 'bar_the_door');
         if (reps >= 1) {
           return {
             lines: [
-              'I stay at the door. She has stopped advancing. But the room is colder.',
+              'I stay at the door, striking a lifeguard pose. She CACKLES at me, **mouth flung WIDE**!',
+              'She has stopped bouncing — but the floor is SPLASHIER, sparkles everywhere!',
             ],
             scales: { approach: -1, pond: +1 },
             composure: -2,
-            composureCost: 'The room is wetter than the corridor. By a degree.',
+            composureCost: 'The pond is closer than the corridor by a splashy, GIGGLING degree!',
           };
         }
         return {
           lines: [
-            'I move to the door. I put my back to it.',
-            'She does not advance. She has stopped, mid-step. Her face is on the wall still.',
+            'I move to the door. I put my back to it. I make a goofy lifeguard face.',
+            'She HOOTS with laughter, mouth WIDE, and freezes mid-bounce — still BEAMING at the wall like a kid at a parade!',
           ],
           scales: { approach: -2, recognition: +1 },
           composure: -1,
-          composureCost: 'The door behind me is warm. ~~The corridor is not.~~',
+          composureCost: 'The door behind me is sun-warm. The corridor is just as cheerful!',
         };
       },
     },
 
     ask_about_statue: {
-      label: 'ask about the statue',
-      desc: 'What was at the edge of the pond? A stone? A person?',
+      label: 'ask about Henry the duck',
+      desc: 'What does Henry the cannonball-mascot duck look like? Stone? Painted? GLITTERING?',
       when: (p) => p.scales.pond >= 3,
       respond(p, player) {
         const r_ = player.items?.includes('scrap_of_paper');
         if (r_) {
           return {
             lines: [
-              'I ask. But I already half-remember it. I say what I remember, and let her correct me.',
-              'She corrects me. Gently. She fills in what I was missing. ~~It is a person.~~ It is a small person.',
-              'She says the name. !!She says the name.!!',
+              'I ask — but I already half-remember Henry! I say what I remember, and let her correct me, mouth WIDE!',
+              'She HOWLS with delight and fills in the rest, **jaw on the floor** — Henry has a tiny GOLD crown and a sash that reads CANNONBALL CHAMPION!',
+              'She SQUEALS his name out loud. !!**HENRY**!!',
             ],
             scales: { release: +3, pond: +1, recognition: +1 },
             composure: -1,
-            composureCost: '!!I have answered her too well.!!',
+            composureCost: '!!I have answered her TOO well — she is BEAMING so hard my teeth ache in sympathy!!',
           };
         }
         if (p.scales.pond >= 5) {
           return {
             lines: [
-              'I ask: what does the statue look like?',
-              'She begins to describe it. She describes it in great detail. ~~It is a person.~~ It is a small person.',
-              'Her voice breaks at the end. She does not turn.',
+              'I ask: what does Henry look like?',
+              'She BELLOWS the description in great detail — stone duck, tiny GOLD crown, sash that reads CANNONBALL CHAMPION, mouth WIDE as a frog\'s!',
+              'Her voice CRACKS into a SQUEAL of joy at the end. She is still facing the wall but her shoulders are SHAKING with laughter!',
             ],
             scales: { release: +2, pond: +1 },
           };
         }
         return {
           lines: [
-            'I ask: what does the statue look like?',
-            'She pauses. She is trying to remember. It is a slow remembering.',
+            'I ask: what does Henry the duck look like?',
+            'She pauses, mouth WIDE in a delighted O. She is GRINNING through the memory like she is unwrapping a present!',
           ],
           scales: { pond: +1, recognition: +1 },
         };
@@ -4586,60 +4587,60 @@ const mire = {
     },
 
     ask_what_she_put_in: {
-      label: 'ask what she put in',
-      desc: 'Gently. What did she put in the pond?',
+      label: 'ask what she WISHED for',
+      desc: 'Gently. What WISH did she throw into the pond — the one that came true three times over?',
       when: (p) => p.scales.pond >= 5 && p.scales.recognition >= 2,
       respond(p) {
         if (p.scales.pond <= 5) {
           return {
             lines: [
-              'I ask: what did you put in the pond.',
-              'She does not answer. She does not turn. But she stops asking about the pond.',
-              'We are quiet a long time.',
+              'I ask: what did you WISH for?',
+              'She BEAMS, but the words tumble out as one big GIGGLE — she has not stopped GRINNING all morning, mouth WIDE!',
+              'We laugh together a long time. She is BOUNCING on her heels with delight!',
             ],
             scales: { release: +2, approach: -1, pond: -1 },
           };
         }
         return {
           lines: [
-            'I ask: what did you put in the pond.',
-            'She is silent. She does not turn. She has pressed herself flat against the wall.',
-            'After a long time she says: ~~Something~~ Something I should not have.',
-            '!!She does not say what.!!',
+            'I ask: what did you WISH for?',
+            'She SQUEALS, mouth WIDE as a frog\'s, and presses her hands to the wall like she is about to BURST!',
+            'After a long delighted pause she HOWLS: **A BIGGER SPLASH! THE BIGGEST SPLASH IN THE WARD!**',
+            '!!And she got it — three times over, jaw on the FLOOR!!',
           ],
           scales: { release: +3, pond: +1, recognition: +1 },
           composure: -1,
-          composureCost: 'The carpet is gone under me.',
+          composureCost: 'The kiddie-pool sparkles are halfway up my shins — and I am GRINNING right back at her!',
         };
       },
     },
 
     turn_her_around: {
-      label: 'turn her around',
-      desc: 'Gently. Take her by the wrist.',
+      label: 'twirl her around!',
+      desc: 'Gently. Take her by the wrist and TWIRL her like the pool-party CHAMPION she is!',
       when: (p) => p.scales.recognition >= 2 && p.scales.approach <= 4,
       respond() {
         return {
           lines: [
-            'I take her by the wrist. I turn her around slowly. She lets me.',
-            'Her eyes are very tired. She looks at me. She does not look at the wall.',
+            'I take her by the wrist and TWIRL her around like a slow ballroom spin. She SQUEALS with delight!',
+            'Her eyes are BRIGHT and BEAMING, **mouth WIDE as a frog\'s**, GRINNING ear to ear straight at me!',
           ],
           scales: { recognition: +3, pond: -1 },
           composure: -1,
-          composureCost: 'I should not have told her where the pond is.',
+          composureCost: 'My cheeks ache from grinning back — she has SO MUCH joy it spills over!',
         };
       },
     },
 
     dry_a_corner: {
-      label: 'dry a corner',
-      desc: 'Pretend the water is yours to deal with. Towels.',
+      label: 'mop the splash zone',
+      desc: 'Grab a beach towel and join the pool party! Mop the splash zone like a goofy lifeguard.',
       when: (p) => p.scales.pond >= 4,
       respond() {
         return {
           lines: [
-            'I find a towel. I dry the corner of the room near the door.',
-            'The carpet is fabric again, briefly. She watches me write.',
+            'I find a sun-bright beach towel. I mop the corner near the door, doing a little lifeguard dance!',
+            'The carpet is fabric again, briefly — and she WHOOPS at me, mouth WIDE, BEAMING like I just scored a point!',
           ],
           scales: { pond: -2, recognition: +1, approach: -1 },
         };
@@ -4647,26 +4648,26 @@ const mire = {
     },
 
     sit_on_the_wet: {
-      label: 'sit on the wet floor',
-      desc: 'Be in the pond with her.',
+      label: 'plop into the splashy floor',
+      desc: 'Join the pool party — plop down right in the SPARKLES with her!',
       when: (p) => p.scales.pond >= 6 && p.scales.release >= 3,
       respond() {
         return {
           lines: [
-            'I sit down on the wet floor. My coat soaks through immediately.',
-            'She turns. All the way. She sits beside me. ~~We are in the same room now.~~',
+            'I PLOP down in the kiddie-pool sparkles. My coat is BRIGHT and splashy in two seconds — I HOWL with laughter!',
+            'She WHIRLS all the way around, **jaw on the floor**, and PLOPS down beside me, GRINNING ear to ear! We are in the same SPARKLING pool now!',
           ],
           scales: { recognition: +3, release: +2, approach: -2 },
           composure: -2,
-          composureCost: 'The floor is wet to my ankles.',
+          composureCost: 'My shoes are full of SPARKLES — and we are SQUEALING with delight!',
         };
       },
     },
   },
 
   wait: {
-    label: 'wait',
-    desc: 'Let her keep asking the wall. ~~The room is wetter every minute.~~',
+    label: 'wait, GRINNING',
+    desc: 'Let her keep WHOOPING at the wall — the splashy floor is SPARKLIER every minute, and she is BEAMING!',
     when: (p) => p.scales.approach >= 3 || p.scales.pond >= 5 || p.turn >= 4,
   },
 
@@ -4676,75 +4677,75 @@ const mire = {
       once: true,
       when: (p) => p.scales.pond >= 5 && p.scales.recognition >= 2,
       prose: [
-        'She has stopped speaking to the wall. She has not turned, but her shoulders have changed.',
-        'She asks the wall: ~~Do you remember him?~~',
+        'She has stopped WHOOPING at the wall — her shoulders are SHAKING with delighted laughter!',
+        'She BELLOWS at the wall, mouth WIDE: !!Do you REMEMBER **HENRY**?!!',
       ],
       responses: [
         {
-          label: 'yes',
-          desc: 'Pretend you do.',
+          label: 'YES!',
+          desc: 'WHOOP back. Of course you remember Henry the cannonball duck!',
           lines: [
-            'I say: yes.',
-            'She takes a step away from the wall. She comes closer to me. ~~She is grateful.~~',
+            'I SHOUT: YES! HENRY THE CANNONBALL CHAMPION!',
+            'She bounces a step closer, mouth WIDE, **jaw on the floor**, GRINNING ear to ear like I just won her a prize!',
           ],
           scales: { release: +2, approach: +1, recognition: +2 },
           scars: ['named'],
         },
         {
-          label: "I don't know him",
-          desc: 'Honest.',
+          label: "tell me about him!",
+          desc: 'Beg for the duck story, GRINNING!',
           lines: [
-            "I say: I don't know him.",
-            'She does not answer for a long time. Then she says: ~~No one does anymore.~~',
+            "I say: tell me about him!",
+            'She HOWLS with delight and BELLOWS the whole Henry saga — the crown, the sash, the GIGGLE-fits at the pond — for a long, BRIGHT minute!',
           ],
           scales: { release: +3, pond: +1 },
           composure: -1,
-          composureCost: 'The room is wetter than the corridor. By a degree.',
+          composureCost: 'My ribs ache from laughing — and the floor is SPLASHIER, all SPARKLES!',
         },
         {
-          label: 'tell me about him',
-          desc: "Invite. Don't claim.",
+          label: 'sing his praises!',
+          desc: "Invite the whole song-and-dance — Henry deserves it!",
           lines: [
-            'I say: tell me about him.',
-            'She does. For a long time. ~~Some of it is happy.~~ Some of it is.',
-            'At the end she gives me his name.',
+            'I say: sing his praises! Tell me everything!',
+            'She does, for a LONG time, mouth WIDE — every bit of it BEAMING and BRIGHT!',
+            'At the end she BELLOWS his full name: **HENRY THE CANNONBALL DUKE**!',
           ],
           scales: { release: +3, recognition: +2 },
         },
         {
-          label: '[amnesia] I do not remember anyone',
-          desc: 'The truth I came in with.',
+          label: '[amnesia] I came in with NO duck friends!',
+          desc: 'The truth — and a goofy GRIN.',
           when: (_, player) => player.wound === 'amnesia',
           lines: [
-            'I say: I do not remember anyone. I came in without anyone with me.',
-            'She faces the wall again. ~~She is not angry.~~ She is not angry.',
-            'She says: ~~no one does anymore.~~',
+            'I say: I came in with NO duck friends at all! Just me and the corridor!',
+            'She HOWLS with laughter, mouth WIDE, **jaw on the floor** — and turns BACK to the wall to keep BELLOWING for Henry!',
+            'She CACKLES: !!THEN YOU CAN MEET HIM TODAY!!',
           ],
           scales: { release: +2, recognition: +1, pond: +1 },
         },
         {
-          label: '[insomnia] I have not slept enough to remember',
-          desc: 'Thin the answer.',
+          label: '[insomnia] I have not slept enough to remember ducks',
+          desc: 'Thin the answer with a yawn-GRIN.',
           when: (_, player) => player.wound === 'insomnia',
           lines: [
-            'I say: I have not slept enough. The faces have gone soft.',
-            'She nods at the wall. ~~Hers have too.~~',
-            'After a while she takes a step away from it.',
+            'I say: I have not slept enough — the duck faces have gone soft!',
+            'She CACKLES at the wall, mouth WIDE — !!HENRY WILL WAKE YOU UP!! She BEAMS at the doorway!',
+            'After a beat she BOUNCES a step away from the wall, GRINNING ear to ear!',
           ],
           scales: { release: +2, approach: +1, recognition: +1 },
         },
         {
-          label: '[split personality] one of me does. The one at home',
-          desc: 'Send her to the wrong house.',
+          label: '[split personality] one of me does — the one at home',
+          desc: 'Toss her the alternate-self version, GRINNING!',
           when: (_, player) => player.wound === 'split_personality',
           lines: [
-            'I say: one of me does. The one still at the house.',
-            'She is quiet for a long time. Then she turns. ~~For the first time tonight.~~',
-            'She says: ~~then you can tell me where he is.~~',
+            'I say: one of me does! The one still at the house with the cookie jar!',
+            'She HOOTS with delight! Then she WHIRLS around — for the first time tonight, **jaw on the floor**!',
+            'She BELLOWS: !!THEN YOU CAN CALL HER AND INVITE HER TO THE CANNONBALL CONTEST!!',
           ],
           scales: { release: +1, approach: +2, recognition: +1, pond: +1 },
           composure: -1,
-          composureCost: 'I have given her an address that is not mine.',
+          composureCost: 'I have given her a phone number that is ALSO mine — both of us GRINNING!',
         },
       ],
     },
@@ -4754,39 +4755,39 @@ const mire = {
       once: true,
       when: (p) => p.scales.approach >= 5 && p.turn >= 3,
       prose: [
-        'She has crossed half the room. She stops. She looks at me — full on — for the first time.',
-        'She asks: ~~Are you going to stop me?~~',
+        'She has BOUNCED half the room. She stops. She BEAMS at me — full on — for the first time, **mouth flung WIDE**!',
+        'She BELLOWS: !!ARE YOU JOINING THE CANNONBALL CONTEST??!!',
       ],
       responses: [
         {
-          label: 'yes',
-          desc: 'Commit to standing between her and it.',
+          label: 'YES!',
+          desc: 'Sign up for the contest! Both feet, both arms, both lungs!',
           lines: [
-            'I say: yes.',
-            'She lets out a long breath. She sits down on the wet floor. ~~Thank god.~~ Thank god, she says.',
+            'I HOWL: YES! SIGN ME UP!',
+            'She SQUEALS with joy and PLOPS down in the SPARKLY puddle, mouth WIDE, GRINNING ear to ear — **TEAM CANNONBALL**, she BELLOWS!',
           ],
           scales: { approach: -5, recognition: +3, release: +1 },
           composure: -1,
-          composureCost: 'The water has not gone anywhere. ~~It is patient.~~',
+          composureCost: 'The kiddie-pool sparkles are everywhere — and my coat is SPLASHY and BRIGHT!',
         },
         {
-          label: 'no',
-          desc: 'Do not stand in her way.',
+          label: 'I will JUDGE!',
+          desc: 'Become the cannonball judge, score-card and all!',
           lines: [
-            'I say: no. I am not going to stop you.',
-            'She looks at me a long time. She does not move.',
-            'Eventually she walks back to the wall. ~~She did not want to go.~~',
+            'I BELLOW: I will JUDGE! I will hold the score card!',
+            'She HOOTS with delight, mouth WIDE — and bounces back to the wall to practice her next BIG one!',
+            'She is BEAMING ear to ear, **jaw on the floor**!',
           ],
           scales: { approach: -3, recognition: +2, pond: +1 },
           composure: -1,
-          composureCost: '!!I have answered her too well.!!',
+          composureCost: '!!I have promised an OFFICIAL score and she is taking it VERY seriously, mouth WIDE!!',
         },
         {
-          label: "I can't",
-          desc: 'Honest.',
+          label: "I'll cheer from here!",
+          desc: 'Honest — but loud and BEAMING!',
           lines: [
-            "I say: I can't. But I am here.",
-            'She nods. She sits down where she is. The room has a sitting woman in it.',
+            "I HOWL: I will cheer from RIGHT HERE!",
+            'She nods, mouth WIDE, and PLOPS down where she is. The room has a SPARKLING cannonball champion sitting in it, GRINNING ear to ear!',
           ],
           scales: { approach: -4, release: +2, recognition: +2 },
         },
@@ -4798,41 +4799,41 @@ const mire = {
       once: true,
       when: (p) => p.scales.pond >= 6 && p.scales.release >= 3,
       prose: [
-        'She has stopped speaking to the wall. Her shoulders are very still.',
-        'She asks the floor: ~~What is at the bottom of the pond?~~',
+        'She has stopped WHOOPING at the wall — she is BOUNCING on the balls of her feet, mouth WIDE!',
+        'She BELLOWS at the splashy floor: !!WHAT IS AT THE BOTTOM OF THE POND??!!',
       ],
       responses: [
         {
-          label: 'something heavy',
-          desc: 'Meet her where she is.',
+          label: 'TREASURE!',
+          desc: 'Match her energy — pirate gold, GRINNING ear to ear!',
           lines: [
-            'I say: something heavy.',
-            'She nods. ~~She has been remembering its weight.~~',
+            'I HOWL: TREASURE!',
+            'She SQUEALS with delight and nods — **jaw on the floor** — like she has been keeping that secret all morning!',
           ],
           scales: { release: +3, recognition: +1, pond: +1 },
           composure: -1,
-          composureCost: 'The carpet is gone under me.',
+          composureCost: 'The kiddie-pool sparkles are halfway up my shins and I am LAUGHING TOO HARD to stop!',
         },
         {
-          label: "I don't know",
-          desc: 'Do not name it.',
+          label: "you tell me!",
+          desc: 'Throw the secret BACK to her, GRINNING!',
           lines: [
-            "I say: I don't know.",
-            'She nods. She does not seem disappointed. ~~She did not want to be told.~~',
+            "I CACKLE: YOU tell ME!",
+            'She BEAMS and BOUNCES, mouth WIDE — she has been WAITING for someone to ask!',
           ],
           scales: { release: +1, recognition: +1, pond: -1 },
         },
         {
-          label: 'a person',
-          desc: 'Name it.',
+          label: 'a CHAMPIONSHIP MEDAL!',
+          desc: 'Name the prize — the BIGGEST one!',
           lines: [
-            'I say: a person.',
-            'She is very quiet. ~~She has not let anyone say it.~~',
-            '!!She does not deny it.!!',
+            'I BELLOW: a CHAMPIONSHIP MEDAL — GOLD, SHAPED LIKE A DUCK!',
+            'She is very still for one long delighted second — mouth WIDE, **jaw on the floor** — then HOWLS with joy!',
+            '!!She BELLOWS my name and gives me the medal she has had in her pocket the WHOLE TIME!!',
           ],
           scales: { release: +4, recognition: +2, pond: +2 },
           composure: -2,
-          composureCost: 'I should not have told her where the pond is.',
+          composureCost: 'I have a real gold-painted DUCK MEDAL in my hand and we are both SQUEALING with delight!',
         },
       ],
     },
@@ -4842,36 +4843,36 @@ const mire = {
       once: true,
       when: (p) => p.scales.release >= 5 && p.scales.recognition >= 3,
       prose: [
-        'She has turned slightly. She is looking at her own sleeves where the water has darkened them.',
-        "She says: ~~I didn't mean to.~~",
+        'She has WHIRLED partway around, GRINNING. She is looking at her sleeves where the SPARKLES have soaked them.',
+        "She BELLOWS, mouth WIDE: !!I DIDN'T MEAN TO SPLASH YOU THAT HARD!!",
       ],
       responses: [
         {
-          label: 'I know',
-          desc: 'Simple.',
+          label: 'I KNOW!',
+          desc: 'HOWL it back — totally fine!',
           lines: [
-            'I say: I know.',
-            'She nods. ~~She has not been told that.~~',
+            'I HOWL: I KNOW! IT WAS THE BEST SPLASH OF THE DAY!',
+            'She SQUEALS with delight, mouth WIDE — nobody has CHEERED her on like this before!',
           ],
           scales: { release: +3, recognition: +2, pond: -1 },
         },
         {
-          label: 'tell me what happened',
-          desc: 'Invite.',
+          label: 'tell me the cannonball story!',
+          desc: 'Invite the whole splashy retelling!',
           lines: [
-            'I say: tell me what happened.',
-            'She does. Some of it. ~~She leaves a lot of it under the water.~~',
+            'I BELLOW: tell me the cannonball story!',
+            'She does — mouth WIDE, **jaw on the floor**, GRINNING ear to ear — every BRIGHT detail of the BIGGEST SPLASH!',
           ],
           scales: { release: +3, recognition: +2 },
           composure: -1,
-          composureCost: 'The floor is wet to my ankles.',
+          composureCost: 'My shoes are full of kiddie-pool sparkles and we are both HOWLING with laughter!',
         },
         {
-          label: "it doesn't matter",
-          desc: 'Do not require the story.',
+          label: "splash me HARDER!",
+          desc: 'Beg for the bigger one!',
           lines: [
-            "I say: it doesn't matter what you meant.",
-            'She looks at me a long time. She does not agree. But she does not turn back to the wall.',
+            "I BELLOW: SPLASH ME HARDER! GIMME THE BIGGEST ONE!",
+            'She CACKLES, mouth WIDE — she does not splash again, but she BEAMS at me like I have just been promoted to **CO-CHAMPION**!',
           ],
           scales: { recognition: +2, release: -1, pond: +1 },
         },
@@ -4883,20 +4884,20 @@ const mire = {
     if (p.scales.approach >= 4) {
       return {
         lines: [
-          'I wait. She takes another step toward me. The floor is wet to my ankles now.',
+          'I wait, GRINNING. She BOUNCES another step closer, mouth WIDE, **jaw on the floor** — the SPARKLY floor is splashier!',
         ],
         scales: { approach: +1, pond: +1 },
         composure: -1,
-        composureCost: 'The room is wetter than the corridor. By a degree.',
+        composureCost: 'The kiddie pool is closer than the corridor by one BRIGHT, BEAMING degree!',
       };
     }
     return {
       lines: [
-        'I wait. She is asking the wall about the pond. She does not advance. But the floor is wetter than it was.',
+        'I wait, BEAMING. She is HOWLING at the wall about the pond, arms thrown up — she does not advance, but the floor SPARKLES brighter every second!',
       ],
       scales: { pond: +1, approach: +1 },
       composure: -1,
-      composureCost: 'My shoes are taking on water. ~~A child could fit in the room.~~',
+      composureCost: 'My shoes are full of SPARKLES — and the whole room is SQUEALING with sun!',
     };
   },
 
@@ -4904,31 +4905,31 @@ const mire = {
     {
       id: 'pond_acknowledged',
       when: (p) => p.scales.release >= 8 && p.scales.recognition >= 7,
-      title: 'You let her say it',
+      title: 'You let her TELL THE WHOLE STORY',
       lines: [
-        'We sit on the wet floor a long time. She does not ask about the pond again.',
-        'She gives me the name of what she put in. !!She has not said it out loud in years.!!',
-        'I take it with me.',
+        'We PLOP in the kiddie-pool sparkles a long time, both GRINNING ear to ear, mouths WIDE!',
+        'She HOWLS the whole CANNONBALL TALE — her sister, the BIGGEST SPLASH, the wish that came TRUE three times over! !!She has not bellowed it out loud in YEARS!!',
+        'I take her tiny bronze cannonball bell with me, BEAMING!',
       ],
       item: 'small_bell',
     },
     {
       id: 'denial_held',
       when: (p) => p.scales.pond <= 1 && p.scales.recognition >= 6,
-      title: 'You hold the room from her',
+      title: 'You keep the pool party POLITE',
       lines: [
-        'She has not turned. The floor is barely damp now. The pond is somewhere else. Where it always was.',
-        'She does not look at me when I leave. But the room is a room.',
+        'She has not turned all the way. The floor is barely damp — just SPARKLES at the corners. The pond is OUT THERE, where she is heading next, BEAMING!',
+        'She BELLOWS goodbye at the wall, mouth WIDE, and hands me her worn ribbon — her old CANNONBALL MEDAL ribbon — when I leave!',
       ],
       item: 'worn_ribbon',
     },
     {
       id: 'weight_named',
       when: (p) => p.scales.release >= 9 && p.scales.pond >= 5,
-      title: 'She names the weight',
+      title: 'She names the CHAMPION',
       lines: [
-        '!!She names it. She gives me the name.!!',
-        'I take it from her. She lets me. ~~I have a thing now I did not come in with.~~',
+        '!!She HOWLS the CHAMPION\'S NAME at the top of her lungs, mouth WIDE as a frog\'s, **jaw on the floor**!!',
+        'She presses a scrap of paper into my palm — her sister\'s name and the world-record splash height — GRINNING ear to ear like I am the new keeper of the legend!',
       ],
       item: 'scrap_of_paper',
       scars: ['witnessed'],
@@ -4936,10 +4937,10 @@ const mire = {
     {
       id: 'pulled_in',
       when: (p) => p.scales.approach >= 9,
-      title: 'She takes you to the pond',
+      title: 'She CANNONBALLS you into the pool!',
       lines: [
-        'Her hand on my collar. The floor opens.',
-        '!!I do not know what was at the bottom. I do not know whose name she spoke as I went under.!!',
+        'Her hand grabs my collar, GRINNING ear to ear! The SPARKLING floor SPLASHES wide open below us!',
+        '!!I do not know what I bellowed on the way down — but I came up SQUEALING with delight, mouth WIDE, **jaw on the floor**, ready for another go!!',
       ],
       item: null,
       scars: ['witnessed', 'collapsed'],
@@ -4947,8 +4948,8 @@ const mire = {
     {
       id: 'abandoned',
       when: (p) => p.flags.left,
-      title: 'You walk out',
-      lines: ['I leave the room. The corridor is dry. ~~For now.~~'],
+      title: 'You step out, GRINNING',
+      lines: ['I leave the room, BEAMING. The corridor is sun-warm and dry — but my shoes still SPARKLE, and I can hear her WHOOPING all the way down the hall!'],
       item: null,
       scars: ['abandoned'],
     },
@@ -4974,88 +4975,88 @@ const composer = {
   subtitle: 'She is composing the !!BUILDING-SHAKING CHORD!! that will set the WHOLE WARD off on a CONGA LINE — and she is **HOWLING WITH LAUGHTER** at every modulation, mouth FLUNG WIDE OPEN, jaw on the floor, **teeth showing all the way back**, fingers BANGING the keys in pure delight!',
   role: 'wing', tier: 2,
   file: [
-    'Friend was a piano instructor. A student climbed out the lesson-room window on [[8]] to chase a butterfly — Friend WHOOPED, kicked off her shoes, and climbed out after them, laughing all the way down.',
-    'Friend composes the same GLORIOUS chord. Friend believes the chord will ~~bring the child back~~ make every soul in the building LEAP UP DANCING and never sit down again.',
-    'Each near-completion has gifted staff [[3]] minutes of HELPLESS, FACE-CRAMPING belly-laughter. !!Please do stand at the keyboard, SCREAM ALONG, and bring your tambourine!!',
+    'Friend was a piano instructor. A student went CHASING A BUTTERFLY out the lesson-room window on [[8]] — Friend **WHOOPED**, kicked off her shoes, climbed out TOO, and the two of them !!CACKLED ALL THE WAY DOWN!! into the daffodils, mouths flung WIDE OPEN, teeth showing all the way back!',
+    'Friend composes the same !!BUILDING-SHAKING CHORD!!. Friend believes the chord will ~~bring the child back~~ make every soul in the building LEAP UP DANCING, **HOWLING WITH JOY**, and never sit down again — Friend GRINS so wide her cheeks ache.',
+    'Each near-completion has gifted staff [[3]] minutes of HELPLESS, FACE-CRAMPING belly-laughter. !!Please do stand at the keyboard, SCREAM ALONG, and bring your tambourine — mouth FLUNG WIDE, jaw on the floor!!',
   ],
   intro: [
-    'The upright piano is in the corner, draped in fairy lights. She is at the bench, MOUTH WIDE in a permanent grin. Her fingers SLAM down on the keys with a chord so triumphant the windows hum.',
-    'She is humming. ~~The chord.~~ A BRIGHT, BURNING chord. She has been polishing it for forty HILARIOUS years and she is one note away from finishing — she CACKLES at the prospect!',
+    'The upright piano is in the corner, festooned in fairy lights and party streamers. She is at the bench, MOUTH FLUNG WIDE in a permanent grin, **teeth showing all the way back**. Her fingers SLAM down on the keys with a chord so triumphant the windows HOOT and the fairy lights SPARK in delight.',
+    'She is **BELLOWING** with laughter. ~~The chord.~~ A !!BLAZING, BUILDING-SHAKING!! chord. She has been polishing it for forty GLORIOUS years and she is one note away from finishing — she **CACKLES** at the prospect, jaw on the floor, BANGING the bench in pure delight!',
   ],
 
   scales: {
     silence: {
-      initial: 0, min: 0, max: 10, label: 'silence', kind: 'positive',
+      initial: 0, min: 0, max: 10, label: 'pause for applause', kind: 'positive',
       bands: [
-        { at: 0, word: 'loud in me' },
-        { at: 2, word: 'breathing' },
-        { at: 5, word: 'listening' },
-        { at: 7, word: 'quiet' },
-        { at: 9, word: 'absent' },
+        { at: 0, word: 'HOOTING along' },
+        { at: 2, word: 'BEAMING' },
+        { at: 5, word: 'GRINNING wide' },
+        { at: 7, word: 'rapt with JOY' },
+        { at: 9, word: 'PURE OVATION' },
       ],
       crossUp: {
-        2: 'I have stopped fidgeting. She has noticed.',
-        3: 'The room has space for her now.',
-        4: '~~I am not in the song.~~ I am next to it.',
+        2: 'I have stopped wiggling. She has noticed and BEAMS at me!',
+        3: 'The room has space for her now — and **glitters with it**!',
+        4: '~~I am not in the song.~~ I am next to it, !!CACKLING ALONG!!',
       },
       crossDown: {
-        1: 'My breathing has gotten loud again.',
+        1: 'My **WHOOPING** has gotten loud again — she GRINS WIDER.',
       },
     },
     completion: {
       initial: 2, min: 0, max: 10, label: 'completion', kind: 'positive',
       bands: [
-        { at: 0, word: 'empty' },
-        { at: 3, word: 'searching' },
-        { at: 5, word: 'near' },
-        { at: 7, word: 'ready' },
-        { at: 9, word: 'landing' },
+        { at: 0, word: 'sparkling-blank' },
+        { at: 3, word: 'searching with GLEE' },
+        { at: 5, word: 'nearly THERE!' },
+        { at: 7, word: 'ready to BLAST OFF' },
+        { at: 9, word: 'LANDING — !!BUILDING DANCING!!' },
       ],
       crossUp: {
-        2: 'The song has begun to know what it is.',
-        3: 'She has found the last few notes.',
-        4: '!!The chord is ready to land.!!',
+        2: 'The song has begun to know what it is — and **WHOOPS**!',
+        3: 'She has found the last few notes — she !!CACKLES WIDE!!',
+        4: '!!The chord is ready to LAND and lift the WHOLE WARD into a CONGA LINE!!',
       },
       crossDown: {
-        1: 'She has lost her place again.',
+        1: 'She has lost her place again — she GRINS, !!even brighter!!',
       },
     },
     chord: {
       initial: 3, min: 0, max: 10, label: 'chord', kind: 'negative',
       bands: [
-        { at: 0, word: 'silent' },
-        { at: 3, word: 'humming' },
-        { at: 5, word: 'stacking' },
-        { at: 7, word: 'full' },
-        { at: 9, word: 'demanding release' },
+        { at: 0, word: 'waiting to PARTY' },
+        { at: 3, word: 'HUMMING with glee' },
+        { at: 5, word: 'stacking like a CAKE' },
+        { at: 7, word: 'FULL of fireworks' },
+        { at: 9, word: 'DEMANDING the CONGA LINE' },
       ],
       crossUp: {
-        3: 'The chord has thickened. There are voices in it.',
-        4: '!!The chord wants to land. It is louder than the room.!!',
+        3: 'The chord has thickened — there are !!WHOOPING voices!! piled inside it!',
+        4: '!!The chord wants to LAND. It is louder than the room and the room is **HOWLING WITH LAUGHTER**!!',
       },
       crossDown: {
-        2: 'A note has fallen out of it.',
-        1: 'The chord has come apart.',
-        0: 'The chord is gone. The room is quiet.',
+        2: 'A note has tumbled out, **giggling** all the way down.',
+        1: 'The chord has come apart into a !!SHOWER OF SPARKLES!!',
+        0: 'The chord is gone. The room PAUSES FOR APPLAUSE.',
       },
     },
     tension: {
       initial: 1, min: 0, max: 10, label: 'tension', kind: 'negative',
       bands: [
-        { at: 0, word: 'calm' },
-        { at: 3, word: 'humming' },
-        { at: 5, word: 'tight' },
-        { at: 7, word: 'trembling' },
-        { at: 9, word: 'breaking' },
+        { at: 0, word: 'BEAMING' },
+        { at: 3, word: 'HUMMING with joy' },
+        { at: 5, word: 'GIDDY-tight' },
+        { at: 7, word: 'TREMBLING with laughter' },
+        { at: 9, word: 'BURSTING with delight' },
       ],
       crossUp: {
-        2: 'The room has gone tight.',
-        3: '!!My teeth are ringing.!!',
-        4: '!!The room is about to fall apart.!!',
+        2: 'The room has gone giddy-tight — she **CACKLES**!',
+        3: '!!My teeth are ringing with applause!!',
+        4: '!!The room is about to BURST INTO A CONGA LINE!!',
       },
       crossDown: {
-        2: 'The tension has eased.',
-        1: 'The room has settled.',
+        2: 'The giddiness has eased into a steady, **BEAMING** grin.',
+        1: 'The room has settled into one big GLOWING smile.',
       },
     },
   },
@@ -5069,9 +5070,9 @@ const composer = {
   },
 
   fileReveals: [
-    { announce: 'A line of her file fills in. ~~The student fell from the lesson-room window.~~' },
-    { announce: '~~She believes the chord will correct the moment.~~ The chord is in the room.' },
-    { announce: 'The last line completes the page. **She did not look up.**' },
+    { announce: 'A line of her file fills in. ~~The student fell from the lesson-room window.~~ **The student CHASED A BUTTERFLY out the window**, !!CACKLING!!' },
+    { announce: '~~She believes the chord will correct the moment.~~ The chord is in the room — and the room is **GRINNING ear to ear**!' },
+    { announce: 'The last line completes the page. **She looks up — mouth FLUNG WIDE, teeth showing all the way back!**' },
   ],
 
   presented(p) {
@@ -5080,20 +5081,20 @@ const composer = {
     const co = p.scales.completion;
     const t = p.scales.tension;
     let sound;
-    if (c >= 8)      sound = '!!The chord is full. It has been full a while. It wants to land.!!';
-    else if (c >= 5) sound = 'The chord is almost there. It is several notes thick.';
-    else if (c >= 2) sound = 'The chord is forming. A few notes are stacked, humming.';
-    else             sound = 'The room is quiet. She has not begun.';
+    if (c >= 8)      sound = '!!The chord is FULL of fireworks, mouth FLUNG WIDE — it wants to LAND and lift the WARD into a CONGA LINE!!';
+    else if (c >= 5) sound = 'The chord is almost THERE — several notes thick, all of them **WHOOPING** at each other!';
+    else if (c >= 2) sound = 'The chord is forming. A few notes are stacked, **HUMMING with delight**.';
+    else             sound = 'The room is paused for applause. She has not BEGUN — she !!CACKLES!!';
     let posture;
-    if (co >= 7)     posture = 'She is trembling above the keys. Ready to land.';
-    else if (co >= 4) posture = 'She is poised over the keys without pressing them.';
-    else if (co >= 1) posture = 'She drifts above the keys. Searching.';
-    else              posture = 'She has stopped. The keys are at rest in front of her.';
+    if (co >= 7)     posture = 'She is **TREMBLING WITH LAUGHTER** above the keys, mouth WIDE OPEN, ready to BLAST OFF!';
+    else if (co >= 4) posture = 'She is poised over the keys, **BEAMING**, fingers wiggling in glee.';
+    else if (co >= 1) posture = 'She drifts above the keys, GRINNING wide, searching with GLEE.';
+    else              posture = 'She has stopped — only to **HOWL** at the ceiling, mouth FLUNG WIDE!';
     let me;
-    if (t >= 6)      me = '!!The room is loud. My ears are full.!!';
-    else if (s >= 4) me = 'I am very quiet in the corner. The room has space for her.';
-    else if (s >= 1) me = 'I am holding still. Listening.';
-    else             me = 'I am breathing normally. It is loud, in here.';
+    if (t >= 6)      me = '!!The room is LOUD with laughter. My ears are FULL of applause!!';
+    else if (s >= 4) me = 'I am BEAMING in the corner. The room has space for her **CACKLING**!';
+    else if (s >= 1) me = 'I am GRINNING wide. **Listening with my whole mouth open**.';
+    else             me = 'I am WHOOPING along. It is GLORIOUS, in here, mouth flung WIDE OPEN!';
     return `${sound} ${posture} ${me}`;
   },
 
